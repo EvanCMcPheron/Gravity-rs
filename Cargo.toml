@@ -1,0 +1,13 @@
+[package]
+name = "gravity"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+async-std = "1.13.0"
+glam = "0.29.2"
+log = "0.4.25"
+simplelog = "0.12.2"
+wgpu = "24.0.1"
+winit = "0.30.8"
