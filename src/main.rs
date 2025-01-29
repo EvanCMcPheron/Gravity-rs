@@ -1,11 +1,16 @@
 const LOG_LEVEL: simplelog::LevelFilter = simplelog::LevelFilter::Info;
+const CLEAR_COLOR: wgpu::Color = wgpu::Color::BLACK;
 
 mod application;
+mod graphics;
 
 pub mod prelude {
     pub use anyhow::{anyhow, bail, Context, Result};
     pub use log::{debug, error, info, trace, warn};
     pub use std::default::Default;
+    pub use derive_builder::Builder;
+    pub use async_std::task::block_on;
+    pub use std::sync::Arc;
 }
 
 use prelude::*;

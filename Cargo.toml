@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.95"
 async-std = "1.13.0"
+derive_builder = "0.20.2"
 glam = "0.29.2"
 log = "0.4.25"
 simplelog = "0.12.2"
