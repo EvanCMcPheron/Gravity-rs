@@ -812,6 +812,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-std",
+ "bytemuck",
  "derive_builder",
  "glam",
  "log",

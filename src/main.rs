@@ -6,11 +6,14 @@ mod graphics;
 
 pub mod prelude {
     pub use anyhow::{anyhow, bail, Context, Result};
+    pub use async_std::task::block_on;
+    pub use derive_builder::Builder;
+    pub use glam::{Mat4, Vec4};
     pub use log::{debug, error, info, trace, warn};
     pub use std::default::Default;
-    pub use derive_builder::Builder;
-    pub use async_std::task::block_on;
     pub use std::sync::Arc;
+    pub use wgpu::include_wgsl;
+    pub use wgpu::util::DeviceExt;
 }
 
 use prelude::*;

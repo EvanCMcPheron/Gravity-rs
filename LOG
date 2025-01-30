@@ -1,189 +1,189 @@
-17:23:14 [WARN] InstanceFlags::VALIDATION requested, but unable to find layer: VK_LAYER_KHRONOS_validation
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [WARN] InstanceFlags::VALIDATION requested, but unable to find layer: VK_LAYER_KHRONOS_validation
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Searching for implicit layer manifest files
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   In following locations:
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   Found the following files:
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Located json file "C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Located json file "C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json (file version 1.0.1)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [WARN] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [WARN] GENERAL [Loader Message (0x0)]
 	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json.  Skipping this file.
-17:23:14 [WARN] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [WARN] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json (file version 1.0.1)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [WARN] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [WARN] GENERAL [Loader Message (0x0)]
 	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json.  Skipping this file.
-17:23:14 [WARN] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [WARN] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json (file version 1.0.1)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json (file version 1.0.0)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json (file version 1.0.0)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: opening device PCI\VEN_8086&DEV_7D55&SUBSYS_140D1462&REV_08\3&11583659&1&10
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(3) Does not contain a value for "VulkanExplicitLayers"
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: Opening child device 4 - SWD\DRIVERENUM\IGCC&4&3A33957&0
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(4) Does not contain a value for "VulkanExplicitLayers"
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: Opening child device 5 - DISPLAY\AUOD0A2\4&3A33957&0&UID8388688
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: opening device PCI\VEN_10DE&DEV_28A1&SUBSYS_140D1462&REV_A1\4&354488ca&0&0008
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(1) Does not contain a value for "VulkanExplicitLayers"
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: unable to open child-device error:13
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: found no registry files
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found no registry files in HKEY_CURRENT_USER\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [WARN] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [WARN] GENERAL [Loader Message (0x0)]
 	windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
-17:23:14 [WARN] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [WARN] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Searching for driver manifest files
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   In following locations:
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   Found the following files:
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json" from PnP registry: E
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found no registry files in HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json, version 1.0.1
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json, version 1.0.1
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	loader_parse_icd_manifest: Driver library architecture doesn't match the current running architecture, skipping this driver
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json, version 1.0.1
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json, version 1.0.0
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	Insert instance layer "VK_LAYER_NV_optimus" (C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll)
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	vkCreateInstance layer callstack setup to:
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   <Application>
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   <Loader>
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   VK_LAYER_NV_optimus
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	           Type: Implicit
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	               Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	           Manifest: C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	           Library:  C:\Windows\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] GENERAL [Loader Message (0x0)]
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] GENERAL [Loader Message (0x0)]
 	   <Drivers>
-17:23:14 [INFO] 	objects: (type: INSTANCE, hndl: 0x2566f02da00, name: ?)
-17:23:14 [INFO] Enabling debug utils
-17:23:14 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
-17:23:14 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
-17:23:14 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
-17:23:14 [WARN] Missing downlevel flags: DownlevelFlags(VERTEX_AND_INSTANCE_INDEX_RESPECTS_RESPECTIVE_FIRST_VALUE_IN_INDIRECT_DRAW)
+06:00:20 [INFO] 	objects: (type: INSTANCE, hndl: 0x262fb4b7a10, name: ?)
+06:00:20 [INFO] Enabling debug utils
+06:00:20 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
+06:00:20 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
+06:00:20 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
+06:00:20 [WARN] Missing downlevel flags: DownlevelFlags(VERTEX_AND_INSTANCE_INDEX_RESPECTS_RESPECTIVE_FIRST_VALUE_IN_INDIRECT_DRAW)
 The underlying API or device in use does not support enough features to be a fully compliant implementation of WebGPU. A subset of the features can still be used. If you are running this program on native and not in a browser and wish to limit the features you use to the supported subset, call Adapter::downlevel_properties or Device::downlevel_properties to get a listing of the features the current platform supports.
-17:23:14 [WARN] DownlevelCapabilities {
+06:00:20 [WARN] DownlevelCapabilities {
     flags: DownlevelFlags(
         COMPUTE_SHADERS | FRAGMENT_WRITABLE_STORAGE | INDIRECT_EXECUTION | BASE_VERTEX | READ_ONLY_DEPTH_STENCIL | NON_POWER_OF_TWO_MIPMAPPED_TEXTURES | CUBE_ARRAY_TEXTURES | COMPARISON_SAMPLERS | INDEPENDENT_BLEND | VERTEX_STORAGE | ANISOTROPIC_FILTERING | FRAGMENT_STORAGE | MULTISAMPLED_SHADING | DEPTH_TEXTURE_AND_BUFFER_COPIES | WEBGPU_TEXTURE_FORMAT_SUPPORT | BUFFER_BINDINGS_NOT_16_BYTE_ALIGNED | UNRESTRICTED_INDEX_BUFFER | FULL_DRAW_INDEX_UINT32 | DEPTH_BIAS_CLAMP | VIEW_FORMATS | UNRESTRICTED_EXTERNAL_TEXTURE_COPIES | SURFACE_VIEW_FORMATS | NONBLOCKING_QUERY_RESOLVE,
     ),
     limits: DownlevelLimits,
     shader_model: Sm5,
 }
-17:23:14 [INFO] Naga generated shader for "main" at Compute:
+06:00:20 [INFO] Naga generated shader for "main" at Compute:
 struct OffsetPc {
     uint inner;
 };
@@ -233,4 +233,50 @@ void main()
     }
 }
 
-17:23:16 [INFO] Close Requested, closing...
+06:00:20 [INFO] Naga generated shader for "vs_main" at Vertex:
+struct NagaConstants {
+    int first_vertex;
+    int first_instance;
+    uint other;
+};
+ConstantBuffer<NagaConstants> _NagaConstants: register(b0);
+
+struct FragmentInput_fs_main {
+    float4 position_1 : SV_Position;
+};
+
+float4 vs_main(float4 vertex : LOC0) : SV_Position
+{
+    return vertex;
+}
+
+float4 fs_main(FragmentInput_fs_main fragmentinput_fs_main) : SV_Target0
+{
+    float4 position = fragmentinput_fs_main.position_1;
+    return float4(1.0, 1.0, 1.0, 1.0);
+}
+
+06:00:20 [INFO] Naga generated shader for "fs_main" at Fragment:
+struct NagaConstants {
+    int first_vertex;
+    int first_instance;
+    uint other;
+};
+ConstantBuffer<NagaConstants> _NagaConstants: register(b0);
+
+struct FragmentInput_fs_main {
+    float4 position_1 : SV_Position;
+};
+
+float4 vs_main(float4 vertex : LOC0) : SV_Position
+{
+    return vertex;
+}
+
+float4 fs_main(FragmentInput_fs_main fragmentinput_fs_main) : SV_Target0
+{
+    float4 position = fragmentinput_fs_main.position_1;
+    return float4(1.0, 1.0, 1.0, 1.0);
+}
+
+06:00:27 [INFO] Close Requested, closing...
