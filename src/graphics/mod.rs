@@ -8,6 +8,7 @@ use wgpu::{
 
 use crate::prelude::*;
 
+pub mod rendering;
 pub mod vertices;
 
 #[derive(Debug)]
@@ -19,13 +20,20 @@ pub struct Graphics<'s> {
     surface_config: wgpu::SurfaceConfiguration,
     render_pipeline: wgpu::RenderPipeline,
     vertices: vertices::Verticies,
+    camera: rendering::Camera<rendering::ViewModeLookAt>,
 }
 
 impl<'s> Graphics<'s> {
     fn generate_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
+        let bg_0 = device.create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor {
+            label: None,
+            entries: &[rendering::Uniform::generate_bind_group_layout_entry(
+                device, 0,
+            )],
+        });
         device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
             label: None,
-            bind_group_layouts: &[],
+            bind_group_layouts: &[&bg_0],
             push_constant_ranges: &[],
         })
     }
@@ -66,7 +74,10 @@ impl<'s> Graphics<'s> {
             multisample: Default::default(),
         })
     }
-    pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
+    pub fn new(
+        window: Arc<winit::window::Window>,
+        camera: rendering::Camera<rendering::ViewModeLookAt>,
+    ) -> Result<Self> {
         let instance = wgpu::Instance::new(&Default::default());
 
         let mut surface = instance
@@ -76,7 +87,7 @@ impl<'s> Graphics<'s> {
         let adapter = block_on(instance.request_adapter(&wgpu::RequestAdapterOptionsBase {
             power_preference: wgpu::PowerPreference::HighPerformance,
             compatible_surface: Some(&surface),
-            force_fallback_adapter: true,
+            force_fallback_adapter: false,
         }))
         .ok_or_else(|| anyhow!("Failed to create"))?;
 
@@ -93,10 +104,13 @@ impl<'s> Graphics<'s> {
 
         let vertices = vertices::Verticies {
             points: vec![
-                [0.0, 0.0, 0.0, 0.0],
-                [0.0, 0.0, 0.0, 0.0],
-                [0.0, 0.0, 0.0, 0.0],
-                [0.0, 0.0, 0.0, 0.0],
+                [1.0, 0.0, 0.0, 1.0],
+                [0.0, 1.0, 0.0, 1.0],
+                [-1.0, 0.0, 0.0, 1.0],
+                [0.0, -1.0, 0.0, 1.0],
+                [0.0, 0.0, 1.0, 1.0],
+                [0.0, 0.0, -1.0, 1.0],
+                [0.0, 0.0, 0.0, 1.0],
                 // [-0.5, -0.5, 0.0, 0.0],
                 // [0.5, -0.5, 0.0, 0.0],
                 // [-0.5, 0.5, 0.0, 0.0],
@@ -114,6 +128,7 @@ impl<'s> Graphics<'s> {
             queue,
             surface_config,
             vertices,
+            camera,
         })
     }
     fn reconfigure_surface(&self) {
@@ -124,7 +139,38 @@ impl<'s> Graphics<'s> {
         self.surface_config.height = size.height;
         self.reconfigure_surface();
     }
+    fn create_uniform_bind_group(&self, uniform: rendering::Uniform) -> wgpu::BindGroup {
+        self.device.create_bind_group(&wgpu::BindGroupDescriptor {
+            label: None,
+            layout: &self
+                .device
+                .create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor {
+                    label: None,
+                    entries: &[rendering::Uniform::generate_bind_group_layout_entry(
+                        &self.device,
+                        0,
+                    )],
+                }),
+            entries: &[wgpu::BindGroupEntry {
+                binding: 0,
+                resource: uniform.generate_buffer(&self.device).as_entire_binding(),
+            }],
+        })
+    }
     pub fn render(&mut self) -> Result<()> {
+        // let uniform = rendering::Uniform {
+        //     width: self.surface_config.width,
+        //     height: self.surface_config.height,
+        //     world_mat: self.camera.generate_world_matrix_columns(),
+        //     padding: [0; 2]
+        // };
+        let uniform = rendering::UniformBuilder::default()
+            .height(self.surface_config.height)
+            .width(self.surface_config.width)
+            .world_mat(self.camera.generate_world_matrix_columns())
+            .build()
+            .with_context(|| "Failed to generate Uniform Struct from UniformBuilder")?;
+
         let surface_tex = self
             .surface
             .get_current_texture()
@@ -151,12 +197,30 @@ impl<'s> Graphics<'s> {
 
         rpass.set_pipeline(&self.render_pipeline);
 
+        rpass.set_bind_group(0, &self.create_uniform_bind_group(uniform), &[]);
+
         rpass.set_vertex_buffer(
             0,
             self.vertices.create_vertex_buffer(&self.device).slice(..),
         );
 
-        rpass.draw(0..4, 0..1);
+        // rpass.draw(0..4, 0..1);
+
+        let indirect_buffer = self
+            .device
+            .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                label: Some("indirect draw instruction buffer"),
+                contents: wgpu::util::DrawIndirectArgs {
+                    vertex_count: self.vertices.points.len() as u32,
+                    instance_count: 1,
+                    first_vertex: 0,
+                    first_instance: 0,
+                }
+                .as_bytes(),
+                usage: wgpu::BufferUsages::INDIRECT,
+            });
+
+        rpass.draw_indirect(&indirect_buffer, 0);
 
         drop(rpass);
 

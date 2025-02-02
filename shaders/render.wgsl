@@ -1,9 +1,21 @@
 
+struct Uniform {
+  world_mat: mat4x4<f32>,
+  width: u32,
+  height: u32,
+  p0_: u32,
+  p1_: u32
+}
+
+@group(0)
+@binding(0)
+var<uniform> inputs: Uniform;
+
 @vertex
 fn vs_main(@location(0) vertex: vec4f) -> @builtin(position) vec4f {
-    // to future evan - the shdaer is receiving the vertices but for some reason the value is no longer on screen
-    // I would guess this is because the CPU and GPU have differnt byte orders, and so the vertex buffer has to be reversed
-    return vertex;
+    //let w = inputs.world_mat;
+    //let mapped = w * vertex;
+    return vertex; //vec4(mapped.xy, 0, 1);
 }
 
 @fragment

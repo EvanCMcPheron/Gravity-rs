@@ -1,5 +1,9 @@
 #![allow(unused)]
 
+use crate::graphics::{
+    rendering::{Camera, ViewModeLookAt, ViewModeLookTo},
+    Graphics,
+};
 use crate::prelude::*;
 
 use winit::{
@@ -18,14 +22,25 @@ pub struct App<'app> {
 impl<'app> ApplicationHandler for App<'app> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         let attr = Window::default_attributes().with_title("Gravity Simulation");
+
         self.window = Some(Arc::new(
             event_loop
                 .create_window(attr)
                 .with_context(|| "failed to create a window")
                 .unwrap(),
         ));
+        let size = self.window.as_ref().unwrap().inner_size();
+        let aspect_ratio = size.width as f32 / size.height as f32;
+        let camera = Camera::<ViewModeLookAt>::new(
+            vec3(0., 0., 0.),
+            vec3(0.5, 0.5, 0.5) * 5.,
+            Vec3::Y,
+            20.,
+            aspect_ratio,
+            0.5,
+        );
         self.graphics = Some(
-            crate::graphics::Graphics::new(self.window.as_ref().unwrap().clone())
+            Graphics::new(self.window.as_ref().unwrap().clone(), camera)
                 .with_context(|| "failed to create window")
                 .unwrap(),
         );

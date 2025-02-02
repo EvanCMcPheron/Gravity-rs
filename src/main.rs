@@ -7,8 +7,9 @@ mod graphics;
 pub mod prelude {
     pub use anyhow::{anyhow, bail, Context, Result};
     pub use async_std::task::block_on;
+    pub use bytemuck::{Pod, Zeroable};
     pub use derive_builder::Builder;
-    pub use glam::{Mat4, Vec4};
+    pub use glam::{Mat4, Vec3, Vec4, Quat, vec3, vec4};
     pub use log::{debug, error, info, trace, warn};
     pub use std::default::Default;
     pub use std::sync::Arc;
