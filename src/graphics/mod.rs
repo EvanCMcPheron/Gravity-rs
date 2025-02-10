@@ -3,7 +3,7 @@ use std::borrow::Borrow;
 
 use rendering::ViewMode;
 use wgpu::{
-    core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, FragmentState, TextureUsages,
+    core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState, FragmentState, TextureUsages
 };
 
 use crate::prelude::*;
@@ -23,6 +23,33 @@ pub struct Graphics<'s> {
 }
 
 impl<'s> Graphics<'s> {
+    fn generate_depth_stencil_state() -> wgpu::DepthStencilState {
+        wgpu::DepthStencilState {
+            format: wgpu::TextureFormat::Depth24PlusStencil8,
+            bias: wgpu::DepthBiasState::default(),
+            depth_compare: wgpu::CompareFunction::Less,
+            depth_write_enabled: true,
+            stencil: wgpu::StencilState::default()
+        }
+    }
+    fn generate_depth_texture(&self) -> wgpu::TextureView {
+        let desc = wgpu::TextureDescriptor {
+            label: Some("Depth Stencil"),
+            size: wgpu::Extent3d {
+                width: self.surface_config.width,
+                height: self.surface_config.height,
+                depth_or_array_layers: 1
+            },
+            mip_level_count: 1,
+            sample_count: 1,
+            dimension: wgpu::TextureDimension::D2,
+            format: wgpu::TextureFormat::Depth24PlusStencil8,
+            usage: wgpu::TextureUsages::RENDER_ATTACHMENT | wgpu::TextureUsages::TEXTURE_BINDING,
+            view_formats: &[]
+        };
+        let texture = self.device.create_texture(&desc);
+        texture.create_view(&wgpu::TextureViewDescriptor::default())
+    }
     fn generate_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
         let bg_0 = device.create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor {
             label: None,
@@ -69,13 +96,11 @@ impl<'s> Graphics<'s> {
             },
             cache: None,
             multiview: None,
-            depth_stencil: None,
+            depth_stencil: Some(Self::generate_depth_stencil_state()),
             multisample: Default::default(),
         })
     }
-    pub fn new(
-        window: Arc<winit::window::Window>,
-    ) -> Result<Self> {
+    pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
         let instance = wgpu::Instance::new(&Default::default());
 
         let surface = instance
@@ -177,6 +202,8 @@ impl<'s> Graphics<'s> {
 
         let mut command_encoder = self.device.create_command_encoder(&Default::default());
 
+        let depth_texture = self.generate_depth_texture();
+
         let render_pass_descriptor = &wgpu::RenderPassDescriptor {
             label: None,
             color_attachments: &[Some(wgpu::RenderPassColorAttachment {
@@ -187,6 +214,14 @@ impl<'s> Graphics<'s> {
                     store: wgpu::StoreOp::Store,
                 },
             })],
+            depth_stencil_attachment: Some(wgpu::RenderPassDepthStencilAttachment {
+                view: &depth_texture,
+                depth_ops: Some(wgpu::Operations {
+                    load: wgpu::LoadOp::Clear(1.0),
+                    store: wgpu::StoreOp::Store
+                }),
+                stencil_ops: None
+            }),
             ..Default::default()
         };
 

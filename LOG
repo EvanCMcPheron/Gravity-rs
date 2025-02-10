@@ -1,886 +1,506 @@
-05:55:38 [WARN] InstanceFlags::VALIDATION requested, but unable to find layer: VK_LAYER_KHRONOS_validation
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Searching for implicit layer manifest files
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   In following locations:
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   Found the following files:
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Located json file "C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Located json file "C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json (file version 1.0.1)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [WARN] GENERAL [Loader Message (0x0)]
-	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json.  Skipping this file.
-05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json (file version 1.0.1)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [WARN] GENERAL [Loader Message (0x0)]
-	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json.  Skipping this file.
-05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json (file version 1.0.1)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found manifest file C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json (file version 1.0.0)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found manifest file C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json (file version 1.0.0)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: opening device PCI\VEN_8086&DEV_7D55&SUBSYS_140D1462&REV_08\3&11583659&1&10
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_entry: Device ID(4) Does not contain a value for "VulkanExplicitLayers"
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: Opening child device 5 - SWD\DRIVERENUM\IGCC&4&3A33957&0
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_entry: Device ID(5) Does not contain a value for "VulkanExplicitLayers"
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: Opening child device 6 - DISPLAY\AUOD0A2\4&3A33957&0&UID8388688
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: opening device PCI\VEN_10DE&DEV_28A1&SUBSYS_140D1462&REV_A1\4&354488ca&0&0008
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_entry: Device ID(2) Does not contain a value for "VulkanExplicitLayers"
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: unable to open child-device error:13
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_get_device_registry_files: found no registry files
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found no registry files in HKEY_CURRENT_USER\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [WARN] GENERAL [Loader Message (0x0)]
-	windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
-05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Searching for driver manifest files
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   In following locations:
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   Found the following files:
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json" from PnP registry: E
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found no registry files in HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json, version 1.0.1
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json, version 1.0.1
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	loader_parse_icd_manifest: Driver library architecture doesn't match the current running architecture, skipping this driver
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json, version 1.0.1
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json, version 1.0.0
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	Insert instance layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll)
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	vkCreateInstance layer callstack setup to:
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   <Application>
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   <Loader>
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   VK_LAYER_NV_optimus
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	           Type: Implicit
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	               Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	           Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	           Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] GENERAL [Loader Message (0x0)]
-	   <Drivers>
-05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:38 [INFO] Enabling debug utils
-05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
-05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
-05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	Inserted device layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll)
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	vkCreateDevice layer callstack setup to:
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	   <Application>
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	   <Loader>
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	   VK_LAYER_NV_optimus
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	           Type: Implicit
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	               Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	           Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	           Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	     ||
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	   <Device>
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] GENERAL [Loader Message (0x0)]
-	       Using "NVIDIA GeForce RTX 4050 Laptop GPU" with driver: "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll"
-05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
-05:55:39 [INFO] FPS: 1.148254
-05:55:39 [INFO] FPS: 342.64178
-05:55:39 [INFO] FPS: 847.0987
-05:55:39 [INFO] FPS: 800.64056
-05:55:39 [INFO] FPS: 138.42938
-05:55:39 [INFO] FPS: 1152.3392
-05:55:39 [INFO] FPS: 447.38727
-05:55:39 [INFO] FPS: 51.087917
-05:55:39 [INFO] FPS: 702.5926
-05:55:39 [INFO] FPS: 18.59697
-05:55:39 [INFO] FPS: 237.9253
-05:55:39 [INFO] FPS: 169.47142
-05:55:39 [INFO] FPS: 142.29407
-05:55:39 [INFO] FPS: 145.45667
-05:55:39 [INFO] FPS: 153.4943
-05:55:39 [INFO] FPS: 141.17714
-05:55:39 [INFO] FPS: 70.48707
-05:55:39 [INFO] FPS: 141.31079
-05:55:39 [INFO] FPS: 157.3069
-05:55:39 [INFO] FPS: 142.03336
-05:55:39 [INFO] FPS: 145.87253
-05:55:39 [INFO] FPS: 148.01877
-05:55:39 [INFO] FPS: 141.56085
-05:55:39 [INFO] FPS: 137.72966
-05:55:39 [INFO] FPS: 161.4257
-05:55:39 [INFO] FPS: 129.35774
-05:55:39 [INFO] FPS: 154.46878
-05:55:39 [INFO] FPS: 146.14755
-05:55:39 [INFO] FPS: 146.24373
-05:55:39 [INFO] FPS: 146.95078
-05:55:39 [INFO] FPS: 138.95258
-05:55:39 [INFO] FPS: 149.15355
-05:55:39 [INFO] FPS: 145.93854
-05:55:39 [INFO] FPS: 138.4869
-05:55:39 [INFO] FPS: 142.63504
-05:55:39 [INFO] FPS: 148.31514
-05:55:39 [INFO] FPS: 145.04945
-05:55:39 [INFO] FPS: 144.20235
-05:55:39 [INFO] FPS: 143.21722
-05:55:39 [INFO] FPS: 152.42276
-05:55:39 [INFO] FPS: 138.08531
-05:55:40 [INFO] FPS: 144.93805
-05:55:40 [INFO] FPS: 141.78365
-05:55:40 [INFO] FPS: 110.686806
-05:55:40 [INFO] FPS: 186.19893
-05:55:40 [INFO] FPS: 153.5933
-05:55:40 [INFO] FPS: 135.45914
-05:55:40 [INFO] FPS: 143.50496
-05:55:40 [INFO] FPS: 149.59087
-05:55:40 [INFO] FPS: 142.27583
-05:55:40 [INFO] FPS: 151.89488
-05:55:40 [INFO] FPS: 136.73157
-05:55:40 [INFO] FPS: 149.38081
-05:55:40 [INFO] FPS: 134.11658
-05:55:40 [INFO] FPS: 153.65703
-05:55:40 [INFO] FPS: 141.25291
-05:55:40 [INFO] FPS: 132.39247
-05:55:40 [INFO] FPS: 173.34927
-05:55:40 [INFO] FPS: 125.79092
-05:55:40 [INFO] FPS: 164.61989
-05:55:40 [INFO] FPS: 133.40092
-05:55:40 [INFO] FPS: 151.38899
-05:55:40 [INFO] FPS: 139.91689
-05:55:40 [INFO] FPS: 146.15823
-05:55:40 [INFO] FPS: 165.87874
-05:55:40 [INFO] FPS: 112.26117
-05:55:40 [INFO] FPS: 199.73634
-05:55:40 [INFO] FPS: 132.41174
-05:55:40 [INFO] FPS: 139.28159
-05:55:40 [INFO] FPS: 155.64929
-05:55:40 [INFO] FPS: 151.66681
-05:55:40 [INFO] FPS: 129.94775
-05:55:40 [INFO] FPS: 146.95294
-05:55:40 [INFO] FPS: 139.20984
-05:55:40 [INFO] FPS: 160.5291
-05:55:40 [INFO] FPS: 148.7564
-05:55:40 [INFO] FPS: 129.22568
-05:55:40 [INFO] FPS: 158.95976
-05:55:40 [INFO] FPS: 138.22464
-05:55:40 [INFO] FPS: 143.38768
-05:55:40 [INFO] FPS: 143.03491
-05:55:40 [INFO] FPS: 160.44154
-05:55:40 [INFO] FPS: 136.8251
-05:55:40 [INFO] FPS: 134.21378
-05:55:40 [INFO] FPS: 160.50334
-05:55:40 [INFO] FPS: 150.8091
-05:55:40 [INFO] FPS: 143.55852
-05:55:40 [INFO] FPS: 140.78558
-05:55:40 [INFO] FPS: 141.7535
-05:55:40 [INFO] FPS: 153.5768
-05:55:40 [INFO] FPS: 130.3424
-05:55:40 [INFO] FPS: 145.58583
-05:55:40 [INFO] FPS: 151.3363
-05:55:40 [INFO] FPS: 146.17105
-05:55:40 [INFO] FPS: 142.74907
-05:55:40 [INFO] FPS: 140.6727
-05:55:40 [INFO] FPS: 137.48727
-05:55:40 [INFO] FPS: 152.0242
-05:55:40 [INFO] FPS: 154.30908
-05:55:40 [INFO] FPS: 137.8949
-05:55:40 [INFO] FPS: 131.15614
-05:55:40 [INFO] FPS: 140.63708
-05:55:40 [INFO] FPS: 158.93703
-05:55:40 [INFO] FPS: 143.87868
-05:55:40 [INFO] FPS: 136.86256
-05:55:40 [INFO] FPS: 160.51364
-05:55:40 [INFO] FPS: 142.0495
-05:55:40 [INFO] FPS: 104.41574
-05:55:40 [INFO] FPS: 196.8814
-05:55:40 [INFO] FPS: 158.08028
-05:55:40 [INFO] FPS: 151.14188
-05:55:40 [INFO] FPS: 136.55232
-05:55:40 [INFO] FPS: 144.29597
-05:55:40 [INFO] FPS: 148.90924
-05:55:40 [INFO] FPS: 125.73556
-05:55:40 [INFO] FPS: 189.29355
-05:55:40 [INFO] FPS: 125.39813
-05:55:40 [INFO] FPS: 153.75627
-05:55:40 [INFO] FPS: 147.87431
-05:55:40 [INFO] FPS: 147.1432
-05:55:40 [INFO] FPS: 108.48576
-05:55:40 [INFO] FPS: 187.36066
-05:55:40 [INFO] FPS: 156.12315
-05:55:40 [INFO] FPS: 138.71935
-05:55:40 [INFO] FPS: 153.09482
-05:55:40 [INFO] FPS: 143.35478
-05:55:40 [INFO] FPS: 133.23207
-05:55:40 [INFO] FPS: 148.81616
-05:55:40 [INFO] FPS: 146.10484
-05:55:40 [INFO] FPS: 148.65909
-05:55:40 [INFO] FPS: 142.1545
-05:55:40 [INFO] FPS: 142.95721
-05:55:40 [INFO] FPS: 135.58955
-05:55:40 [INFO] FPS: 140.82721
-05:55:40 [INFO] FPS: 173.25317
-05:55:40 [INFO] FPS: 141.14127
-05:55:40 [INFO] FPS: 135.96379
-05:55:40 [INFO] FPS: 150.60014
-05:55:40 [INFO] FPS: 144.69894
-05:55:40 [INFO] FPS: 142.05353
-05:55:40 [INFO] FPS: 139.94626
-05:55:40 [INFO] FPS: 140.2092
-05:55:40 [INFO] FPS: 138.32216
-05:55:40 [INFO] FPS: 139.8093
-05:55:40 [INFO] FPS: 166.80289
-05:55:40 [INFO] FPS: 150.01726
-05:55:40 [INFO] FPS: 130.13208
-05:55:40 [INFO] FPS: 151.0985
-05:55:40 [INFO] FPS: 137.62541
-05:55:40 [INFO] FPS: 127.691086
-05:55:40 [INFO] FPS: 148.9292
-05:55:40 [INFO] FPS: 168.32466
-05:55:40 [INFO] FPS: 146.32077
-05:55:40 [INFO] FPS: 147.60802
-05:55:40 [INFO] FPS: 138.00528
-05:55:40 [INFO] FPS: 151.4165
-05:55:40 [INFO] FPS: 147.05666
-05:55:40 [INFO] FPS: 140.90063
-05:55:40 [INFO] FPS: 123.14361
-05:55:40 [INFO] FPS: 180.04716
-05:55:40 [INFO] FPS: 156.86029
-05:55:40 [INFO] FPS: 139.65895
-05:55:40 [INFO] FPS: 149.93402
-05:55:40 [INFO] FPS: 143.0697
-05:55:40 [INFO] FPS: 140.0521
-05:55:40 [INFO] FPS: 144.13168
-05:55:40 [INFO] FPS: 142.74498
-05:55:40 [INFO] FPS: 132.83388
-05:55:40 [INFO] FPS: 146.65338
-05:55:40 [INFO] FPS: 162.91687
-05:55:40 [INFO] FPS: 145.62187
-05:55:40 [INFO] FPS: 138.2495
-05:55:40 [INFO] FPS: 148.20523
-05:55:40 [INFO] FPS: 148.18767
-05:55:40 [INFO] FPS: 130.52444
-05:55:40 [INFO] FPS: 151.60704
-05:55:40 [INFO] FPS: 152.0057
-05:55:40 [INFO] FPS: 143.50908
-05:55:40 [INFO] FPS: 147.9881
-05:55:40 [INFO] FPS: 142.55777
-05:55:40 [INFO] FPS: 125.15645
-05:55:40 [INFO] FPS: 157.86566
-05:55:40 [INFO] FPS: 151.66681
-05:55:40 [INFO] FPS: 146.06216
-05:55:40 [INFO] FPS: 146.10912
-05:55:40 [INFO] FPS: 140.06387
-05:55:41 [INFO] FPS: 139.64336
-05:55:41 [INFO] FPS: 143.34451
-05:55:41 [INFO] FPS: 148.20523
-05:55:41 [INFO] FPS: 152.0057
-05:55:41 [INFO] FPS: 141.77962
-05:55:41 [INFO] FPS: 152.14911
-05:55:41 [INFO] FPS: 134.30751
-05:55:41 [INFO] FPS: 149.0913
-05:55:41 [INFO] FPS: 134.86905
-05:55:41 [INFO] FPS: 141.59692
-05:55:41 [INFO] FPS: 155.7317
-05:55:41 [INFO] FPS: 117.23467
-05:55:41 [INFO] FPS: 150.52986
-05:55:41 [INFO] FPS: 178.1769
-05:55:41 [INFO] received zoom: 1.1587842
-05:55:41 [INFO] FPS: 146.4901
-05:55:41 [INFO] received zoom: 1.059731
-05:55:41 [INFO] FPS: 125.741875
-05:55:41 [INFO] FPS: 176.22078
-05:55:41 [INFO] received zoom: 1.122479
-05:55:41 [INFO] FPS: 123.22707
-05:55:41 [INFO] FPS: 139.24861
-05:55:41 [INFO] received zoom: 1.0774993
-05:55:41 [INFO] FPS: 165.35211
-05:55:41 [INFO] received zoom: 1.0546813
-05:55:41 [INFO] FPS: 145.46724
-05:55:41 [INFO] received zoom: 1.058146
-05:55:41 [INFO] FPS: 149.83968
-05:55:41 [INFO] received zoom: 1.0506097
-05:55:41 [INFO] FPS: 135.99152
-05:55:41 [INFO] received zoom: 1.0536186
-05:55:41 [INFO] FPS: 146.71147
-05:55:41 [INFO] received zoom: 1.0377725
-05:55:41 [INFO] FPS: 144.90024
-05:55:41 [INFO] received zoom: 1.032206
-05:55:41 [INFO] FPS: 147.6407
-05:55:41 [INFO] received zoom: 1.0276573
-05:55:41 [INFO] FPS: 142.44203
-05:55:41 [INFO] received zoom: 1.0245714
-05:55:41 [INFO] FPS: 146.15396
-05:55:41 [INFO] received zoom: 1.0219518
-05:55:41 [INFO] FPS: 148.236
-05:55:41 [INFO] received zoom: 1.0216434
-05:55:41 [INFO] FPS: 141.40671
-05:55:41 [INFO] received zoom: 1.0165008
-05:55:41 [INFO] FPS: 139.91884
-05:55:41 [INFO] received zoom: 1.0166763
-05:55:41 [INFO] FPS: 154.94987
-05:55:41 [INFO] received zoom: 1.0131763
-05:55:41 [INFO] FPS: 133.55414
-05:55:41 [INFO] FPS: 148.236
-05:55:41 [INFO] received zoom: 1.0137731
-05:55:41 [INFO] FPS: 143.74838
-05:55:41 [INFO] received zoom: 1.0101451
-05:55:41 [INFO] FPS: 139.57513
-05:55:41 [INFO] received zoom: 1.0146277
-05:55:41 [INFO] FPS: 135.0968
-05:55:41 [INFO] received zoom: 1.0107948
-05:55:41 [INFO] FPS: 161.74686
-05:55:41 [INFO] received zoom: 1.0126226
-05:55:41 [INFO] FPS: 153.5933
-05:55:41 [INFO] received zoom: 1.0132927
-05:55:41 [INFO] FPS: 139.13431
-05:55:41 [INFO] received zoom: 1.0125778
-05:55:41 [INFO] FPS: 110.63293
-05:55:41 [INFO] received zoom: 1.0316361
-05:55:41 [INFO] FPS: 209.74474
-05:55:41 [INFO] FPS: 139.87383
-05:55:41 [INFO] received zoom: 1.010426
-05:55:41 [INFO] FPS: 153.05498
-05:55:41 [INFO] received zoom: 1.0133394
-05:55:41 [INFO] FPS: 138.74821
-05:55:41 [INFO] received zoom: 1.0126128
-05:55:41 [INFO] FPS: 143.1045
-05:55:41 [INFO] received zoom: 1.014267
-05:55:41 [INFO] FPS: 148.2338
-05:55:41 [INFO] received zoom: 1.0098381
-05:55:41 [INFO] FPS: 142.34875
-05:55:41 [INFO] received zoom: 1.0102448
-05:55:41 [INFO] FPS: 113.9796
-05:55:41 [INFO] received zoom: 1.0153537
-05:55:41 [INFO] FPS: 191.64798
-05:55:41 [INFO] received zoom: 1.0076095
-05:55:41 [INFO] FPS: 150.81819
-05:55:41 [INFO] FPS: 141.12334
-05:55:41 [INFO] received zoom: 1.0103338
-05:55:41 [INFO] FPS: 148.65466
-05:55:41 [INFO] received zoom: 1.0098102
-05:55:41 [INFO] FPS: 122.955864
-05:55:41 [INFO] received zoom: 1.0094885
-05:55:41 [INFO] FPS: 149.64684
-05:55:41 [INFO] received zoom: 1.0077962
-05:55:41 [INFO] FPS: 159.17737
-05:55:41 [INFO] received zoom: 1.005497
-05:55:41 [INFO] FPS: 134.79088
-05:55:41 [INFO] received zoom: 1.0086554
-05:55:41 [INFO] FPS: 155.01953
-05:55:41 [INFO] received zoom: 1.0018815
-05:55:41 [INFO] FPS: 142.12218
-05:55:41 [INFO] received zoom: 1.0041045
-05:55:41 [INFO] FPS: 149.32506
-05:55:41 [INFO] received zoom: 1.0039065
-05:55:41 [INFO] FPS: 137.63678
-05:55:41 [INFO] FPS: 157.60939
-05:55:41 [INFO] received zoom: 1.0037011
-05:55:41 [INFO] FPS: 144.51494
-05:55:41 [INFO] FPS: 144.78694
-05:55:41 [INFO] FPS: 147.19519
-05:55:41 [INFO] FPS: 124.11568
-05:55:41 [INFO] FPS: 175.54022
-05:55:41 [INFO] FPS: 136.67177
-05:55:41 [INFO] FPS: 144.271
-05:55:41 [INFO] received zoom: 0.9979783
-05:55:41 [INFO] FPS: 149.29607
-05:55:41 [INFO] received zoom: 0.9960928
-05:55:41 [INFO] FPS: 137.55725
-05:55:41 [INFO] received zoom: 0.993639
-05:55:41 [INFO] FPS: 150.89557
-05:55:41 [INFO] received zoom: 0.9884026
-05:55:41 [INFO] FPS: 102.2997
-05:55:41 [INFO] received zoom: 0.9743401
-05:55:41 [INFO] FPS: 244.20023
-05:55:41 [INFO] received zoom: 0.98805624
-05:55:41 [INFO] FPS: 143.50703
-05:55:41 [INFO] received zoom: 0.96748126
-05:55:41 [INFO] FPS: 143.38974
-05:55:41 [INFO] received zoom: 0.9572843
-05:55:41 [INFO] FPS: 139.9972
-05:55:41 [INFO] received zoom: 0.9437489
-05:55:41 [INFO] FPS: 147.67995
-05:55:41 [INFO] received zoom: 0.94075024
-05:55:41 [INFO] FPS: 131.27495
-05:55:41 [INFO] received zoom: 0.93334603
-05:55:41 [INFO] FPS: 160.67613
-05:55:41 [INFO] received zoom: 0.94009686
-05:55:41 [INFO] FPS: 148.7586
-05:55:41 [INFO] received zoom: 0.9333372
-05:55:41 [INFO] FPS: 135.32532
-05:55:41 [INFO] received zoom: 0.9288751
-05:55:41 [INFO] FPS: 148.28656
-05:55:41 [INFO] received zoom: 0.9409926
-05:55:41 [INFO] FPS: 136.65497
-05:55:41 [INFO] received zoom: 0.9359701
-05:55:41 [INFO] FPS: 155.91138
-05:55:41 [INFO] received zoom: 0.953232
-05:55:41 [INFO] FPS: 142.80206
-05:55:41 [INFO] FPS: 143.42264
-05:55:41 [INFO] received zoom: 0.9511932
-05:55:41 [INFO] FPS: 152.15605
-05:55:41 [INFO] received zoom: 0.9559115
-05:55:41 [INFO] FPS: 136.55418
-05:55:41 [INFO] received zoom: 0.9530101
-05:55:41 [INFO] FPS: 147.42087
-05:55:41 [INFO] received zoom: 0.9544954
-05:55:41 [INFO] FPS: 124.4896
-05:55:41 [INFO] received zoom: 0.9601707
-05:55:41 [INFO] FPS: 172.38406
-05:55:41 [INFO] received zoom: 0.96616083
-05:55:41 [INFO] FPS: 144.88133
-05:55:41 [INFO] received zoom: 0.96577656
-05:55:41 [INFO] FPS: 149.11351
-05:55:41 [INFO] received zoom: 0.9687039
-05:55:41 [INFO] FPS: 138.22083
-05:55:41 [INFO] received zoom: 0.9662376
-05:55:41 [INFO] FPS: 146.52873
-05:55:41 [INFO] received zoom: 0.97213286
-05:55:41 [INFO] FPS: 117.43567
-05:55:41 [INFO] received zoom: 0.9652292
-05:55:41 [INFO] FPS: 185.85979
-05:55:41 [INFO] received zoom: 0.97803
-05:55:41 [INFO] FPS: 145.32559
-05:55:41 [INFO] received zoom: 0.97390914
-05:55:41 [INFO] FPS: 146.12833
-05:55:41 [INFO] received zoom: 0.9720565
-05:55:41 [INFO] FPS: 132.05853
-05:55:41 [INFO] received zoom: 0.9734966
-05:55:41 [INFO] FPS: 157.61435
-05:55:41 [INFO] received zoom: 0.9740929
-05:55:41 [INFO] FPS: 144.35847
-05:55:41 [INFO] FPS: 143.06151
-05:55:41 [INFO] received zoom: 0.9714575
-05:55:41 [INFO] FPS: 139.268
-05:55:41 [INFO] received zoom: 0.96649146
-05:55:41 [INFO] FPS: 155.28674
-05:55:41 [INFO] received zoom: 0.9737046
-05:55:41 [INFO] FPS: 143.01651
-05:55:41 [INFO] received zoom: 0.9734879
-05:55:41 [INFO] FPS: 130.26262
-05:55:41 [INFO] received zoom: 0.97760934
-05:55:41 [INFO] FPS: 151.79114
-05:55:41 [INFO] FPS: 161.09286
-05:55:41 [INFO] FPS: 131.02898
-05:55:41 [INFO] FPS: 146.139
-05:55:41 [INFO] received zoom: 1.2794143
-05:55:41 [INFO] FPS: 144.83308
-05:55:41 [INFO] received zoom: 0.97784805
-05:55:41 [INFO] FPS: 153.948
-05:55:41 [INFO] received zoom: 0.9829488
-05:55:41 [INFO] FPS: 136.17114
-05:55:41 [INFO] received zoom: 0.97643894
-05:55:41 [INFO] FPS: 146.71361
-05:55:41 [INFO] received zoom: 0.986084
-05:55:41 [INFO] FPS: 146.14542
-05:55:41 [INFO] received zoom: 0.9860299
-05:55:41 [INFO] FPS: 146.53732
-05:55:41 [INFO] received zoom: 0.98606724
-05:55:41 [INFO] FPS: 146.97021
-05:55:41 [INFO] received zoom: 0.9900774
-05:55:41 [INFO] FPS: 136.5803
-05:55:41 [INFO] FPS: 132.48192
-05:55:41 [INFO] received zoom: 0.980186
-05:55:41 [INFO] FPS: 169.04457
-05:55:41 [INFO] FPS: 142.90613
-05:55:41 [INFO] FPS: 146.86876
-05:55:41 [INFO] FPS: 141.6812
-05:55:41 [INFO] FPS: 144.4711
-05:55:41 [INFO] FPS: 140.99799
-05:55:41 [INFO] FPS: 142.29204
-05:55:41 [INFO] FPS: 153.52258
-05:55:41 [INFO] FPS: 140.62521
-05:55:41 [INFO] FPS: 136.25648
-05:55:41 [INFO] FPS: 156.30373
-05:55:41 [INFO] FPS: 136.18597
-05:55:41 [INFO] FPS: 157.67897
-05:55:41 [INFO] FPS: 142.00511
-05:55:41 [INFO] FPS: 145.35095
-05:55:41 [INFO] FPS: 141.12932
-05:55:41 [INFO] FPS: 140.69843
-05:55:41 [INFO] FPS: 135.67232
-05:55:41 [INFO] FPS: 160.09221
-05:55:41 [INFO] FPS: 142.27179
-05:55:41 [INFO] FPS: 112.58599
-05:55:41 [INFO] FPS: 209.34517
-05:55:41 [INFO] FPS: 132.68935
-05:55:42 [INFO] FPS: 157.9629
-05:55:42 [INFO] FPS: 139.76436
-05:55:42 [INFO] FPS: 138.86575
-05:55:42 [INFO] FPS: 159.67044
-05:55:42 [INFO] FPS: 129.88869
-05:55:42 [INFO] FPS: 163.12947
-05:55:42 [INFO] FPS: 135.318
-05:55:42 [INFO] FPS: 155.73656
-05:55:42 [INFO] FPS: 137.74294
-05:55:42 [INFO] FPS: 149.68939
-05:55:42 [INFO] FPS: 143.9947
-05:55:42 [INFO] FPS: 139.04144
-05:55:42 [INFO] FPS: 138.79059
-05:55:42 [INFO] FPS: 142.68388
-05:55:42 [INFO] FPS: 157.79341
-05:55:42 [INFO] FPS: 128.42741
-05:55:42 [INFO] FPS: 164.57925
-05:55:42 [INFO] FPS: 140.18364
-05:55:42 [INFO] FPS: 139.4778
-05:55:42 [INFO] FPS: 136.55978
-05:55:42 [INFO] FPS: 128.59917
-05:55:42 [INFO] FPS: 178.28809
-05:55:42 [INFO] received zoom: 0.9885485
-05:55:42 [INFO] FPS: 138.37575
-05:55:42 [INFO] received zoom: 0.9641676
-05:55:42 [INFO] FPS: 160.80273
-05:55:42 [INFO] received zoom: 0.96372366
-05:55:42 [INFO] FPS: 121.811584
-05:55:42 [INFO] received zoom: 0.9497174
-05:55:42 [INFO] FPS: 145.56677
-05:55:42 [INFO] received zoom: 0.9539158
-05:55:42 [INFO] FPS: 161.89088
-05:55:42 [INFO] received zoom: 0.9621659
-05:55:42 [INFO] FPS: 146.50298
-05:55:42 [INFO] FPS: 148.89594
-05:55:42 [INFO] received zoom: 0.95886385
-05:55:42 [INFO] FPS: 137.779
-05:55:42 [INFO] received zoom: 0.9597786
-05:55:42 [INFO] FPS: 137.1441
-05:55:42 [INFO] received zoom: 0.9617191
-05:55:42 [INFO] FPS: 158.16528
-05:55:42 [INFO] received zoom: 0.9668069
-05:55:42 [INFO] FPS: 147.7105
-05:55:42 [INFO] received zoom: 0.9664321
-05:55:42 [INFO] FPS: 129.36108
-05:55:42 [INFO] received zoom: 0.96843463
-05:55:42 [INFO] FPS: 161.82014
-05:55:42 [INFO] received zoom: 0.97656864
-05:55:42 [INFO] FPS: 145.11472
-05:55:42 [INFO] received zoom: 0.97588116
-05:55:42 [INFO] FPS: 142.00108
-05:55:42 [INFO] received zoom: 0.9815142
-05:55:42 [INFO] FPS: 141.46472
-05:55:42 [INFO] received zoom: 0.9814441
-05:55:42 [INFO] FPS: 147.30144
-05:55:42 [INFO] received zoom: 0.99009967
-05:55:42 [INFO] FPS: 147.67122
-05:55:42 [INFO] received zoom: 0.9920996
-05:55:42 [INFO] FPS: 134.99103
-05:55:42 [INFO] received zoom: 0.9935181
-05:55:42 [INFO] FPS: 141.28484
-05:55:42 [INFO] received zoom: 0.99587125
-05:55:42 [INFO] FPS: 153.83195
-05:55:42 [INFO] FPS: 144.7178
-05:55:42 [INFO] FPS: 150.92061
-05:55:42 [INFO] received zoom: 0.9961348
-05:55:42 [INFO] FPS: 139.15173
-05:55:42 [INFO] FPS: 148.00563
-05:55:42 [INFO] FPS: 107.316864
-05:55:42 [INFO] FPS: 154.46878
-05:55:42 [INFO] FPS: 188.2601
-05:55:42 [INFO] FPS: 141.32278
-05:55:42 [INFO] FPS: 135.84558
-05:55:42 [INFO] FPS: 158.05779
-05:55:42 [INFO] FPS: 139.7878
-05:55:42 [INFO] FPS: 136.16002
-05:55:42 [INFO] FPS: 158.80074
-05:55:42 [INFO] FPS: 150.37819
-05:55:42 [INFO] FPS: 139.75069
-05:55:42 [INFO] FPS: 135.43529
-05:55:42 [INFO] FPS: 112.4442
-05:55:42 [INFO] FPS: 205.69359
-05:55:42 [INFO] FPS: 156.57048
-05:55:42 [INFO] FPS: 138.74629
-05:55:42 [INFO] FPS: 150.89784
-05:55:42 [INFO] FPS: 140.71823
-05:55:42 [INFO] FPS: 134.43571
-05:55:42 [INFO] FPS: 144.17947
-05:55:42 [INFO] FPS: 112.15667
-05:55:42 [INFO] FPS: 230.00667
-05:55:42 [INFO] FPS: 138.77902
-05:55:42 [INFO] FPS: 121.96908
-05:55:42 [INFO] FPS: 183.09988
-05:55:42 [INFO] FPS: 135.14061
-05:55:42 [INFO] FPS: 157.39357
-05:55:42 [INFO] FPS: 142.77148
-05:55:42 [INFO] FPS: 147.6516
-05:55:42 [INFO] FPS: 125.8289
-05:55:42 [INFO] FPS: 169.47142
-05:55:42 [INFO] FPS: 128.76642
-05:55:42 [INFO] FPS: 132.714
-05:55:42 [INFO] FPS: 172.39299
-05:55:42 [INFO] FPS: 148.64584
-05:55:42 [INFO] FPS: 130.666
-05:55:42 [INFO] FPS: 158.81335
-05:55:42 [INFO] FPS: 130.56364
-05:55:42 [INFO] FPS: 164.08507
-05:55:42 [INFO] FPS: 140.42972
-05:55:42 [INFO] FPS: 151.04372
-05:55:42 [INFO] FPS: 110.09942
-05:55:42 [INFO] FPS: 183.3315
-05:55:42 [INFO] FPS: 160.44154
-05:55:42 [INFO] FPS: 143.5915
-05:55:42 [INFO] FPS: 141.07954
-05:55:42 [INFO] FPS: 143.21722
-05:55:42 [INFO] FPS: 110.367966
-05:55:42 [INFO] FPS: 209.6436
-05:55:42 [INFO] FPS: 102.67573
-05:55:42 [INFO] FPS: 235.29965
-05:55:42 [INFO] FPS: 125.91604
-05:55:42 [INFO] FPS: 135.91388
-05:55:42 [INFO] FPS: 156.11096
-05:55:42 [INFO] FPS: 118.77754
-05:55:42 [INFO] FPS: 148.26018
-05:55:42 [INFO] FPS: 214.36688
-05:55:42 [INFO] FPS: 125.16115
-05:55:42 [INFO] FPS: 152.78606
-05:55:42 [INFO] FPS: 139.03178
-05:55:42 [INFO] FPS: 145.3446
-05:55:42 [INFO] FPS: 151.03915
-05:55:42 [INFO] FPS: 154.0215
-05:55:42 [INFO] FPS: 134.17596
-05:55:42 [INFO] FPS: 149.6849
-05:55:42 [INFO] FPS: 157.77599
-05:55:42 [INFO] FPS: 146.01524
-05:55:42 [INFO] FPS: 140.37451
-05:55:42 [INFO] FPS: 149.51482
-05:55:42 [INFO] FPS: 126.78128
-05:55:42 [INFO] FPS: 170.23885
-05:55:42 [INFO] FPS: 132.22966
-05:55:42 [INFO] FPS: 112.7167
-05:55:42 [INFO] FPS: 205.01045
-05:55:42 [INFO] FPS: 136.36983
-05:55:42 [INFO] FPS: 154.4306
-05:55:42 [INFO] FPS: 153.92192
-05:55:42 [INFO] FPS: 159.109
-05:55:42 [INFO] FPS: 114.083626
-05:55:42 [INFO] FPS: 159.27878
-05:55:42 [INFO] FPS: 151.89488
-05:55:42 [INFO] FPS: 144.69058
-05:55:42 [INFO] FPS: 145.59431
-05:55:42 [INFO] FPS: 156.66368
-05:55:42 [INFO] FPS: 140.74596
-05:55:42 [INFO] FPS: 141.82385
-05:55:42 [INFO] FPS: 142.35889
-05:55:42 [INFO] FPS: 140.16006
-05:55:42 [INFO] FPS: 152.6601
-05:55:42 [INFO] FPS: 135.89911
-05:55:42 [INFO] FPS: 155.83606
-05:55:42 [INFO] FPS: 139.83472
-05:55:42 [INFO] FPS: 142.78575
-05:55:42 [INFO] FPS: 146.98749
-05:55:42 [INFO] FPS: 138.87346
-05:55:42 [INFO] FPS: 137.0201
-05:55:42 [INFO] FPS: 157.24507
-05:55:43 [INFO] FPS: 145.60916
-05:55:43 [INFO] FPS: 136.50572
-05:55:43 [INFO] FPS: 132.04109
-05:55:43 [INFO] FPS: 169.62378
-05:55:43 [INFO] FPS: 108.88976
-05:55:43 [INFO] FPS: 208.71597
-05:55:43 [INFO] FPS: 128.43895
-05:55:43 [INFO] FPS: 141.1871
-05:55:43 [INFO] FPS: 160.90623
-05:55:43 [INFO] FPS: 149.44556
-05:55:43 [INFO] FPS: 127.76123
-05:55:43 [INFO] FPS: 166.01643
-05:55:43 [INFO] FPS: 134.73457
-05:55:43 [INFO] FPS: 145.59856
-05:55:43 [INFO] FPS: 146.42789
-05:55:43 [INFO] FPS: 144.43562
-05:55:43 [INFO] FPS: 105.35076
-05:55:43 [INFO] FPS: 271.5178
-05:55:43 [INFO] FPS: 152.5972
-05:55:43 [INFO] FPS: 119.500015
-05:55:43 [INFO] FPS: 159.33969
-05:55:43 [INFO] FPS: 137.44005
-05:55:43 [INFO] FPS: 150.86142
-05:55:43 [INFO] FPS: 135.40779
-05:55:43 [INFO] FPS: 152.40417
-05:55:43 [INFO] FPS: 127.76613
-05:55:43 [INFO] FPS: 161.81491
-05:55:43 [INFO] FPS: 147.71266
-05:55:43 [INFO] FPS: 130.59946
-05:55:43 [INFO] FPS: 162.67569
-05:55:43 [INFO] FPS: 147.10641
-05:55:43 [INFO] FPS: 147.31662
-05:55:43 [INFO] FPS: 143.31781
-05:55:43 [INFO] FPS: 122.503975
-05:55:43 [INFO] FPS: 172.69069
-05:55:43 [INFO] FPS: 146.17319
-05:55:43 [INFO] FPS: 142.59233
-05:55:43 [INFO] FPS: 148.30634
-05:55:43 [INFO] FPS: 138.49265
-05:55:43 [INFO] FPS: 137.79419
-05:55:43 [INFO] FPS: 160.44669
-05:55:43 [INFO] FPS: 136.30478
-05:55:43 [INFO] FPS: 138.64049
-05:55:43 [INFO] FPS: 143.62863
-05:55:43 [INFO] FPS: 149.86887
-05:55:43 [INFO] FPS: 103.9447
-05:55:43 [INFO] FPS: 283.80872
-05:55:43 [INFO] FPS: 131.52184
-05:55:43 [INFO] FPS: 135.78285
-05:55:43 [INFO] FPS: 132.92923
-05:55:43 [INFO] FPS: 179.5848
-05:55:43 [INFO] FPS: 138.59822
-05:55:43 [INFO] FPS: 156.55577
-05:55:43 [INFO] FPS: 142.56793
-05:55:43 [INFO] FPS: 140.04622
-05:55:43 [INFO] FPS: 150.96846
-05:55:43 [INFO] FPS: 119.82937
-05:55:43 [INFO] FPS: 159.41081
-05:55:43 [INFO] FPS: 155.36153
-05:55:43 [INFO] FPS: 117.568214
-05:55:43 [INFO] FPS: 201.50322
-05:55:43 [INFO] FPS: 116.057755
-05:55:43 [INFO] FPS: 164.79893
-05:55:43 [INFO] FPS: 153.03389
-05:55:43 [INFO] FPS: 137.99385
-05:55:43 [INFO] FPS: 152.01035
-05:55:43 [INFO] FPS: 134.44475
-05:55:43 [INFO] FPS: 143.84143
-05:55:43 [INFO] FPS: 154.80595
-05:55:43 [INFO] FPS: 138.66164
-05:55:43 [INFO] FPS: 165.88976
-05:55:43 [INFO] FPS: 121.00531
-05:55:43 [INFO] FPS: 167.02019
-05:55:43 [INFO] FPS: 126.28017
-05:55:43 [INFO] FPS: 119.094406
-05:55:43 [INFO] FPS: 244.64833
-05:55:43 [INFO] FPS: 139.16916
-05:55:43 [INFO] FPS: 137.69553
-05:55:43 [INFO] FPS: 143.65546
-05:55:43 [INFO] FPS: 119.54001
-05:55:43 [INFO] FPS: 157.95293
-05:55:43 [INFO] FPS: 149.0313
-05:55:43 [INFO] Close Requested, closing...
+06:23:08 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
+06:23:08 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
+06:23:08 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
+06:23:10 [INFO] received zoom: 1.164415
+06:23:10 [INFO] received zoom: 1.0552827
+06:23:10 [INFO] received zoom: 1.0441717
+06:23:10 [INFO] received zoom: 1.0461694
+06:23:10 [INFO] received zoom: 1.0466458
+06:23:10 [INFO] received zoom: 1.0417157
+06:23:10 [INFO] received zoom: 1.0474657
+06:23:10 [INFO] received zoom: 1.0743663
+06:23:10 [INFO] received zoom: 1.035339
+06:23:10 [INFO] received zoom: 1.0313343
+06:23:10 [INFO] received zoom: 1.031346
+06:23:10 [INFO] received zoom: 1.0313346
+06:23:10 [INFO] received zoom: 1.0216639
+06:23:10 [INFO] received zoom: 1.0188948
+06:23:10 [INFO] received zoom: 1.022973
+06:23:10 [INFO] received zoom: 1.0232867
+06:23:10 [INFO] received zoom: 1.0157878
+06:23:10 [INFO] received zoom: 1.0157212
+06:23:10 [INFO] received zoom: 1.0126169
+06:23:10 [INFO] received zoom: 1.0144622
+06:23:10 [INFO] received zoom: 1.009745
+06:23:10 [INFO] received zoom: 1.0082921
+06:23:10 [INFO] received zoom: 1.0133297
+06:23:10 [INFO] received zoom: 1.0020273
+06:23:10 [INFO] received zoom: 1.0071062
+06:23:10 [INFO] received zoom: 1.0043613
+06:23:10 [INFO] received zoom: 1.0020889
+06:23:10 [INFO] received zoom: 1.0040499
+06:23:10 [INFO] received zoom: 1.0041705
+06:23:10 [INFO] received zoom: 0.8048073
+06:23:10 [INFO] received zoom: 0.9612698
+06:23:10 [INFO] received zoom: 0.9526975
+06:23:10 [INFO] received zoom: 0.95065683
+06:23:10 [INFO] received zoom: 0.9567279
+06:23:10 [INFO] received zoom: 0.95629996
+06:23:10 [INFO] received zoom: 0.95485234
+06:23:10 [INFO] received zoom: 0.95966136
+06:23:10 [INFO] received zoom: 0.95588225
+06:23:10 [INFO] received zoom: 0.9654305
+06:23:10 [INFO] received zoom: 0.96264684
+06:23:10 [INFO] received zoom: 0.96045226
+06:23:10 [INFO] received zoom: 0.96317047
+06:23:10 [INFO] received zoom: 0.972819
+06:23:10 [INFO] received zoom: 0.96215487
+06:23:10 [INFO] received zoom: 0.9679937
+06:23:10 [INFO] received zoom: 0.9720267
+06:23:11 [INFO] received zoom: 0.97008425
+06:23:11 [INFO] received zoom: 0.9732133
+06:23:11 [INFO] received zoom: 0.97824985
+06:23:11 [INFO] received zoom: 0.9738898
+06:23:11 [INFO] received zoom: 0.97710127
+06:23:11 [INFO] received zoom: 0.9704671
+06:23:11 [INFO] received zoom: 0.9816329
+06:23:11 [INFO] received zoom: 0.97809476
+06:23:11 [INFO] received zoom: 0.97937274
+06:23:11 [INFO] received zoom: 0.97287357
+06:23:11 [INFO] received zoom: 0.9868466
+06:23:11 [INFO] received zoom: 0.98133683
+06:23:11 [INFO] received zoom: 0.9824275
+06:23:11 [INFO] received zoom: 0.9872286
+06:23:11 [INFO] received zoom: 0.9810958
+06:23:11 [INFO] received zoom: 0.98536146
+06:23:11 [INFO] received zoom: 0.9862557
+06:23:11 [INFO] received zoom: 0.9864666
+06:23:11 [INFO] received zoom: 0.98727226
+06:23:11 [INFO] received zoom: 0.98504704
+06:23:11 [INFO] received zoom: 0.98746526
+06:23:11 [INFO] received zoom: 0.99445564
+06:23:12 [INFO] received zoom: 1.550192
+06:23:12 [INFO] received zoom: 1.0058616
+06:23:12 [INFO] received zoom: 1.0339067
+06:23:12 [INFO] received zoom: 1.045131
+06:23:12 [INFO] received zoom: 1.0414424
+06:23:12 [INFO] received zoom: 1.0289646
+06:23:12 [INFO] received zoom: 1.0304947
+06:23:12 [INFO] received zoom: 1.0242149
+06:23:12 [INFO] received zoom: 1.014737
+06:23:12 [INFO] received zoom: 1.0187953
+06:23:12 [INFO] received zoom: 1.0106099
+06:23:12 [INFO] received zoom: 1.0055159
+06:23:13 [INFO] received zoom: 1.0115521
+06:23:13 [INFO] received zoom: 1.0062199
+06:23:13 [INFO] received zoom: 1.0043412
+06:23:13 [INFO] received zoom: 1.00353
+06:23:13 [INFO] received zoom: 1.0042458
+06:23:13 [INFO] received zoom: 1.0020926
+06:23:13 [INFO] received zoom: 1.0034742
+06:23:13 [INFO] received zoom: 1.0041867
+06:23:13 [INFO] received zoom: 1.0033824
+06:23:13 [INFO] received zoom: 1.0021156
+06:23:13 [INFO] received zoom: 1.0048825
+06:23:13 [INFO] received zoom: 1.0029551
+06:23:13 [INFO] received zoom: 1.0035143
+06:23:13 [INFO] received zoom: 1.0063158
+06:23:13 [INFO] received zoom: 1.0041114
+06:23:13 [INFO] received zoom: 1.0043554
+06:23:13 [INFO] received zoom: 1.0018508
+06:23:13 [INFO] received zoom: 1.0088531
+06:23:13 [INFO] received zoom: 1.0057986
+06:23:13 [INFO] received zoom: 1.0073186
+06:23:13 [INFO] received zoom: 1.011711
+06:23:13 [INFO] received zoom: 1.0123533
+06:23:13 [INFO] received zoom: 1.0088792
+06:23:13 [INFO] received zoom: 1.0112321
+06:23:13 [INFO] received zoom: 1.0094669
+06:23:13 [INFO] received zoom: 1.0143923
+06:23:13 [INFO] received zoom: 1.0101777
+06:23:13 [INFO] received zoom: 1.0056969
+06:23:13 [INFO] received zoom: 1.0091754
+06:23:13 [INFO] received zoom: 1.0056335
+06:23:13 [INFO] received zoom: 1.0037127
+06:23:13 [INFO] received zoom: 1.0083216
+06:23:13 [INFO] received zoom: 1.0022495
+06:23:13 [INFO] received zoom: 0.9928195
+06:23:13 [INFO] received zoom: 0.99316514
+06:23:13 [INFO] received zoom: 0.98230433
+06:23:13 [INFO] received zoom: 0.97546566
+06:23:13 [INFO] received zoom: 0.9723338
+06:23:13 [INFO] received zoom: 0.96239924
+06:23:13 [INFO] received zoom: 0.9499129
+06:23:13 [INFO] received zoom: 0.9509176
+06:23:13 [INFO] received zoom: 0.9460102
+06:23:13 [INFO] received zoom: 0.938925
+06:23:13 [INFO] received zoom: 0.9354784
+06:23:13 [INFO] received zoom: 0.94291824
+06:23:13 [INFO] received zoom: 0.93435925
+06:23:13 [INFO] received zoom: 0.94170487
+06:23:13 [INFO] received zoom: 0.94418734
+06:23:13 [INFO] received zoom: 0.9436304
+06:23:13 [INFO] received zoom: 0.9455546
+06:23:13 [INFO] received zoom: 0.9596079
+06:23:13 [INFO] received zoom: 0.9017762
+06:23:13 [INFO] received zoom: 0.9695718
+06:23:13 [INFO] received zoom: 0.96469104
+06:23:13 [INFO] received zoom: 0.97140545
+06:23:13 [INFO] received zoom: 0.96550494
+06:23:13 [INFO] received zoom: 0.97811127
+06:23:13 [INFO] received zoom: 0.9784937
+06:23:13 [INFO] received zoom: 0.9751997
+06:23:13 [INFO] received zoom: 0.9724907
+06:23:13 [INFO] received zoom: 0.9811703
+06:23:13 [INFO] received zoom: 0.9765224
+06:23:13 [INFO] received zoom: 0.97613585
+06:23:13 [INFO] received zoom: 0.9822361
+06:23:13 [INFO] received zoom: 0.9795824
+06:23:13 [INFO] received zoom: 0.9858183
+06:23:13 [INFO] received zoom: 0.99028665
+06:23:13 [INFO] received zoom: 0.9604247
+06:23:13 [INFO] received zoom: 0.9764926
+06:23:13 [INFO] received zoom: 0.9123123
+06:23:13 [INFO] received zoom: 0.97675616
+06:23:13 [INFO] received zoom: 0.98038703
+06:23:13 [INFO] received zoom: 0.96837866
+06:23:13 [INFO] received zoom: 0.97598284
+06:23:13 [INFO] received zoom: 0.9765524
+06:23:13 [INFO] received zoom: 0.9727238
+06:23:13 [INFO] received zoom: 0.97813386
+06:23:13 [INFO] received zoom: 0.9786637
+06:23:13 [INFO] received zoom: 0.97319984
+06:23:13 [INFO] received zoom: 0.98873895
+06:23:13 [INFO] received zoom: 0.9805411
+06:23:13 [INFO] received zoom: 0.98928255
+06:23:13 [INFO] received zoom: 0.9917425
+06:23:13 [INFO] received zoom: 0.9863103
+06:23:13 [INFO] received zoom: 0.9896638
+06:23:13 [INFO] received zoom: 0.99299735
+06:23:13 [INFO] received zoom: 0.99450654
+06:23:13 [INFO] received zoom: 0.99167496
+06:23:13 [INFO] received zoom: 0.9903134
+06:23:13 [INFO] received zoom: 0.99717766
+06:23:13 [INFO] received zoom: 0.9979119
+06:23:13 [INFO] received zoom: 0.9956284
+06:23:13 [INFO] received zoom: 0.996574
+06:23:14 [INFO] received zoom: 0.99595785
+06:23:14 [INFO] received zoom: 0.99789923
+06:23:14 [INFO] received zoom: 0.99584746
+06:23:14 [INFO] received zoom: 0.99469393
+06:23:14 [INFO] received zoom: 0.9973573
+06:23:14 [INFO] received zoom: 0.9936627
+06:23:14 [INFO] received zoom: 0.99007624
+06:23:14 [INFO] received zoom: 0.99582773
+06:23:14 [INFO] received zoom: 0.98677814
+06:23:14 [INFO] received zoom: 0.98733735
+06:23:14 [INFO] received zoom: 0.9928868
+06:23:14 [INFO] received zoom: 0.99213785
+06:23:14 [INFO] received zoom: 0.9859048
+06:23:14 [INFO] received zoom: 0.9864948
+06:23:14 [INFO] received zoom: 0.9915386
+06:23:14 [INFO] received zoom: 0.97373337
+06:23:14 [INFO] received zoom: 0.9889201
+06:23:14 [INFO] received zoom: 0.9931028
+06:23:14 [INFO] received zoom: 0.9864366
+06:23:14 [INFO] received zoom: 0.9984448
+06:23:14 [INFO] received zoom: 0.9869287
+06:23:14 [INFO] received zoom: 0.9977722
+06:23:14 [INFO] received zoom: 0.99599516
+06:23:14 [INFO] received zoom: 0.9954347
+06:23:14 [INFO] received zoom: 0.9947304
+06:23:14 [INFO] received zoom: 0.99560297
+06:23:14 [INFO] received zoom: 0.99655104
+06:23:14 [INFO] received zoom: 0.99581116
+06:23:14 [INFO] received zoom: 0.9978162
+06:23:14 [INFO] received zoom: 0.9946457
+06:23:14 [INFO] received zoom: 0.9951923
+06:23:14 [INFO] received zoom: 0.9945163
+06:23:14 [INFO] received zoom: 0.9979044
+06:23:14 [INFO] received zoom: 0.9974993
+06:23:14 [INFO] received zoom: 0.9951073
+06:23:14 [INFO] received zoom: 0.9949562
+06:23:14 [INFO] received zoom: 0.99790776
+06:23:14 [INFO] received zoom: 0.9978066
+06:23:14 [INFO] received zoom: 0.9956814
+06:23:14 [INFO] received zoom: 0.9983522
+06:23:14 [INFO] received zoom: 0.99565077
+06:23:14 [INFO] received zoom: 0.99910057
+06:23:14 [INFO] received zoom: 0.99580956
+06:23:14 [INFO] received zoom: 0.9962923
+06:23:14 [INFO] received zoom: 0.9968847
+06:23:14 [INFO] received zoom: 0.9983645
+06:23:14 [INFO] received zoom: 0.9953685
+06:23:14 [INFO] received zoom: 0.9968914
+06:23:14 [INFO] received zoom: 0.9956961
+06:23:14 [INFO] received zoom: 0.99484265
+06:23:14 [INFO] received zoom: 0.99866515
+06:23:14 [INFO] received zoom: 0.9966809
+06:23:14 [INFO] received zoom: 0.9932461
+06:23:14 [INFO] received zoom: 0.9939069
+06:23:14 [INFO] received zoom: 0.9953967
+06:23:14 [INFO] received zoom: 0.99255866
+06:23:14 [INFO] received zoom: 0.9919796
+06:23:15 [INFO] received zoom: 0.99320406
+06:23:15 [INFO] received zoom: 0.9905264
+06:23:15 [INFO] received zoom: 0.9928472
+06:23:15 [INFO] received zoom: 0.99265945
+06:23:15 [INFO] received zoom: 0.9906648
+06:23:15 [INFO] received zoom: 0.99323136
+06:23:15 [INFO] received zoom: 0.9960247
+06:23:15 [INFO] received zoom: 0.9912685
+06:23:15 [INFO] received zoom: 0.99073094
+06:23:15 [INFO] received zoom: 0.9977539
+06:23:15 [INFO] received zoom: 0.99689746
+06:23:15 [INFO] received zoom: 0.99546915
+06:23:15 [INFO] received zoom: 0.99681634
+06:23:15 [INFO] received zoom: 0.9954016
+06:23:15 [INFO] received zoom: 0.99466467
+06:23:15 [INFO] received zoom: 0.8519416
+06:23:15 [INFO] received zoom: 0.9834975
+06:23:15 [INFO] received zoom: 0.9750366
+06:23:15 [INFO] received zoom: 0.97507334
+06:23:15 [INFO] received zoom: 0.9811478
+06:23:15 [INFO] received zoom: 0.9768326
+06:23:15 [INFO] received zoom: 0.9768959
+06:23:15 [INFO] received zoom: 0.98194766
+06:23:15 [INFO] received zoom: 0.9523451
+06:23:15 [INFO] received zoom: 0.9810279
+06:23:15 [INFO] received zoom: 0.9713115
+06:23:15 [INFO] received zoom: 0.96235514
+06:23:15 [INFO] received zoom: 0.97135144
+06:23:15 [INFO] received zoom: 0.98204815
+06:23:15 [INFO] received zoom: 0.96654004
+06:23:15 [INFO] received zoom: 0.982183
+06:23:15 [INFO] received zoom: 0.9745563
+06:23:15 [INFO] received zoom: 0.98688155
+06:23:15 [INFO] received zoom: 0.9787383
+06:23:15 [INFO] received zoom: 0.988289
+06:23:15 [INFO] received zoom: 0.98531103
+06:23:15 [INFO] received zoom: 0.9884984
+06:23:15 [INFO] received zoom: 0.9841677
+06:23:15 [INFO] received zoom: 0.9925336
+06:23:15 [INFO] received zoom: 0.9858493
+06:23:15 [INFO] received zoom: 0.9934724
+06:23:15 [INFO] received zoom: 0.9881598
+06:23:15 [INFO] received zoom: 0.98672765
+06:23:15 [INFO] received zoom: 0.98847944
+06:23:15 [INFO] received zoom: 0.9925301
+06:23:15 [INFO] received zoom: 0.98711914
+06:23:15 [INFO] received zoom: 0.9892846
+06:23:15 [INFO] received zoom: 0.99077034
+06:23:15 [INFO] received zoom: 0.987492
+06:23:15 [INFO] received zoom: 0.9888038
+06:23:15 [INFO] received zoom: 0.9950156
+06:23:15 [INFO] received zoom: 0.9912661
+06:23:15 [INFO] received zoom: 0.9932424
+06:23:15 [INFO] received zoom: 0.9900738
+06:23:15 [INFO] received zoom: 0.9910727
+06:23:15 [INFO] received zoom: 0.991348
+06:23:15 [INFO] received zoom: 0.9889217
+06:23:15 [INFO] received zoom: 0.99130577
+06:23:15 [INFO] received zoom: 0.99336874
+06:23:15 [INFO] received zoom: 0.9859996
+06:23:15 [INFO] received zoom: 0.9932388
+06:23:15 [INFO] received zoom: 0.9929434
+06:23:15 [INFO] received zoom: 0.99159616
+06:23:15 [INFO] received zoom: 0.9935019
+06:23:15 [INFO] received zoom: 0.993562
+06:23:15 [INFO] received zoom: 0.9932459
+06:23:15 [INFO] received zoom: 0.9929497
+06:23:15 [INFO] received zoom: 0.99349034
+06:23:15 [INFO] received zoom: 0.9909833
+06:23:15 [INFO] received zoom: 0.9951428
+06:23:15 [INFO] received zoom: 0.9957805
+06:23:15 [INFO] received zoom: 0.9887036
+06:23:15 [INFO] received zoom: 0.9967101
+06:23:15 [INFO] received zoom: 0.99134344
+06:23:15 [INFO] received zoom: 0.993164
+06:23:15 [INFO] received zoom: 0.9934586
+06:23:15 [INFO] received zoom: 0.9920386
+06:23:15 [INFO] received zoom: 0.99294376
+06:23:15 [INFO] received zoom: 0.9983741
+06:23:16 [INFO] received zoom: 0.82292783
+06:23:16 [INFO] received zoom: 0.9564447
+06:23:16 [INFO] received zoom: 0.94809717
+06:23:16 [INFO] received zoom: 0.94337946
+06:23:16 [INFO] received zoom: 0.9621566
+06:23:16 [INFO] received zoom: 0.79147327
+06:23:16 [INFO] received zoom: 0.949503
+06:23:16 [INFO] received zoom: 0.9589584
+06:23:16 [INFO] received zoom: 0.94964594
+06:23:16 [INFO] received zoom: 0.95892185
+06:23:16 [INFO] received zoom: 0.959314
+06:23:16 [INFO] received zoom: 0.948228
+06:23:16 [INFO] received zoom: 0.9477488
+06:23:16 [INFO] received zoom: 0.95587087
+06:23:16 [INFO] received zoom: 0.9485524
+06:23:16 [INFO] received zoom: 0.9370439
+06:23:16 [INFO] received zoom: 0.9674391
+06:23:16 [INFO] received zoom: 0.9511687
+06:23:16 [INFO] received zoom: 0.9478917
+06:23:16 [INFO] received zoom: 0.9772864
+06:23:16 [INFO] received zoom: 0.9621869
+06:23:16 [INFO] received zoom: 0.97365576
+06:23:16 [INFO] received zoom: 0.9681757
+06:23:16 [INFO] received zoom: 0.969905
+06:23:16 [INFO] received zoom: 0.98263854
+06:23:16 [INFO] received zoom: 0.9693235
+06:23:16 [INFO] received zoom: 0.96889514
+06:23:16 [INFO] received zoom: 0.9895323
+06:23:16 [INFO] received zoom: 0.9749439
+06:23:16 [INFO] received zoom: 0.9718761
+06:23:16 [INFO] received zoom: 0.98825943
+06:23:16 [INFO] received zoom: 0.9828857
+06:23:16 [INFO] received zoom: 0.98166
+06:23:16 [INFO] received zoom: 0.98869365
+06:23:16 [INFO] received zoom: 0.9837377
+06:23:16 [INFO] received zoom: 0.9985467
+06:23:16 [INFO] received zoom: 0.87734073
+06:23:16 [INFO] received zoom: 0.95616716
+06:23:16 [INFO] received zoom: 0.9685394
+06:23:16 [INFO] received zoom: 0.9511761
+06:23:16 [INFO] received zoom: 0.95193833
+06:23:16 [INFO] received zoom: 0.9613426
+06:23:16 [INFO] received zoom: 0.9450092
+06:23:16 [INFO] received zoom: 0.94736373
+06:23:16 [INFO] received zoom: 0.9585988
+06:23:16 [INFO] received zoom: 0.94650394
+06:23:16 [INFO] received zoom: 0.91375756
+06:23:16 [INFO] received zoom: 0.95401996
+06:23:16 [INFO] received zoom: 0.96645427
+06:23:16 [INFO] received zoom: 0.8701649
+06:23:16 [INFO] received zoom: 0.97005343
+06:23:16 [INFO] received zoom: 0.93116987
+06:23:16 [INFO] received zoom: 0.93708897
+06:23:16 [INFO] received zoom: 0.9710578
+06:23:16 [INFO] received zoom: 0.9454897
+06:23:16 [INFO] received zoom: 0.94778496
+06:23:16 [INFO] received zoom: 0.97249115
+06:23:16 [INFO] received zoom: 0.9594086
+06:23:16 [INFO] received zoom: 0.9378415
+06:23:16 [INFO] received zoom: 0.99764204
+06:23:16 [INFO] received zoom: 0.9762943
+06:23:16 [INFO] received zoom: 0.98366934
+06:23:16 [INFO] received zoom: 0.98453397
+06:23:16 [INFO] received zoom: 0.9879658
+06:23:16 [INFO] received zoom: 0.9896572
+06:23:16 [INFO] received zoom: 0.988736
+06:23:16 [INFO] received zoom: 0.98408777
+06:23:16 [INFO] received zoom: 0.99158216
+06:23:16 [INFO] received zoom: 0.99521655
+06:23:17 [INFO] received zoom: 0.8735511
+06:23:17 [INFO] received zoom: 0.98354805
+06:23:17 [INFO] received zoom: 0.9767944
+06:23:17 [INFO] received zoom: 0.97307277
+06:23:17 [INFO] received zoom: 0.9765204
+06:23:17 [INFO] received zoom: 0.9741647
+06:23:17 [INFO] received zoom: 0.96836746
+06:23:17 [INFO] received zoom: 0.97334725
+06:23:17 [INFO] received zoom: 0.97564536
+06:23:17 [INFO] received zoom: 0.974974
+06:23:17 [INFO] received zoom: 0.97729367
+06:23:17 [INFO] received zoom: 0.978692
+06:23:17 [INFO] received zoom: 0.988278
+06:23:17 [INFO] received zoom: 0.9912444
+06:23:17 [INFO] received zoom: 0.9936021
+06:23:17 [INFO] received zoom: 0.996166
+06:23:17 [INFO] received zoom: 0.9959625
+06:23:17 [INFO] received zoom: 1.0027621
+06:23:17 [INFO] received zoom: 1.0102037
+06:23:17 [INFO] received zoom: 1.019909
+06:23:17 [INFO] received zoom: 1.0202646
+06:23:17 [INFO] received zoom: 1.0390154
+06:23:17 [INFO] received zoom: 1.0462567
+06:23:17 [INFO] received zoom: 1.050116
+06:23:17 [INFO] received zoom: 1.0729758
+06:23:17 [INFO] received zoom: 1.0773655
+06:23:17 [INFO] received zoom: 1.0805291
+06:23:17 [INFO] received zoom: 1.0879196
+06:23:17 [INFO] received zoom: 1.0970043
+06:23:17 [INFO] received zoom: 1.0874888
+06:23:17 [INFO] received zoom: 1.103425
+06:23:17 [INFO] received zoom: 1.1014458
+06:23:17 [INFO] received zoom: 1.0771874
+06:23:17 [INFO] received zoom: 1.0831271
+06:23:17 [INFO] received zoom: 1.0806291
+06:23:17 [INFO] received zoom: 1.0648717
+06:23:17 [INFO] received zoom: 1.0635608
+06:23:17 [INFO] received zoom: 1.073024
+06:23:17 [INFO] received zoom: 1.1319441
+06:23:17 [INFO] received zoom: 1.0466149
+06:23:17 [INFO] received zoom: 1.0618968
+06:23:17 [INFO] received zoom: 1.0537066
+06:23:17 [INFO] received zoom: 1.0704341
+06:23:17 [INFO] received zoom: 1.075559
+06:23:17 [INFO] received zoom: 1.0693113
+06:23:17 [INFO] received zoom: 1.0751477
+06:23:17 [INFO] received zoom: 1.0803645
+06:23:17 [INFO] received zoom: 1.0837933
+06:23:17 [INFO] received zoom: 1.0699414
+06:23:17 [INFO] received zoom: 1.0722551
+06:23:17 [INFO] received zoom: 1.0737062
+06:23:17 [INFO] received zoom: 1.0727438
+06:23:17 [INFO] received zoom: 1.0562725
+06:23:17 [INFO] received zoom: 1.0702884
+06:23:17 [INFO] received zoom: 1.0625284
+06:23:17 [INFO] received zoom: 1.0480323
+06:23:17 [INFO] received zoom: 1.060479
+06:23:17 [INFO] received zoom: 1.0492882
+06:23:17 [INFO] received zoom: 1.041811
+06:23:17 [INFO] received zoom: 1.0500958
+06:23:17 [INFO] received zoom: 1.0416348
+06:23:17 [INFO] received zoom: 1.0290087
+06:23:18 [INFO] received zoom: 1.0500507
+06:23:18 [INFO] received zoom: 1.015131
+06:23:18 [INFO] received zoom: 1.0152164
+06:23:18 [INFO] received zoom: 1.003728
+06:23:18 [INFO] received zoom: 1.0040509
+06:23:18 [INFO] received zoom: 1.1993551
+06:23:18 [INFO] received zoom: 1.0444669
+06:23:18 [INFO] received zoom: 1.045349
+06:23:18 [INFO] received zoom: 1.0707551
+06:23:18 [INFO] received zoom: 1.0591635
+06:23:18 [INFO] received zoom: 1.052661
+06:23:18 [INFO] received zoom: 1.0614656
+06:23:18 [INFO] received zoom: 1.0815189
+06:23:18 [INFO] received zoom: 1.0467154
+06:23:18 [INFO] received zoom: 1.1770086
+06:23:18 [INFO] received zoom: 1.0797623
+06:23:18 [INFO] received zoom: 1.0740513
+06:23:18 [INFO] received zoom: 1.0705056
+06:23:18 [INFO] received zoom: 1.077155
+06:23:18 [INFO] received zoom: 1.0754273
+06:23:18 [INFO] received zoom: 1.0640574
+06:23:18 [INFO] received zoom: 1.0653548
+06:23:18 [INFO] received zoom: 1.0662812
+06:23:18 [INFO] received zoom: 1.0981697
+06:23:18 [INFO] received zoom: 1.0577949
+06:23:18 [INFO] received zoom: 1.0253398
+06:23:18 [INFO] received zoom: 1.0396585
+06:23:18 [INFO] received zoom: 1.0294151
+06:23:18 [INFO] received zoom: 1.023988
+06:23:18 [INFO] received zoom: 1.0356025
+06:23:18 [INFO] received zoom: 1.0153323
+06:23:18 [INFO] received zoom: 1.0098426
+06:23:18 [INFO] received zoom: 1.0039221
+06:23:18 [INFO] received zoom: 1.3052105
+06:23:18 [INFO] received zoom: 1.0503342
+06:23:18 [INFO] received zoom: 1.044926
+06:23:18 [INFO] received zoom: 1.0650554
+06:23:18 [INFO] received zoom: 1.0759295
+06:23:18 [INFO] received zoom: 1.066066
+06:23:18 [INFO] received zoom: 1.0916307
+06:23:18 [INFO] received zoom: 1.0967338
+06:23:18 [INFO] received zoom: 1.0755988
+06:23:18 [INFO] received zoom: 1.1020777
+06:23:18 [INFO] received zoom: 1.0988687
+06:23:18 [INFO] received zoom: 1.0880824
+06:23:18 [INFO] received zoom: 1.171579
+06:23:18 [INFO] received zoom: 1.0357964
+06:23:18 [INFO] received zoom: 1.1045301
+06:23:18 [INFO] received zoom: 1.0745515
+06:23:18 [INFO] received zoom: 1.0822446
+06:23:18 [INFO] received zoom: 1.079294
+06:23:18 [INFO] received zoom: 1.0564488
+06:23:18 [INFO] received zoom: 1.0552613
+06:23:18 [INFO] received zoom: 1.0442145
+06:23:18 [INFO] received zoom: 1.0305825
+06:23:18 [INFO] received zoom: 1.0286826
+06:23:18 [INFO] received zoom: 1.0227647
+06:23:18 [INFO] received zoom: 1.0161412
+06:23:18 [INFO] received zoom: 1.0381918
+06:23:18 [INFO] received zoom: 1.0014819
+06:23:18 [INFO] received zoom: 1.003724
+06:23:18 [INFO] received zoom: 1.0047113
+06:23:22 [INFO] Close Requested, closing...

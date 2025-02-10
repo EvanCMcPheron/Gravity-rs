@@ -15,7 +15,7 @@ var<uniform> inputs: Uniform;
 fn vs_main(@location(0) vertex: vec4f) -> @builtin(position) vec4f {
     let w = inputs.world_mat;
     let mapped = w * vertex;
-    return vec4(mapped.xy / mapped.w, 0, 1);
+    return vec4(mapped.xyz / mapped.w, 1);
 }
 
 fn map_z(n: f32) -> f32 {
