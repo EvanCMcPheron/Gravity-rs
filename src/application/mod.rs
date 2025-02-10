@@ -26,7 +26,7 @@ impl Default for UserOptions {
     fn default() -> Self {
         Self {
             mouse_sensitivity: 0.7,
-            line_size: 5.,
+            line_size: 0.5,
             gravitation_const: 2e-5,
             scroll_sensitivity: 7.0,
         }
@@ -167,7 +167,7 @@ impl<'app> ApplicationHandler for App<'app> {
             event::DeviceEvent::MouseWheel { delta } => {
                 self.cursor_state.add_scroll_delta(match delta {
                     winit::event::MouseScrollDelta::LineDelta(x, y) => {
-                        vec2(x * self.options.line_size, y * self.options.line_size)
+                        vec2(x * self.options.line_size, -y * self.options.line_size)
                     }
                     winit::event::MouseScrollDelta::PixelDelta(d) => vec2(d.x as f32, d.y as f32),
                 });

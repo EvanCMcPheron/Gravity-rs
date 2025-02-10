@@ -3,7 +3,7 @@
 use crate::graphics::vertices::Verticies;
 use crate::prelude::*;
 
-const INVERSE_SINGULARITY_THRESHOLD: f32 = 5e3;
+const INVERSE_SINGULARITY_THRESHOLD: f32 = 5e2;
 
 pub fn physics_tick(delta: f32, vertices: &mut Verticies, gravitation_constant: f32) {
     let start = std::time::Instant::now();
