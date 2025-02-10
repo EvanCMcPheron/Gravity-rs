@@ -2,6 +2,7 @@
 use std::borrow::Borrow;
 
 use rendering::ViewMode;
+use vertices::Verticies;
 use wgpu::{
     core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState,
     FragmentState, TextureUsages,
@@ -127,21 +128,10 @@ impl<'s> Graphics<'s> {
 
         surface.configure(&device, &surface_config);
 
-        let points = vec![
-            [1.0, 0.0, 0.0, 1.0],
-            [0.0, 1.0, 0.0, 1.0],
-            [-1.0, 0.0, 0.0, 1.0],
-            [0.0, -1.0, 0.0, 1.0],
-            [0.0, 0.0, 1.0, 1.0],
-            [0.0, 0.0, -1.0, 1.0],
-            [0.0, 0.0, 0.0, 1.0],
-        ];
+        let vertices = Verticies::generate_galaxy(2.0, core::f32::consts::PI / 6.0, 3000, Vec3::Z)
+            .with_context(|| "Failed to generate galaxy")?;
 
-        let vertices = vertices::Verticies {
-            velocities: vec![[0.0f32; 4]; points.len()],
-            mass: vec![1.0; points.len()],
-            points,
-        };
+        info!("Vertices: {:#?}", vertices);
 
         Ok(Graphics {
             render_pipeline: Self::generate_render_pipeline(&device, &surface, &adapter),

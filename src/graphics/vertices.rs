@@ -1,3 +1,5 @@
+use core::f32;
+
 use crate::prelude::*;
 
 #[derive(Debug, Default)]
@@ -23,5 +25,61 @@ impl Verticies {
             contents: bytemuck::cast_slice(&self.points),
             usage: wgpu::BufferUsages::VERTEX,
         })
+    }
+    pub fn generate_unit_points() -> Self {
+        let points = vec![
+            [1.0, 0.0, 0.0, 1.0],
+            [0.0, 1.0, 0.0, 1.0],
+            [-1.0, 0.0, 0.0, 1.0],
+            [0.0, -1.0, 0.0, 1.0],
+            [0.0, 0.0, 1.0, 1.0],
+            [0.0, 0.0, -1.0, 1.0],
+            [0.0, 0.0, 0.0, 1.0],
+        ];
+
+        Verticies {
+            velocities: vec![[0.0f32; 4]; points.len()],
+            mass: vec![1.0; points.len()],
+            points,
+        }
+    }
+    pub fn generate_galaxy(
+        max_radius: f32,
+        max_phi: f32,
+        star_count: usize,
+        up: Vec3,
+    ) -> Result<Self> {
+        let mut rng = rng();
+        let mut ret = Self {
+            points: vec![[1.0; 4]; star_count],
+            velocities: vec![[0.0; 4]; star_count],
+            mass: vec![1.0; star_count]
+        };
+        // up DOT (x,y) = 0, up.x * x = -up.y * y
+        // p = (x, (Up.x * x) / (-up.y))
+        let up = up.normalize_or_zero();
+        let r_axis = vec3(1.,1.,(up.x + up.y)/(-up.z)).normalize_or_zero();
+        let phi_axis = up.cross(r_axis).normalize_or_zero();
+
+        for i in 0..star_count {
+            let mut r: f32 = rng.random_range(0.0..=1.0);
+            r = r.powf(1. / 3.) * max_radius;
+
+            let theta = rng.random_range(0.0..f32::consts::PI * 2.);
+
+            let mut phi = rng.random_range(-max_phi..=max_phi);
+            phi *= phi.cos().powf(1./3. );
+
+            let phi_rot = Quat::from_scaled_axis(phi_axis * phi);
+            let theta_rot = Quat::from_scaled_axis(up * theta);
+
+            let position = theta_rot.mul_vec3(phi_rot.mul_vec3(r_axis)) * r;
+
+            ret.points[i][0] = position.x;
+            ret.points[i][1] = position.y;
+            ret.points[i][2] = position.z;
+        }
+
+        Ok(ret)
     }
 }

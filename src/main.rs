@@ -16,6 +16,10 @@ pub mod prelude {
     pub use std::sync::Arc;
     pub use wgpu::include_wgsl;
     pub use wgpu::util::DeviceExt;
+    pub use rand::{
+        Rng,
+        rng
+    };
 }
 
 use prelude::*;

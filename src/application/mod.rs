@@ -27,7 +27,7 @@ impl Default for UserOptions {
         Self {
             mouse_sensitivity: 0.7,
             line_size: 5.,
-            gravitation_const: 6e-3,
+            gravitation_const: 2e-5,
             scroll_sensitivity: 7.0,
         }
     }
@@ -103,8 +103,8 @@ impl<'app> App<'app> {
                 pitch_dir = pitch_dir.normalize_or_zero();
             }
 
-            let mut rotation_vec = -up * cursor_delta.x * self.options.mouse_sensitivity * delta;
-            rotation_vec += pitch_dir * cursor_delta.y * self.options.mouse_sensitivity * delta;
+            let mut rotation_vec = -up * cursor_delta.x * self.options.mouse_sensitivity * 0.01;
+            rotation_vec += pitch_dir * cursor_delta.y * self.options.mouse_sensitivity * 0.01;
 
             self.camera
                 .as_mut()
