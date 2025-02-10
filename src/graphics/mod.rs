@@ -138,7 +138,7 @@ impl<'s> Graphics<'s> {
             label: None,
             color_attachments: &[Some(wgpu::RenderPassColorAttachment {
                 view: &view,
-                resolve_target: None,
+                resolve_target: None;,
                 ops: wgpu::Operations {
                     load: wgpu::LoadOp::Clear(crate::CLEAR_COLOR),
                     store: wgpu::StoreOp::Store,
