@@ -25,5 +25,5 @@ fn map_z(n: f32) -> f32 {
 
 @fragment
 fn fs_main(@builtin(position) position: vec4f) -> @location(0) vec4f {
-    return vec4f(position.x, position.y, 1., 1.);
+    return vec4f(1., 1., 1., 1.);
 }

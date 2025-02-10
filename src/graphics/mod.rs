@@ -3,11 +3,13 @@ use std::borrow::Borrow;
 
 use rendering::ViewMode;
 use wgpu::{
-    core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState, FragmentState, TextureUsages
+    core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState,
+    FragmentState, TextureUsages,
 };
 
 use crate::prelude::*;
 
+pub mod compute;
 pub mod rendering;
 pub mod vertices;
 
@@ -29,7 +31,7 @@ impl<'s> Graphics<'s> {
             bias: wgpu::DepthBiasState::default(),
             depth_compare: wgpu::CompareFunction::Less,
             depth_write_enabled: true,
-            stencil: wgpu::StencilState::default()
+            stencil: wgpu::StencilState::default(),
         }
     }
     fn generate_depth_texture(&self) -> wgpu::TextureView {
@@ -38,14 +40,14 @@ impl<'s> Graphics<'s> {
             size: wgpu::Extent3d {
                 width: self.surface_config.width,
                 height: self.surface_config.height,
-                depth_or_array_layers: 1
+                depth_or_array_layers: 1,
             },
             mip_level_count: 1,
             sample_count: 1,
             dimension: wgpu::TextureDimension::D2,
             format: wgpu::TextureFormat::Depth24PlusStencil8,
             usage: wgpu::TextureUsages::RENDER_ATTACHMENT | wgpu::TextureUsages::TEXTURE_BINDING,
-            view_formats: &[]
+            view_formats: &[],
         };
         let texture = self.device.create_texture(&desc);
         texture.create_view(&wgpu::TextureViewDescriptor::default())
@@ -125,22 +127,20 @@ impl<'s> Graphics<'s> {
 
         surface.configure(&device, &surface_config);
 
+        let points = vec![
+            [1.0, 0.0, 0.0, 1.0],
+            [0.0, 1.0, 0.0, 1.0],
+            [-1.0, 0.0, 0.0, 1.0],
+            [0.0, -1.0, 0.0, 1.0],
+            [0.0, 0.0, 1.0, 1.0],
+            [0.0, 0.0, -1.0, 1.0],
+            [0.0, 0.0, 0.0, 1.0],
+        ];
+
         let vertices = vertices::Verticies {
-            points: vec![
-                [1.0, 0.0, 0.0, 1.0],
-                [0.0, 1.0, 0.0, 1.0],
-                [-1.0, 0.0, 0.0, 1.0],
-                [0.0, -1.0, 0.0, 1.0],
-                [0.0, 0.0, 1.0, 1.0],
-                [0.0, 0.0, -1.0, 1.0],
-                [0.0, 0.0, 0.0, 1.0],
-                // [-0.5, -0.5, 0.0, 0.0],
-                // [0.5, -0.5, 0.0, 0.0],
-                // [-0.5, 0.5, 0.0, 0.0],
-                // [0.5, 0.5, 0.0, 0.0],
-            ],
-            velocities: vec![],
-            mass: vec![],
+            velocities: vec![[0.0f32; 4]; points.len()],
+            mass: vec![1.0; points.len()],
+            points,
         };
 
         Ok(Graphics {
@@ -178,6 +178,9 @@ impl<'s> Graphics<'s> {
                 resource: uniform.generate_buffer(&self.device).as_entire_binding(),
             }],
         })
+    }
+    pub fn physics_tick(&mut self, delta: f32, gravitation_const: f32) {
+        compute::physics_tick(delta, &mut self.vertices, gravitation_const);
     }
     pub fn render<M: ViewMode + Default>(&mut self, camera: &rendering::Camera<M>) -> Result<()> {
         // let uniform = rendering::Uniform {
@@ -218,9 +221,9 @@ impl<'s> Graphics<'s> {
                 view: &depth_texture,
                 depth_ops: Some(wgpu::Operations {
                     load: wgpu::LoadOp::Clear(1.0),
-                    store: wgpu::StoreOp::Store
+                    store: wgpu::StoreOp::Store,
                 }),
-                stencil_ops: None
+                stencil_ops: None,
             }),
             ..Default::default()
         };

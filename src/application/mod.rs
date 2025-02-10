@@ -19,6 +19,7 @@ pub struct UserOptions {
     pub mouse_sensitivity: f32,
     pub line_size: f32,
     pub scroll_sensitivity: f32,
+    pub gravitation_const: f32
 }
 
 impl Default for UserOptions {
@@ -26,6 +27,7 @@ impl Default for UserOptions {
         Self {
             mouse_sensitivity: 0.7,
             line_size: 5.,
+            gravitation_const: 6e-3,
             scroll_sensitivity: 7.0,
         }
     }
@@ -35,7 +37,7 @@ impl Default for UserOptions {
 pub struct CursorState {
     delta: (f64, f64),
     scroll_delta: Vec2,
-    presed: bool,
+    pressed: bool,
 }
 
 impl CursorState {
@@ -57,7 +59,7 @@ impl CursorState {
         ret
     }
     pub fn set_pressed(&mut self, pressed: bool) {
-        self.presed = pressed;
+        self.pressed = pressed;
     }
 }
 
@@ -84,7 +86,9 @@ impl<'app> App<'app> {
     }
     fn process_frame(&mut self, delta: f32) -> Result<()> {
         info!("FPS: {:?}", 1./delta);
-        if self.cursor_state.presed {
+        self.graphics.as_mut().unwrap().physics_tick(delta, self.options.gravitation_const);
+
+        if self.cursor_state.pressed {
             let cursor_delta = self.cursor_state.pop_delta();
             let cursor_delta = vec2(cursor_delta.0 as f32, cursor_delta.1 as f32);
 

@@ -6,7 +6,7 @@ pub struct Verticies {
     pub points: Vec<[f32; 4]>,
     /// The velocities of the points
     pub velocities: Vec<[f32; 4]>,
-    pub mass: Vec<[f32; 4]>,
+    pub mass: Vec<f32>,
 }
 
 impl Verticies {
