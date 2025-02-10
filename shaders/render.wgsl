@@ -13,12 +13,17 @@ var<uniform> inputs: Uniform;
 
 @vertex
 fn vs_main(@location(0) vertex: vec4f) -> @builtin(position) vec4f {
-    //let w = inputs.world_mat;
-    //let mapped = w * vertex;
-    return vertex; //vec4(mapped.xy, 0, 1);
+    let w = inputs.world_mat;
+    let mapped = w * vertex;
+    return vec4(mapped.xy / mapped.w, 0, 1);
+}
+
+fn map_z(n: f32) -> f32 {
+    // Maps the z space from [0,1] -> [0,very large number]
+    return (1/pow(1 - 0.9999 * n, 50.)) - 1;
 }
 
 @fragment
 fn fs_main(@builtin(position) position: vec4f) -> @location(0) vec4f {
-    return vec4f(1., 1., 1., 1.);
+    return vec4f(position.x, position.y, 1., 1.);
 }

@@ -1,7 +1,7 @@
-#![allow(unused)]
-
+#![allow(dead_code, unused_variables)]
 use std::borrow::Borrow;
 
+use rendering::ViewMode;
 use wgpu::{
     core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, FragmentState, TextureUsages,
 };
@@ -20,7 +20,6 @@ pub struct Graphics<'s> {
     surface_config: wgpu::SurfaceConfiguration,
     render_pipeline: wgpu::RenderPipeline,
     vertices: vertices::Verticies,
-    camera: rendering::Camera<rendering::ViewModeLookAt>,
 }
 
 impl<'s> Graphics<'s> {
@@ -76,11 +75,10 @@ impl<'s> Graphics<'s> {
     }
     pub fn new(
         window: Arc<winit::window::Window>,
-        camera: rendering::Camera<rendering::ViewModeLookAt>,
     ) -> Result<Self> {
         let instance = wgpu::Instance::new(&Default::default());
 
-        let mut surface = instance
+        let surface = instance
             .create_surface(window.clone())
             .with_context(|| "Failed to create surface from window")?;
 
@@ -96,7 +94,7 @@ impl<'s> Graphics<'s> {
 
         let size = window.clone().inner_size();
 
-        let mut surface_config = surface
+        let surface_config = surface
             .get_default_config(&adapter, size.width, size.height)
             .ok_or_else(|| anyhow!("faild to create surface configuration"))?;
 
@@ -128,7 +126,6 @@ impl<'s> Graphics<'s> {
             queue,
             surface_config,
             vertices,
-            camera,
         })
     }
     fn reconfigure_surface(&self) {
@@ -157,7 +154,7 @@ impl<'s> Graphics<'s> {
             }],
         })
     }
-    pub fn render(&mut self) -> Result<()> {
+    pub fn render<M: ViewMode + Default>(&mut self, camera: &rendering::Camera<M>) -> Result<()> {
         // let uniform = rendering::Uniform {
         //     width: self.surface_config.width,
         //     height: self.surface_config.height,
@@ -167,7 +164,7 @@ impl<'s> Graphics<'s> {
         let uniform = rendering::UniformBuilder::default()
             .height(self.surface_config.height)
             .width(self.surface_config.width)
-            .world_mat(self.camera.generate_world_matrix_columns())
+            .world_mat(camera.generate_world_matrix_columns())
             .build()
             .with_context(|| "Failed to generate Uniform Struct from UniformBuilder")?;
 
@@ -224,7 +221,11 @@ impl<'s> Graphics<'s> {
 
         drop(rpass);
 
+        trace!("Submitting Queue");
+
         self.queue.submit(Some(command_encoder.finish()));
+
+        trace!("Presenting Surface");
 
         surface_tex.present();
 

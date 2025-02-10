@@ -1,3 +1,4 @@
+#![allow(dead_code, unused_variables)]
 const LOG_LEVEL: simplelog::LevelFilter = simplelog::LevelFilter::Info;
 const CLEAR_COLOR: wgpu::Color = wgpu::Color::BLACK;
 
@@ -9,7 +10,7 @@ pub mod prelude {
     pub use async_std::task::block_on;
     pub use bytemuck::{Pod, Zeroable};
     pub use derive_builder::Builder;
-    pub use glam::{Mat4, Vec3, Vec4, Quat, vec3, vec4};
+    pub use glam::{Mat4, Vec3, Vec4, Quat, vec3, vec4, vec2, Vec2};
     pub use log::{debug, error, info, trace, warn};
     pub use std::default::Default;
     pub use std::sync::Arc;

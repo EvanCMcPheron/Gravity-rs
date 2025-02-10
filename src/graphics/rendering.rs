@@ -5,9 +5,9 @@ use crate::prelude::*;
 
 #[derive(Builder, Debug, Default)]
 pub struct Camera<M: ViewMode + Default> {
-    position: Vec3,
+    pub position: Vec3,
     view_mode: M,
-    up: Vec3,
+    pub up: Vec3,
     /// The fov in the x direction, seems more intuitive but requires conversion to fov_y
     pub fov: f32,
     /// width/height
@@ -33,6 +33,7 @@ pub trait ViewMode {
     fn set_position(&mut self, new_position: Vec3, camera_position: &mut Vec3);
     fn get_orientation(&self, camera_position: Vec3) -> Vec3;
     fn set_orientation(&mut self, new_orientation: Vec3, camera_position: &mut Vec3);
+    fn zoom(&mut self, zoom: f32, camera_position: &mut Vec3, fov: &mut f32);
 }
 
 #[derive(Debug, Default)]
@@ -77,6 +78,9 @@ impl ViewMode for ViewModeLookTo {
     fn set_position(&mut self, new_position: Vec3, camera_position: &mut Vec3) {
         *camera_position = new_position
     }
+    fn zoom(&mut self, zoom: f32, camera_position: &mut Vec3, fov: &mut f32) {
+        *fov /= zoom
+    }
 }
 
 impl ViewMode for ViewModeLookAt {
@@ -113,6 +117,13 @@ impl ViewMode for ViewModeLookAt {
     fn set_position(&mut self, new_position: Vec3, camera_position: &mut Vec3) {
         self.focus = new_position;
     }
+    fn zoom(&mut self, zoom: f32, camera_position: &mut Vec3, fov: &mut f32) {
+        info!("received zoom: {:?}", zoom);
+        let mut dif = camera_position.clone() - self.focus;
+        dif = zoom * dif;
+        *camera_position = self.focus + dif;
+        
+    }
 }
 
 impl<M: ViewMode + Default> Camera<M> {
@@ -125,7 +136,7 @@ impl<M: ViewMode + Default> Camera<M> {
         Mat4::perspective_infinite_rh(self.fov / self.aspect_ratio, self.aspect_ratio, self.z_near)
     }
     fn generate_world_matix(&self) -> Mat4 {
-        self.generate_perspective_matrix() * self.generate_view_matrix()
+        self.generate_perspective_matrix().mul_mat4( &self.generate_view_matrix())
     }
     pub fn generate_world_matrix_columns(&self) -> [[f32; 4]; 4] {
         self.generate_world_matix().to_cols_array_2d()
@@ -172,17 +183,23 @@ impl<M: ViewMode + Default> Camera<M> {
         self.view_mode.get_orientation(self.position)
     }
     pub fn set_orientation(&mut self, new_orientation: Vec3) {
-        self.view_mode.set_orientation(new_orientation, &mut self.position);
+        self.view_mode
+            .set_orientation(new_orientation, &mut self.position);
     }
     pub fn get_position(&self) -> Vec3 {
         self.view_mode.get_position(self.position)
     }
     pub fn set_position(&mut self, new_position: Vec3) {
-        self.view_mode.set_position(new_position, &mut self.position);
+        self.view_mode
+            .set_position(new_position, &mut self.position);
     }
     pub fn rotate(&mut self, rotation: Quat) {
         self.up = rotation * self.up;
-        self.view_mode.rotate_orientation(rotation, &mut self.position);
+        self.view_mode
+            .rotate_orientation(rotation, &mut self.position);
+    }
+    pub fn zoom(&mut self, zoom: f32) {
+        self.view_mode.zoom(zoom, &mut self.position, &mut self.fov);
     }
 }
 
@@ -192,7 +209,8 @@ pub struct Uniform {
     pub world_mat: [[f32; 4]; 4],
     pub width: u32,
     pub height: u32,
-    padding: [f32; 2]
+    #[builder(setter(skip))]
+    padding: [f32; 2],
 }
 
 impl Uniform {
