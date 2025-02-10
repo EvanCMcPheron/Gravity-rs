@@ -48,6 +48,7 @@ impl Verticies {
         max_phi: f32,
         star_count: usize,
         up: Vec3,
+        gravitation_constant: f32
     ) -> Result<Self> {
         let mut rng = rng();
         let mut ret = Self {
@@ -60,10 +61,12 @@ impl Verticies {
         let up = up.normalize_or_zero();
         let r_axis = vec3(1.,1.,(up.x + up.y)/(-up.z)).normalize_or_zero();
         let phi_axis = up.cross(r_axis).normalize_or_zero();
+        let galactic_mass = star_count as f32;
 
         for i in 0..star_count {
             let mut r: f32 = rng.random_range(0.0..=1.0);
-            r = r.powf(1. / 3.) * max_radius;
+            r = r.powf(1. / 2.) * max_radius; // 1/3 should be an even radial distribution, 1/2
+                                              // biases towards center
 
             let theta = rng.random_range(0.0..f32::consts::PI * 2.);
 
@@ -78,6 +81,13 @@ impl Verticies {
             ret.points[i][0] = position.x;
             ret.points[i][1] = position.y;
             ret.points[i][2] = position.z;
+
+            let mut vel = theta_rot.mul_vec3(phi_axis);
+            vel *= (gravitation_constant*galactic_mass / r).sqrt() * r/max_radius * 0.8;
+
+            ret.velocities[i][0] = vel.x;
+            ret.velocities[i][1] = vel.y;
+            ret.velocities[i][2] = vel.z;
         }
 
         Ok(ret)

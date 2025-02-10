@@ -19,7 +19,7 @@ pub struct UserOptions {
     pub mouse_sensitivity: f32,
     pub line_size: f32,
     pub scroll_sensitivity: f32,
-    pub gravitation_const: f32
+    pub gravitation_const: f32,
 }
 
 impl Default for UserOptions {
@@ -85,8 +85,11 @@ impl<'app> App<'app> {
         )
     }
     fn process_frame(&mut self, delta: f32) -> Result<()> {
-        info!("FPS: {:?}", 1./delta);
-        self.graphics.as_mut().unwrap().physics_tick(delta, self.options.gravitation_const);
+        info!("FPS: {:?}", 1. / delta);
+        self.graphics
+            .as_mut()
+            .unwrap()
+            .physics_tick(delta, self.options.gravitation_const);
 
         if self.cursor_state.pressed {
             let cursor_delta = self.cursor_state.pop_delta();
@@ -135,8 +138,18 @@ impl<'app> ApplicationHandler for App<'app> {
         let aspect_ratio = size.width as f32 / size.height as f32;
         self.camera = Some(Self::create_camera(aspect_ratio));
         self.previous_frame = Some(std::time::Instant::now());
+
+        let vertices = crate::graphics::vertices::Verticies::generate_galaxy(
+            2.0,
+            core::f32::consts::PI / 12.0,
+            3000,
+            Vec3::Z,
+            self.options.gravitation_const,
+        )
+        .with_context(|| "Failed to generate galaxy")
+        .unwrap();
         self.graphics = Some(
-            Graphics::new(self.window.as_ref().unwrap().clone())
+            Graphics::new(self.window.as_ref().unwrap().clone(), vertices)
                 .with_context(|| "failed to create window")
                 .unwrap(),
         );

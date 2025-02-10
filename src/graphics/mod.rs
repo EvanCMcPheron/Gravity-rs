@@ -103,7 +103,7 @@ impl<'s> Graphics<'s> {
             multisample: Default::default(),
         })
     }
-    pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
+    pub fn new(window: Arc<winit::window::Window>, vertices: Verticies) -> Result<Self> {
         let instance = wgpu::Instance::new(&Default::default());
 
         let surface = instance
@@ -127,9 +127,6 @@ impl<'s> Graphics<'s> {
             .ok_or_else(|| anyhow!("faild to create surface configuration"))?;
 
         surface.configure(&device, &surface_config);
-
-        let vertices = Verticies::generate_galaxy(2.0, core::f32::consts::PI / 6.0, 3000, Vec3::Z)
-            .with_context(|| "Failed to generate galaxy")?;
 
         info!("Vertices: {:#?}", vertices);
 
