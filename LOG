@@ -1,1453 +1,886 @@
-05:50:06 [WARN] InstanceFlags::VALIDATION requested, but unable to find layer: VK_LAYER_KHRONOS_validation
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [WARN] InstanceFlags::VALIDATION requested, but unable to find layer: VK_LAYER_KHRONOS_validation
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Searching for implicit layer manifest files
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   In following locations:
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   Found the following files:
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Located json file "C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Located json file "C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json" from registry "HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ImplicitLayers"
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json (file version 1.0.1)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [WARN] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [WARN] GENERAL [Loader Message (0x0)]
 	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json.  Skipping this file.
-05:50:06 [WARN] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json (file version 1.0.1)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [WARN] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [WARN] GENERAL [Loader Message (0x0)]
 	loader_add_layer_properties: Can not find 'layer' object in manifest JSON file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json.  Skipping this file.
-05:50:06 [WARN] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json (file version 1.0.1)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files (x86)\Steam\SteamOverlayVulkanLayer64.json (file version 1.0.0)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found manifest file C:\Program Files (x86)\Steam\SteamFossilizeVulkanLayer64.json (file version 1.0.0)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Layer Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: opening device PCI\VEN_8086&DEV_7D55&SUBSYS_140D1462&REV_08\3&11583659&1&10
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(4) Does not contain a value for "VulkanExplicitLayers"
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: Opening child device 5 - SWD\DRIVERENUM\IGCC&4&3A33957&0
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(5) Does not contain a value for "VulkanExplicitLayers"
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: Opening child device 6 - DISPLAY\AUOD0A2\4&3A33957&0&UID8388688
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: opening device PCI\VEN_10DE&DEV_28A1&SUBSYS_140D1462&REV_A1\4&354488ca&0&0008
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_entry: Device ID(2) Does not contain a value for "VulkanExplicitLayers"
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: unable to open child-device error:13
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_get_device_registry_files: found no registry files
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found no registry files in HKEY_CURRENT_USER\SOFTWARE\Khronos\Vulkan\ExplicitLayers
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [WARN] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [WARN] GENERAL [Loader Message (0x0)]
 	windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
-05:50:06 [WARN] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [WARN] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Searching for driver manifest files
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   In following locations:
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   Found the following files:
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	      C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json" from PnP registry: E
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	windows_add_json_entry: Located json file "C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json" from PnP registry: E
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found no registry files in HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x64.json, version 1.0.1
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\Program Files\WindowsApps\Microsoft.D3DMappingLayers_1.2409.2.0_x64__8wekyb3d8bbwe\dzn_icd.x86.json, version 1.0.1
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	loader_parse_icd_manifest: Driver library architecture doesn't match the current running architecture, skipping this driver
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json, version 1.0.1
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Found ICD manifest file C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_e29b5e14236bf68d\igvk64.json, version 1.0.0
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	Insert instance layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll)
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	vkCreateInstance layer callstack setup to:
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   <Application>
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   <Loader>
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   VK_LAYER_NV_optimus
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	           Type: Implicit
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	               Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	           Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	           Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] GENERAL [Loader Message (0x0)]
 	   <Drivers>
-05:50:06 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:06 [INFO] Enabling debug utils
-05:50:06 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
-05:50:06 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
-05:50:06 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:38 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:38 [INFO] Enabling debug utils
+05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Intel(R) Arc(TM) Graphics)
+05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (NVIDIA GeForce RTX 4050 Laptop GPU)
+05:55:39 [WARN] Adapter is not Vulkan compliant, hiding adapter: Microsoft Direct3D12 (Microsoft Basic Render Driver)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	Inserted device layer "VK_LAYER_NV_optimus" (C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll)
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	vkCreateDevice layer callstack setup to:
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	   <Application>
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	   <Loader>
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	   VK_LAYER_NV_optimus
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	           Type: Implicit
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	               Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	           Manifest: C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\nv-vk64.json
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	           Library:  C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	     ||
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	   <Device>
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] GENERAL [Loader Message (0x0)]
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] GENERAL [Loader Message (0x0)]
 	       Using "NVIDIA GeForce RTX 4050 Laptop GPU" with driver: "C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_dde504d4ef015896\.\nvoglv64.dll"
-05:50:07 [INFO] 	objects: (type: INSTANCE, hndl: 0x1ad8cbef1b0, name: ?)
-05:50:07 [INFO] FPS: 1.187837
-05:50:07 [INFO] FPS: 327.3215
-05:50:07 [INFO] FPS: 924.6417
-05:50:07 [INFO] FPS: 898.55334
-05:50:07 [INFO] FPS: 95.432594
-05:50:07 [INFO] FPS: 1140.7712
-05:50:07 [INFO] FPS: 577.73413
-05:50:07 [INFO] FPS: 52.001812
-05:50:07 [INFO] FPS: 1273.7231
-05:50:07 [INFO] FPS: 21.77174
-05:50:07 [INFO] FPS: 63.595024
-05:50:07 [INFO] FPS: 1403.3118
-05:50:07 [INFO] FPS: 240.7782
-05:50:07 [INFO] FPS: 126.72345
-05:50:07 [INFO] FPS: 157.00311
-05:50:07 [INFO] FPS: 143.66785
-05:50:07 [INFO] FPS: 149.1669
-05:50:07 [INFO] FPS: 72.550514
-05:50:07 [INFO] FPS: 139.47195
-05:50:07 [INFO] FPS: 152.1329
-05:50:07 [INFO] FPS: 154.26385
-05:50:07 [INFO] FPS: 138.01099
-05:50:07 [INFO] FPS: 144.83517
-05:50:07 [INFO] FPS: 140.54616
-05:50:07 [INFO] FPS: 136.14519
-05:50:07 [INFO] FPS: 144.75131
-05:50:07 [INFO] FPS: 144.65291
-05:50:07 [INFO] FPS: 137.61404
-05:50:07 [INFO] FPS: 166.19301
-05:50:07 [INFO] FPS: 150.50269
-05:50:07 [INFO] FPS: 142.44406
-05:50:07 [INFO] FPS: 130.407
-05:50:07 [INFO] FPS: 148.2316
-05:50:07 [INFO] FPS: 141.78566
-05:50:07 [INFO] FPS: 145.6134
-05:50:07 [INFO] FPS: 161.83586
-05:50:07 [INFO] FPS: 139.9306
-05:50:07 [INFO] FPS: 128.68025
-05:50:07 [INFO] FPS: 161.55872
-05:50:07 [INFO] FPS: 132.94336
-05:50:07 [INFO] FPS: 155.95758
-05:50:07 [INFO] FPS: 144.94644
-05:50:07 [INFO] FPS: 156.31105
-05:50:07 [INFO] FPS: 124.06025
-05:50:07 [INFO] FPS: 159.294
-05:50:07 [INFO] FPS: 145.94066
-05:50:07 [INFO] FPS: 139.4603
-05:50:07 [INFO] FPS: 146.90327
-05:50:07 [INFO] FPS: 137.40039
-05:50:07 [INFO] FPS: 155.42914
-05:50:07 [INFO] FPS: 142.17268
-05:50:07 [INFO] FPS: 152.46924
-05:50:07 [INFO] FPS: 131.59453
-05:50:07 [INFO] FPS: 148.13278
-05:50:07 [INFO] FPS: 152.79306
-05:50:07 [INFO] FPS: 135.93605
-05:50:07 [INFO] FPS: 131.3698
-05:50:07 [INFO] FPS: 149.85764
-05:50:07 [INFO] FPS: 138.51567
-05:50:07 [INFO] FPS: 162.80812
-05:50:07 [INFO] FPS: 133.87778
-05:50:07 [INFO] FPS: 158.17279
-05:50:07 [INFO] FPS: 148.4164
-05:50:07 [INFO] FPS: 124.234406
-05:50:07 [INFO] FPS: 180.0018
-05:50:07 [INFO] FPS: 139.02599
-05:50:07 [INFO] FPS: 136.78394
-05:50:07 [INFO] FPS: 145.46513
-05:50:07 [INFO] FPS: 141.23296
-05:50:07 [INFO] FPS: 132.53459
-05:50:07 [INFO] FPS: 173.80423
-05:50:07 [INFO] FPS: 139.48752
-05:50:07 [INFO] FPS: 150.48909
-05:50:07 [INFO] FPS: 134.4574
-05:50:07 [INFO] FPS: 144.59435
-05:50:07 [INFO] FPS: 149.02019
-05:50:07 [INFO] FPS: 151.46466
-05:50:07 [INFO] FPS: 136.39587
-05:50:07 [INFO] FPS: 156.62933
-05:50:07 [INFO] FPS: 138.55022
-05:50:07 [INFO] FPS: 141.74545
-05:50:07 [INFO] FPS: 152.49017
-05:50:07 [INFO] FPS: 135.35829
-05:50:07 [INFO] FPS: 136.2008
-05:50:07 [INFO] FPS: 140.74991
-05:50:07 [INFO] FPS: 150.10507
-05:50:07 [INFO] FPS: 172.89671
-05:50:07 [INFO] FPS: 129.74039
-05:50:07 [INFO] FPS: 143.83522
-05:50:07 [INFO] FPS: 140.4238
-05:50:07 [INFO] FPS: 136.79329
-05:50:07 [INFO] FPS: 132.59785
-05:50:07 [INFO] FPS: 175.7871
-05:50:07 [INFO] FPS: 136.37169
-05:50:07 [INFO] FPS: 145.85551
-05:50:07 [INFO] FPS: 156.21826
-05:50:07 [INFO] FPS: 139.96977
-05:50:08 [INFO] FPS: 143.6472
-05:50:08 [INFO] FPS: 144.73456
-05:50:08 [INFO] FPS: 134.36345
-05:50:08 [INFO] FPS: 142.38727
-05:50:08 [INFO] FPS: 143.21313
-05:50:08 [INFO] FPS: 182.43513
-05:50:08 [INFO] FPS: 113.515114
-05:50:08 [INFO] FPS: 184.47801
-05:50:08 [INFO] FPS: 132.68935
-05:50:08 [INFO] FPS: 149.45895
-05:50:08 [INFO] FPS: 138.72511
-05:50:08 [INFO] FPS: 136.75214
-05:50:08 [INFO] FPS: 148.37675
-05:50:08 [INFO] FPS: 154.90428
-05:50:08 [INFO] FPS: 139.45251
-05:50:08 [INFO] FPS: 149.1491
-05:50:08 [INFO] FPS: 142.29002
-05:50:08 [INFO] FPS: 146.55666
-05:50:08 [INFO] FPS: 136.15074
-05:50:08 [INFO] FPS: 157.62926
-05:50:08 [INFO] FPS: 143.09427
-05:50:08 [INFO] FPS: 152.21164
-05:50:08 [INFO] FPS: 142.2637
-05:50:08 [INFO] FPS: 134.17415
-05:50:08 [INFO] FPS: 139.1924
-05:50:08 [INFO] FPS: 151.93181
-05:50:08 [INFO] FPS: 150.74771
-05:50:08 [INFO] FPS: 145.37842
-05:50:08 [INFO] FPS: 143.43292
-05:50:08 [INFO] FPS: 150.75679
-05:50:08 [INFO] FPS: 113.28877
-05:50:08 [INFO] FPS: 186.3655
-05:50:08 [INFO] FPS: 142.71036
-05:50:08 [INFO] FPS: 146.18173
-05:50:08 [INFO] FPS: 136.21008
-05:50:08 [INFO] FPS: 154.44016
-05:50:08 [INFO] FPS: 136.79517
-05:50:08 [INFO] FPS: 142.25359
-05:50:08 [INFO] FPS: 162.95403
-05:50:08 [INFO] FPS: 134.61668
-05:50:08 [INFO] FPS: 144.33139
-05:50:08 [INFO] FPS: 145.33617
-05:50:08 [INFO] FPS: 142.7348
-05:50:08 [INFO] FPS: 149.06685
-05:50:08 [INFO] FPS: 134.85812
-05:50:08 [INFO] FPS: 147.63417
-05:50:08 [INFO] FPS: 155.84335
-05:50:08 [INFO] FPS: 137.81699
-05:50:08 [INFO] FPS: 142.5659
-05:50:08 [INFO] FPS: 154.2472
-05:50:08 [INFO] FPS: 143.83522
-05:50:08 [INFO] FPS: 132.8374
-05:50:08 [INFO] FPS: 160.43124
-05:50:08 [INFO] FPS: 136.82324
-05:50:08 [INFO] FPS: 142.34875
-05:50:08 [INFO] FPS: 142.69609
-05:50:08 [INFO] FPS: 157.14375
-05:50:08 [INFO] FPS: 137.0182
-05:50:08 [INFO] FPS: 144.92754
-05:50:08 [INFO] FPS: 150.8637
-05:50:08 [INFO] FPS: 118.907486
-05:50:08 [INFO] FPS: 163.57242
-05:50:08 [INFO] FPS: 165.69733
-05:50:08 [INFO] FPS: 141.62901
-05:50:08 [INFO] FPS: 132.89037
-05:50:08 [INFO] FPS: 153.36952
-05:50:08 [INFO] FPS: 127.29449
-05:50:08 [INFO] FPS: 166.66667
-05:50:08 [INFO] FPS: 147.44913
-05:50:08 [INFO] FPS: 137.46838
-05:50:08 [INFO] FPS: 147.36005
-05:50:08 [INFO] FPS: 134.09679
-05:50:08 [INFO] FPS: 131.14238
-05:50:08 [INFO] FPS: 185.0755
-05:50:08 [INFO] FPS: 119.96738
-05:50:08 [INFO] FPS: 158.38072
-05:50:08 [INFO] FPS: 142.3447
-05:50:08 [INFO] FPS: 137.90631
-05:50:08 [INFO] FPS: 150.24489
-05:50:08 [INFO] FPS: 146.75453
-05:50:08 [INFO] FPS: 154.7245
-05:50:08 [INFO] FPS: 132.66823
-05:50:08 [INFO] FPS: 151.80496
-05:50:08 [INFO] FPS: 149.9835
-05:50:08 [INFO] FPS: 142.24548
-05:50:08 [INFO] FPS: 144.67383
-05:50:08 [INFO] FPS: 132.44331
-05:50:08 [INFO] FPS: 152.52737
-05:50:08 [INFO] FPS: 139.91689
-05:50:08 [INFO] FPS: 167.991
-05:50:08 [INFO] FPS: 113.18235
-05:50:08 [INFO] FPS: 189.4657
-05:50:08 [INFO] FPS: 149.05573
-05:50:08 [INFO] FPS: 135.86588
-05:50:08 [INFO] FPS: 138.17117
-05:50:08 [INFO] FPS: 151.57257
-05:50:08 [INFO] FPS: 132.42754
-05:50:08 [INFO] FPS: 149.24483
-05:50:08 [INFO] FPS: 162.95137
-05:50:08 [INFO] FPS: 137.62541
-05:50:08 [INFO] FPS: 148.31955
-05:50:08 [INFO] FPS: 152.01035
-05:50:08 [INFO] FPS: 125.34783
-05:50:08 [INFO] FPS: 156.12315
-05:50:08 [INFO] FPS: 139.7214
-05:50:08 [INFO] FPS: 157.03024
-05:50:08 [INFO] FPS: 129.4666
-05:50:08 [INFO] FPS: 160.30008
-05:50:08 [INFO] FPS: 138.3432
-05:50:08 [INFO] FPS: 134.27325
-05:50:08 [INFO] FPS: 158.08278
-05:50:08 [INFO] FPS: 138.17499
-05:50:08 [INFO] FPS: 147.0091
-05:50:08 [INFO] FPS: 143.15573
-05:50:08 [INFO] FPS: 151.07109
-05:50:08 [INFO] FPS: 138.08531
-05:50:08 [INFO] FPS: 142.14035
-05:50:08 [INFO] FPS: 151.18529
-05:50:08 [INFO] FPS: 138.32216
-05:50:08 [INFO] FPS: 148.15912
-05:50:08 [INFO] FPS: 146.82994
-05:50:08 [INFO] FPS: 131.7471
-05:50:08 [INFO] FPS: 171.63846
-05:50:08 [INFO] FPS: 130.81642
-05:50:08 [INFO] FPS: 157.22034
-05:50:08 [INFO] FPS: 138.36426
-05:50:08 [INFO] FPS: 151.85106
-05:50:08 [INFO] FPS: 145.75346
-05:50:08 [INFO] FPS: 144.4711
-05:50:08 [INFO] FPS: 137.84547
-05:50:08 [INFO] FPS: 146.05789
-05:50:08 [INFO] FPS: 147.06316
-05:50:08 [INFO] FPS: 124.56403
-05:50:08 [INFO] FPS: 157.401
-05:50:08 [INFO] FPS: 164.93486
-05:50:08 [INFO] FPS: 136.49828
-05:50:08 [INFO] FPS: 147.75632
-05:50:08 [INFO] FPS: 140.14435
-05:50:08 [INFO] FPS: 141.94464
-05:50:08 [INFO] FPS: 159.16217
-05:50:08 [INFO] FPS: 145.7471
-05:50:08 [INFO] FPS: 144.70525
-05:50:08 [INFO] FPS: 123.1133
-05:50:08 [INFO] FPS: 164.96205
-05:50:09 [INFO] FPS: 142.88164
-05:50:09 [INFO] FPS: 122.862206
-05:50:09 [INFO] FPS: 183.98587
-05:50:09 [INFO] FPS: 141.15721
-05:50:09 [INFO] FPS: 139.37477
-05:50:09 [INFO] FPS: 145.44397
-05:50:09 [INFO] FPS: 158.3782
-05:50:09 [INFO] FPS: 131.86871
-05:50:09 [INFO] FPS: 155.26021
-05:50:09 [INFO] FPS: 135.65944
-05:50:09 [INFO] FPS: 143.21107
-05:50:09 [INFO] FPS: 151.58176
-05:50:09 [INFO] FPS: 147.4187
-05:50:09 [INFO] FPS: 140.53036
-05:50:09 [INFO] FPS: 136.80264
-05:50:09 [INFO] FPS: 154.94987
-05:50:09 [INFO] FPS: 143.68228
-05:50:09 [INFO] FPS: 119.38731
-05:50:09 [INFO] FPS: 196.40964
-05:50:09 [INFO] FPS: 120.75399
-05:50:09 [INFO] FPS: 163.38802
-05:50:09 [INFO] FPS: 138.29729
-05:50:09 [INFO] FPS: 156.09634
-05:50:09 [INFO] FPS: 146.4429
-05:50:09 [INFO] FPS: 144.94644
-05:50:09 [INFO] FPS: 120.70298
-05:50:09 [INFO] FPS: 154.6934
-05:50:09 [INFO] FPS: 142.13226
-05:50:09 [INFO] FPS: 164.81525
-05:50:09 [INFO] FPS: 149.21587
-05:50:09 [INFO] FPS: 116.63168
-05:50:09 [INFO] FPS: 169.77065
-05:50:09 [INFO] FPS: 144.83098
-05:50:09 [INFO] FPS: 144.28766
-05:50:09 [INFO] FPS: 150.00151
-05:50:09 [INFO] FPS: 142.47247
-05:50:09 [INFO] FPS: 148.44284
-05:50:09 [INFO] FPS: 130.76682
-05:50:09 [INFO] FPS: 161.4674
-05:50:09 [INFO] FPS: 141.33078
-05:50:09 [INFO] FPS: 138.88118
-05:50:09 [INFO] FPS: 135.91573
-05:50:09 [INFO] FPS: 153.85089
-05:50:09 [INFO] FPS: 98.23955
-05:50:09 [INFO] FPS: 249.08461
-05:50:09 [INFO] FPS: 148.69888
-05:50:09 [INFO] FPS: 151.15787
-05:50:09 [INFO] FPS: 144.28348
-05:50:09 [INFO] FPS: 145.09787
-05:50:09 [INFO] FPS: 132.48016
-05:50:09 [INFO] FPS: 154.74846
-05:50:09 [INFO] FPS: 156.70297
-05:50:09 [INFO] FPS: 133.37602
-05:50:09 [INFO] FPS: 152.34613
-05:50:09 [INFO] FPS: 140.02072
-05:50:09 [INFO] FPS: 133.09023
-05:50:09 [INFO] FPS: 162.74452
-05:50:09 [INFO] FPS: 140.55011
-05:50:09 [INFO] FPS: 156.78651
-05:50:09 [INFO] FPS: 141.1632
-05:50:09 [INFO] FPS: 125.29445
-05:50:09 [INFO] FPS: 100.48131
-05:50:09 [INFO] FPS: 348.51706
-05:50:09 [INFO] FPS: 140.70041
-05:50:09 [INFO] FPS: 124.762955
-05:50:09 [INFO] FPS: 157.4109
-05:50:09 [INFO] FPS: 158.94713
-05:50:09 [INFO] FPS: 125.852646
-05:50:09 [INFO] FPS: 175.64198
-05:50:09 [INFO] FPS: 138.28389
-05:50:09 [INFO] FPS: 127.8429
-05:50:09 [INFO] FPS: 174.33447
-05:50:09 [INFO] FPS: 132.34166
-05:50:09 [INFO] FPS: 138.26479
-05:50:09 [INFO] FPS: 150.0195
-05:50:09 [INFO] FPS: 148.63701
-05:50:09 [INFO] FPS: 143.26648
-05:50:09 [INFO] FPS: 147.95964
-05:50:09 [INFO] FPS: 124.88604
-05:50:09 [INFO] FPS: 154.26147
-05:50:09 [INFO] FPS: 150.17496
-05:50:09 [INFO] FPS: 147.5797
-05:50:09 [INFO] FPS: 141.04173
-05:50:09 [INFO] FPS: 154.26385
-05:50:09 [INFO] FPS: 148.08672
-05:50:09 [INFO] FPS: 138.91011
-05:50:09 [INFO] FPS: 140.10115
-05:50:09 [INFO] FPS: 144.84987
-05:50:09 [INFO] FPS: 149.72974
-05:50:09 [INFO] FPS: 132.41876
-05:50:09 [INFO] FPS: 111.124695
-05:50:09 [INFO] FPS: 213.40163
-05:50:09 [INFO] FPS: 138.86575
-05:50:09 [INFO] FPS: 152.94028
-05:50:09 [INFO] FPS: 147.59712
-05:50:09 [INFO] FPS: 132.36267
-05:50:09 [INFO] FPS: 132.45384
-05:50:09 [INFO] FPS: 160.84412
-05:50:09 [INFO] FPS: 123.34867
-05:50:09 [INFO] FPS: 199.7563
-05:50:09 [INFO] FPS: 148.38997
-05:50:09 [INFO] FPS: 122.26882
-05:50:09 [INFO] FPS: 175.11295
-05:50:09 [INFO] FPS: 133.49532
-05:50:09 [INFO] FPS: 130.45293
-05:50:09 [INFO] FPS: 165.69733
-05:50:09 [INFO] FPS: 158.53891
-05:50:09 [INFO] FPS: 125.52092
-05:50:09 [INFO] FPS: 158.22784
-05:50:09 [INFO] FPS: 139.80344
-05:50:09 [INFO] FPS: 150.96391
-05:50:09 [INFO] FPS: 143.8849
-05:50:09 [INFO] FPS: 148.82281
-05:50:09 [INFO] FPS: 147.02423
-05:50:09 [INFO] FPS: 138.99507
-05:50:09 [INFO] FPS: 138.62128
-05:50:09 [INFO] FPS: 157.08945
-05:50:09 [INFO] FPS: 140.53432
-05:50:09 [INFO] FPS: 139.55565
-05:50:09 [INFO] FPS: 120.52985
-05:50:09 [INFO] FPS: 196.14766
-05:50:09 [INFO] FPS: 138.52718
-05:50:09 [INFO] FPS: 136.30478
-05:50:09 [INFO] FPS: 160.00768
-05:50:09 [INFO] FPS: 140.06387
-05:50:09 [INFO] FPS: 153.8864
-05:50:09 [INFO] FPS: 135.08401
-05:50:09 [INFO] FPS: 116.10087
-05:50:09 [INFO] FPS: 153.84853
-05:50:09 [INFO] FPS: 158.06778
-05:50:09 [INFO] FPS: 159.844
-05:50:09 [INFO] received zoom: 1.1350275
-05:50:09 [INFO] FPS: 134.57863
-05:50:09 [INFO] received zoom: 1.0325089
-05:50:09 [INFO] FPS: 149.2181
-05:50:09 [INFO] received zoom: 1.0351834
-05:50:09 [INFO] FPS: 124.80188
-05:50:09 [INFO] FPS: 170.29393
-05:50:09 [INFO] received zoom: 1.0548072
-05:50:09 [INFO] FPS: 145.90872
-05:50:09 [INFO] FPS: 152.51575
-05:50:09 [INFO] received zoom: 1.0325103
-05:50:09 [INFO] FPS: 141.54282
-05:50:09 [INFO] received zoom: 1.0370913
-05:50:09 [INFO] FPS: 144.01337
-05:50:09 [INFO] received zoom: 1.0364549
-05:50:09 [INFO] FPS: 132.68407
-05:50:09 [INFO] received zoom: 1.0351713
-05:50:09 [INFO] FPS: 168.37569
-05:50:09 [INFO] received zoom: 1.029448
-05:50:09 [INFO] FPS: 138.15399
-05:50:09 [INFO] received zoom: 1.0295564
-05:50:09 [INFO] FPS: 138.17499
-05:50:09 [INFO] received zoom: 1.0337737
-05:50:09 [INFO] FPS: 152.66942
-05:50:09 [INFO] received zoom: 1.0305672
-05:50:10 [INFO] FPS: 129.1239
-05:50:10 [INFO] received zoom: 1.011294
-05:50:10 [INFO] FPS: 139.97957
-05:50:10 [INFO] received zoom: 1.0479237
-05:50:10 [INFO] FPS: 160.62967
-05:50:10 [INFO] received zoom: 1.023605
-05:50:10 [INFO] FPS: 141.72737
-05:50:10 [INFO] received zoom: 1.0246953
-05:50:10 [INFO] FPS: 139.49725
-05:50:10 [INFO] received zoom: 1.0250901
-05:50:10 [INFO] FPS: 164.71751
-05:50:10 [INFO] received zoom: 1.0230192
-05:50:10 [INFO] FPS: 135.25943
-05:50:10 [INFO] FPS: 135.55646
-05:50:10 [INFO] received zoom: 1.0215162
-05:50:10 [INFO] FPS: 154.65033
-05:50:10 [INFO] received zoom: 1.0207458
-05:50:10 [INFO] FPS: 121.13136
-05:50:10 [INFO] received zoom: 1.0240785
-05:50:10 [INFO] FPS: 166.39766
-05:50:10 [INFO] received zoom: 1.0157754
-05:50:10 [INFO] FPS: 152.1329
-05:50:10 [INFO] received zoom: 1.0172546
-05:50:10 [INFO] FPS: 120.24578
-05:50:10 [INFO] received zoom: 1.0218303
-05:50:10 [INFO] FPS: 176.11525
-05:50:10 [INFO] received zoom: 1.0115927
-05:50:10 [INFO] FPS: 155.37119
-05:50:10 [INFO] received zoom: 1.0131406
-05:50:10 [INFO] FPS: 133.66483
-05:50:10 [INFO] received zoom: 1.0109104
-05:50:10 [INFO] FPS: 155.41948
-05:50:10 [INFO] received zoom: 1.0131365
-05:50:10 [INFO] FPS: 142.73073
-05:50:10 [INFO] received zoom: 1.008174
-05:50:10 [INFO] FPS: 144.22939
-05:50:10 [INFO] received zoom: 1.0101112
-05:50:10 [INFO] FPS: 144.3064
-05:50:10 [INFO] received zoom: 1.0080847
-05:50:10 [INFO] FPS: 145.36784
-05:50:10 [INFO] received zoom: 1.0060192
-05:50:10 [INFO] FPS: 135.86034
-05:50:10 [INFO] received zoom: 1.0042937
-05:50:10 [INFO] FPS: 160.33093
-05:50:10 [INFO] received zoom: 1.0036383
-05:50:10 [INFO] FPS: 141.27287
-05:50:10 [INFO] FPS: 137.22316
-05:50:10 [INFO] received zoom: 1.004251
-05:50:10 [INFO] FPS: 158.5716
-05:50:10 [INFO] received zoom: 1.0018393
-05:50:10 [INFO] FPS: 128.44061
-05:50:10 [INFO] FPS: 137.25705
-05:50:10 [INFO] FPS: 160.76395
-05:50:10 [INFO] received zoom: 1.0036285
-05:50:10 [INFO] FPS: 136.44054
-05:50:10 [INFO] FPS: 137.93674
-05:50:10 [INFO] FPS: 155.94057
-05:50:10 [INFO] FPS: 151.0095
-05:50:10 [INFO] FPS: 148.43402
-05:50:10 [INFO] FPS: 137.38152
-05:50:10 [INFO] FPS: 135.60793
-05:50:10 [INFO] received zoom: 0.99784917
-05:50:10 [INFO] FPS: 169.87447
-05:50:10 [INFO] received zoom: 0.998283
-05:50:10 [INFO] FPS: 132.1947
-05:50:10 [INFO] received zoom: 0.99117464
-05:50:10 [INFO] FPS: 138.09485
-05:50:10 [INFO] received zoom: 0.9894396
-05:50:10 [INFO] FPS: 174.374
-05:50:10 [INFO] received zoom: 0.98829144
-05:50:10 [INFO] FPS: 132.11261
-05:50:10 [INFO] FPS: 142.70221
-05:50:10 [INFO] received zoom: 0.9775173
-05:50:10 [INFO] FPS: 146.26085
-05:50:10 [INFO] received zoom: 0.9680935
-05:50:10 [INFO] FPS: 131.2405
-05:50:10 [INFO] received zoom: 0.9111047
-05:50:10 [INFO] FPS: 163.08957
-05:50:10 [INFO] FPS: 144.92543
-05:50:10 [INFO] received zoom: 0.93962413
-05:50:10 [INFO] FPS: 142.64317
-05:50:10 [INFO] received zoom: 0.9386581
-05:50:10 [INFO] FPS: 140.09134
-05:50:10 [INFO] received zoom: 0.9229669
-05:50:10 [INFO] FPS: 143.0738
-05:50:10 [INFO] received zoom: 0.9123413
-05:50:10 [INFO] FPS: 145.11261
-05:50:10 [INFO] received zoom: 0.91960263
-05:50:10 [INFO] FPS: 123.84821
-05:50:10 [INFO] received zoom: 0.89166844
-05:50:10 [INFO] FPS: 180.78606
-05:50:10 [INFO] received zoom: 0.9290137
-05:50:10 [INFO] FPS: 146.85365
-05:50:10 [INFO] received zoom: 0.9145975
-05:50:10 [INFO] FPS: 130.99294
-05:50:10 [INFO] received zoom: 0.91093665
-05:50:10 [INFO] FPS: 151.95259
-05:50:10 [INFO] received zoom: 0.9213022
-05:50:10 [INFO] FPS: 138.92941
-05:50:10 [INFO] received zoom: 0.9307202
-05:50:10 [INFO] FPS: 142.5009
-05:50:10 [INFO] received zoom: 0.9304098
-05:50:10 [INFO] FPS: 162.67833
-05:50:10 [INFO] received zoom: 0.9462129
-05:50:10 [INFO] FPS: 113.12346
-05:50:10 [INFO] received zoom: 0.87366307
-05:50:10 [INFO] FPS: 212.23312
-05:50:10 [INFO] FPS: 137.91391
-05:50:10 [INFO] FPS: 137.17986
-05:50:10 [INFO] received zoom: 0.9553506
-05:50:10 [INFO] FPS: 140.54616
-05:50:10 [INFO] received zoom: 0.9294419
-05:50:10 [INFO] FPS: 124.46325
-05:50:10 [INFO] FPS: 159.11911
-05:50:10 [INFO] received zoom: 0.9706719
-05:50:10 [INFO] FPS: 163.55905
-05:50:10 [INFO] received zoom: 0.9821675
-05:50:10 [INFO] FPS: 150.36237
-05:50:10 [INFO] received zoom: 0.9747831
-05:50:10 [INFO] FPS: 134.77452
-05:50:10 [INFO] received zoom: 0.9783589
-05:50:10 [INFO] FPS: 137.81319
-05:50:10 [INFO] received zoom: 0.9767197
-05:50:10 [INFO] FPS: 156.44066
-05:50:10 [INFO] received zoom: 0.98322046
-05:50:10 [INFO] FPS: 142.30418
-05:50:10 [INFO] received zoom: 0.969256
-05:50:10 [INFO] FPS: 152.61583
-05:50:10 [INFO] FPS: 128.58925
-05:50:10 [INFO] received zoom: 0.9795862
-05:50:10 [INFO] FPS: 156.71771
-05:50:10 [INFO] received zoom: 0.98325014
-05:50:10 [INFO] FPS: 140.8054
-05:50:10 [INFO] FPS: 156.3135
-05:50:10 [INFO] received zoom: 0.98693866
-05:50:10 [INFO] FPS: 140.55998
-05:50:10 [INFO] received zoom: 0.98547477
-05:50:10 [INFO] FPS: 155.3929
-05:50:10 [INFO] received zoom: 0.9831073
-05:50:10 [INFO] FPS: 118.334785
-05:50:10 [INFO] received zoom: 0.9827467
-05:50:10 [INFO] FPS: 144.4711
-05:50:10 [INFO] received zoom: 0.985868
-05:50:10 [INFO] FPS: 172.50302
-05:50:10 [INFO] received zoom: 0.99154603
-05:50:10 [INFO] FPS: 110.19648
-05:50:10 [INFO] received zoom: 0.9841193
-05:50:10 [INFO] FPS: 209.27945
-05:50:10 [INFO] received zoom: 0.995819
-05:50:10 [INFO] FPS: 137.84167
-05:50:10 [INFO] received zoom: 0.9915362
-05:50:10 [INFO] FPS: 117.198944
-05:50:10 [INFO] received zoom: 0.99253404
-05:50:10 [INFO] FPS: 170.16353
-05:50:10 [INFO] received zoom: 0.9965719
-05:50:10 [INFO] FPS: 160.55489
-05:50:10 [INFO] received zoom: 0.99636674
-05:50:10 [INFO] FPS: 134.70009
-05:50:10 [INFO] received zoom: 0.99566936
-05:50:10 [INFO] FPS: 157.40843
-05:50:10 [INFO] received zoom: 0.9981471
-05:50:10 [INFO] FPS: 159.43878
-05:50:10 [INFO] FPS: 116.58952
-05:50:10 [INFO] received zoom: 0.99499667
-05:50:10 [INFO] FPS: 168.65398
-05:50:10 [INFO] FPS: 157.6541
-05:50:10 [INFO] FPS: 118.15443
-05:50:10 [INFO] FPS: 158.83604
-05:50:10 [INFO] FPS: 153.44484
-05:50:10 [INFO] FPS: 147.46
-05:50:10 [INFO] FPS: 137.68036
-05:50:10 [INFO] FPS: 146.86876
-05:50:10 [INFO] FPS: 141.28285
-05:50:10 [INFO] received zoom: 0.9958712
-05:50:10 [INFO] FPS: 148.86269
-05:50:10 [INFO] received zoom: 1.0019593
-05:50:10 [INFO] FPS: 134.81631
-05:50:10 [INFO] FPS: 161.36319
-05:50:10 [INFO] FPS: 135.89726
-05:50:10 [INFO] FPS: 141.83995
-05:50:10 [INFO] FPS: 137.10463
-05:50:10 [INFO] FPS: 150.57294
-05:50:10 [INFO] received zoom: 1.0038741
-05:50:10 [INFO] FPS: 113.507385
-05:50:10 [INFO] FPS: 181.03809
-05:50:10 [INFO] received zoom: 1.0016111
-05:50:10 [INFO] FPS: 159.41336
-05:50:10 [INFO] FPS: 129.30087
-05:50:10 [INFO] received zoom: 1.0045115
-05:50:10 [INFO] FPS: 157.51009
-05:50:10 [INFO] FPS: 157.48528
-05:50:10 [INFO] received zoom: 1.0037041
-05:50:10 [INFO] FPS: 123.11026
-05:50:10 [INFO] received zoom: 1.0047383
-05:50:10 [INFO] FPS: 166.68611
-05:50:10 [INFO] FPS: 140.26033
-05:50:10 [INFO] received zoom: 1.0020795
-05:50:10 [INFO] FPS: 158.02281
-05:50:10 [INFO] received zoom: 1.0036914
-05:50:10 [INFO] FPS: 135.00014
-05:50:10 [INFO] FPS: 154.07846
-05:50:10 [INFO] received zoom: 1.003786
-05:50:10 [INFO] FPS: 138.15207
-05:50:10 [INFO] FPS: 143.40413
-05:50:10 [INFO] received zoom: 1.0040678
-05:50:10 [INFO] FPS: 135.46097
-05:50:10 [INFO] FPS: 158.47359
-05:50:10 [INFO] received zoom: 1.003681
-05:50:10 [INFO] FPS: 139.28159
-05:50:10 [INFO] FPS: 142.34268
-05:50:10 [INFO] FPS: 152.8982
-05:50:10 [INFO] FPS: 137.35887
-05:50:10 [INFO] FPS: 147.53178
-05:50:10 [INFO] received zoom: 1.001977
-05:50:10 [INFO] FPS: 154.36624
-05:50:10 [INFO] FPS: 134.6747
-05:50:10 [INFO] FPS: 138.31642
-05:50:10 [INFO] FPS: 137.54022
-05:50:10 [INFO] received zoom: 1.0042412
-05:50:10 [INFO] FPS: 175.29405
-05:50:10 [INFO] FPS: 125.26305
-05:50:10 [INFO] FPS: 164.8859
-05:50:10 [INFO] FPS: 144.79742
-05:50:10 [INFO] FPS: 117.31169
-05:50:10 [INFO] FPS: 185.47026
-05:50:10 [INFO] FPS: 146.72008
-05:50:10 [INFO] FPS: 145.81723
-05:50:10 [INFO] FPS: 144.39807
-05:50:10 [INFO] FPS: 147.01126
-05:50:10 [INFO] FPS: 132.38545
-05:50:10 [INFO] FPS: 151.40733
-05:50:10 [INFO] FPS: 147.75414
-05:50:11 [INFO] FPS: 135.51971
-05:50:11 [INFO] FPS: 156.56313
-05:50:11 [INFO] FPS: 140.09526
-05:50:11 [INFO] FPS: 102.770706
-05:50:11 [INFO] FPS: 277.23102
-05:50:11 [INFO] FPS: 142.32849
-05:50:11 [INFO] FPS: 105.18233
-05:50:11 [INFO] FPS: 222.43973
-05:50:11 [INFO] FPS: 137.893
-05:50:11 [INFO] FPS: 146.19884
-05:50:11 [INFO] FPS: 152.18152
-05:50:11 [INFO] FPS: 141.09944
-05:50:11 [INFO] FPS: 122.61212
-05:50:11 [INFO] FPS: 162.61484
-05:50:11 [INFO] FPS: 152.62982
-05:50:11 [INFO] FPS: 128.19362
-05:50:11 [INFO] FPS: 164.24677
-05:50:11 [INFO] FPS: 138.75784
-05:50:11 [INFO] FPS: 154.71494
-05:50:11 [INFO] FPS: 129.77406
-05:50:11 [INFO] FPS: 129.59915
-05:50:11 [INFO] FPS: 173.81631
-05:50:11 [INFO] FPS: 154.81554
-05:50:11 [INFO] FPS: 143.95117
-05:50:11 [INFO] FPS: 138.59053
-05:50:11 [INFO] FPS: 138.22273
-05:50:11 [INFO] FPS: 148.84497
-05:50:11 [INFO] FPS: 148.10866
-05:50:11 [INFO] FPS: 139.78389
-05:50:11 [INFO] FPS: 159.18498
-05:50:11 [INFO] FPS: 130.89177
-05:50:11 [INFO] FPS: 154.6934
-05:50:11 [INFO] FPS: 102.2976
-05:50:11 [INFO] FPS: 231.83568
-05:50:11 [INFO] FPS: 130.20325
-05:50:11 [INFO] FPS: 142.91635
-05:50:11 [INFO] FPS: 158.74023
-05:50:11 [INFO] FPS: 138.41405
-05:50:11 [INFO] FPS: 115.66711
-05:50:11 [INFO] FPS: 179.70743
-05:50:11 [INFO] FPS: 111.39455
-05:50:11 [INFO] FPS: 218.69875
-05:50:11 [INFO] FPS: 132.40298
-05:50:11 [INFO] FPS: 137.37207
-05:50:11 [INFO] FPS: 176.21767
-05:50:11 [INFO] FPS: 131.1269
-05:50:11 [INFO] FPS: 136.18968
-05:50:11 [INFO] FPS: 196.41734
-05:50:11 [INFO] FPS: 125.83681
-05:50:11 [INFO] FPS: 141.61699
-05:50:11 [INFO] FPS: 142.31633
-05:50:11 [INFO] FPS: 148.0341
-05:50:11 [INFO] FPS: 151.96414
-05:50:11 [INFO] FPS: 154.36386
-05:50:11 [INFO] FPS: 131.37325
-05:50:11 [INFO] FPS: 135.31984
-05:50:11 [INFO] FPS: 148.24039
-05:50:11 [INFO] FPS: 145.45667
-05:50:11 [INFO] FPS: 155.92354
-05:50:11 [INFO] FPS: 148.7409
-05:50:11 [INFO] FPS: 141.45673
-05:50:11 [INFO] FPS: 110.07519
-05:50:11 [INFO] FPS: 202.10596
-05:50:11 [INFO] FPS: 153.948
-05:50:11 [INFO] FPS: 116.30341
-05:50:11 [INFO] FPS: 196.80002
-05:50:11 [INFO] FPS: 102.27877
-05:50:11 [INFO] FPS: 233.41037
-05:50:11 [INFO] FPS: 135.14792
-05:50:11 [INFO] FPS: 117.88282
-05:50:11 [INFO] FPS: 185.46683
-05:50:11 [INFO] FPS: 143.55647
-05:50:11 [INFO] FPS: 152.86313
-05:50:11 [INFO] FPS: 135.76073
-05:50:11 [INFO] FPS: 149.23592
-05:50:11 [INFO] FPS: 141.04373
-05:50:11 [INFO] FPS: 156.58029
-05:50:11 [INFO] FPS: 104.50631
-05:50:11 [INFO] FPS: 214.10985
-05:50:11 [INFO] FPS: 136.87755
-05:50:11 [INFO] FPS: 158.45099
-05:50:11 [INFO] FPS: 132.79155
-05:50:11 [INFO] FPS: 157.23271
-05:50:11 [INFO] FPS: 135.0895
-05:50:11 [INFO] FPS: 153.02922
-05:50:11 [INFO] FPS: 140.82326
-05:50:11 [INFO] FPS: 145.31715
-05:50:11 [INFO] FPS: 119.873886
-05:50:11 [INFO] FPS: 173.03433
-05:50:11 [INFO] FPS: 141.07356
-05:50:11 [INFO] FPS: 128.80954
-05:50:11 [INFO] FPS: 175.73457
-05:50:11 [INFO] FPS: 140.58963
-05:50:11 [INFO] FPS: 133.04594
-05:50:11 [INFO] FPS: 135.93051
-05:50:11 [INFO] FPS: 150.16142
-05:50:11 [INFO] FPS: 193.82849
-05:50:11 [INFO] FPS: 111.20625
-05:50:11 [INFO] FPS: 142.37105
-05:50:11 [INFO] FPS: 206.39836
-05:50:11 [INFO] FPS: 136.54674
-05:50:11 [INFO] FPS: 134.02312
-05:50:11 [INFO] FPS: 156.38194
-05:50:11 [INFO] FPS: 126.355156
-05:50:11 [INFO] FPS: 150.5956
-05:50:11 [INFO] FPS: 171.76228
-05:50:11 [INFO] FPS: 123.96182
-05:50:11 [INFO] FPS: 150.52533
-05:50:11 [INFO] FPS: 148.4186
-05:50:11 [INFO] FPS: 142.05957
-05:50:11 [INFO] FPS: 122.0152
-05:50:11 [INFO] FPS: 186.4315
-05:50:11 [INFO] FPS: 146.95724
-05:50:11 [INFO] FPS: 129.94101
-05:50:11 [INFO] FPS: 176.15558
-05:50:11 [INFO] FPS: 119.19377
-05:50:11 [INFO] FPS: 136.41447
-05:50:11 [INFO] FPS: 173.74081
-05:50:11 [INFO] FPS: 139.26994
-05:50:11 [INFO] FPS: 147.60802
-05:50:11 [INFO] FPS: 150.39177
-05:50:11 [INFO] FPS: 121.5835
-05:50:11 [INFO] FPS: 181.1824
-05:50:11 [INFO] FPS: 142.0394
-05:50:11 [INFO] FPS: 140.97214
-05:50:11 [INFO] FPS: 133.99797
-05:50:11 [INFO] FPS: 143.13318
-05:50:11 [INFO] FPS: 151.63693
-05:50:11 [INFO] FPS: 148.39217
-05:50:11 [INFO] FPS: 142.94904
-05:50:11 [INFO] FPS: 154.80115
-05:50:11 [INFO] FPS: 140.7202
-05:50:11 [INFO] FPS: 149.57297
-05:50:11 [INFO] FPS: 101.153145
-05:50:11 [INFO] FPS: 253.04283
-05:50:11 [INFO] FPS: 140.02856
-05:50:11 [INFO] FPS: 143.87039
-05:50:11 [INFO] FPS: 140.97214
-05:50:11 [INFO] FPS: 148.24039
-05:50:11 [INFO] FPS: 111.23842
-05:50:11 [INFO] FPS: 190.30943
-05:50:11 [INFO] FPS: 153.7539
-05:50:11 [INFO] FPS: 133.46858
-05:50:11 [INFO] FPS: 156.70543
-05:50:12 [INFO] FPS: 122.10609
-05:50:12 [INFO] FPS: 173.31624
-05:50:12 [INFO] FPS: 137.08208
-05:50:12 [INFO] FPS: 163.42006
-05:50:12 [INFO] FPS: 142.93881
-05:50:12 [INFO] FPS: 128.7399
-05:50:12 [INFO] FPS: 151.26762
-05:50:12 [INFO] FPS: 130.24394
-05:50:12 [INFO] FPS: 166.58893
-05:50:12 [INFO] FPS: 135.33081
-05:50:12 [INFO] FPS: 152.84444
-05:50:12 [INFO] FPS: 149.32283
-05:50:12 [INFO] FPS: 143.66371
-05:50:12 [INFO] FPS: 140.74991
-05:50:12 [INFO] FPS: 147.66687
-05:50:12 [INFO] FPS: 146.60178
-05:50:12 [INFO] FPS: 134.04826
-05:50:12 [INFO] FPS: 156.32083
-05:50:12 [INFO] FPS: 115.514786
-05:50:12 [INFO] FPS: 168.83907
-05:50:12 [INFO] FPS: 168.0277
-05:50:12 [INFO] FPS: 139.8621
-05:50:12 [INFO] FPS: 132.45209
-05:50:12 [INFO] FPS: 155.12294
-05:50:12 [INFO] FPS: 154.35432
-05:50:12 [INFO] FPS: 130.29655
-05:50:12 [INFO] FPS: 120.38329
-05:50:12 [INFO] FPS: 183.67834
-05:50:12 [INFO] FPS: 150.333
-05:50:12 [INFO] FPS: 131.1183
-05:50:12 [INFO] FPS: 154.73409
-05:50:12 [INFO] FPS: 138.19217
-05:50:12 [INFO] FPS: 144.12129
-05:50:12 [INFO] FPS: 144.06523
-05:50:12 [INFO] FPS: 145.82574
-05:50:12 [INFO] FPS: 161.31895
-05:50:12 [INFO] FPS: 130.813
-05:50:12 [INFO] FPS: 164.563
-05:50:12 [INFO] FPS: 134.97644
-05:50:12 [INFO] FPS: 153.50137
-05:50:12 [INFO] FPS: 136.54114
-05:50:12 [INFO] FPS: 158.75537
-05:50:12 [INFO] FPS: 142.14641
-05:50:12 [INFO] FPS: 135.46281
-05:50:12 [INFO] FPS: 155.65656
-05:50:12 [INFO] FPS: 143.50084
-05:50:12 [INFO] FPS: 133.5488
-05:50:12 [INFO] FPS: 145.04105
-05:50:12 [INFO] FPS: 137.05014
-05:50:12 [INFO] FPS: 118.465164
-05:50:12 [INFO] FPS: 198.24356
-05:50:12 [INFO] FPS: 120.56181
-05:50:12 [INFO] FPS: 200.54147
-05:50:12 [INFO] FPS: 154.43538
-05:50:12 [INFO] FPS: 128.93077
-05:50:12 [INFO] FPS: 117.36814
-05:50:12 [INFO] FPS: 203.5582
-05:50:12 [INFO] FPS: 138.18835
-05:50:12 [INFO] FPS: 142.06564
-05:50:12 [INFO] FPS: 147.72577
-05:50:12 [INFO] FPS: 144.47945
-05:50:12 [INFO] FPS: 143.70087
-05:50:12 [INFO] FPS: 140.08153
-05:50:12 [INFO] FPS: 151.8672
-05:50:12 [INFO] FPS: 146.9443
-05:50:12 [INFO] FPS: 140.66083
-05:50:12 [INFO] FPS: 143.48232
-05:50:12 [INFO] FPS: 140.36467
-05:50:12 [INFO] FPS: 159.72655
-05:50:12 [INFO] FPS: 132.81271
-05:50:12 [INFO] FPS: 152.88182
-05:50:12 [INFO] FPS: 140.47311
-05:50:12 [INFO] FPS: 139.21759
-05:50:12 [INFO] FPS: 126.88583
-05:50:12 [INFO] FPS: 175.35861
-05:50:12 [INFO] FPS: 139.55956
-05:50:12 [INFO] FPS: 157.35394
-05:50:12 [INFO] FPS: 141.78766
-05:50:12 [INFO] FPS: 100.63501
-05:50:12 [INFO] FPS: 238.45293
-05:50:12 [INFO] FPS: 128.23473
-05:50:12 [INFO] FPS: 158.61685
-05:50:12 [INFO] FPS: 155.49922
-05:50:12 [INFO] FPS: 144.5588
-05:50:12 [INFO] FPS: 127.846176
-05:50:12 [INFO] FPS: 153.32721
-05:50:12 [INFO] FPS: 147.83932
-05:50:12 [INFO] FPS: 134.41763
-05:50:12 [INFO] FPS: 161.17334
-05:50:12 [INFO] FPS: 83.03924
-05:50:12 [INFO] FPS: 202.5891
-05:50:12 [INFO] FPS: 343.33585
-05:50:12 [INFO] FPS: 130.55682
-05:50:12 [INFO] FPS: 122.194115
-05:50:12 [INFO] FPS: 158.78056
-05:50:12 [INFO] FPS: 125.29287
-05:50:12 [INFO] FPS: 131.59973
-05:50:12 [INFO] FPS: 160.41579
-05:50:12 [INFO] FPS: 174.62979
-05:50:12 [INFO] FPS: 127.406395
-05:50:12 [INFO] FPS: 175.01181
-05:50:12 [INFO] FPS: 110.24022
-05:50:12 [INFO] FPS: 199.4694
-05:50:12 [INFO] FPS: 131.52702
-05:50:12 [INFO] FPS: 151.11447
-05:50:12 [INFO] FPS: 165.7193
-05:50:12 [INFO] FPS: 123.8206
-05:50:12 [INFO] FPS: 137.39095
-05:50:12 [INFO] FPS: 159.821
-05:50:12 [INFO] FPS: 111.78055
-05:50:12 [INFO] FPS: 201.80412
-05:50:12 [INFO] FPS: 151.99417
-05:50:12 [INFO] FPS: 155.32292
-05:50:12 [INFO] FPS: 141.37672
-05:50:12 [INFO] FPS: 145.40167
-05:50:12 [INFO] FPS: 136.29549
-05:50:12 [INFO] FPS: 147.41
-05:50:12 [INFO] FPS: 147.93556
-05:50:12 [INFO] FPS: 134.72005
-05:50:12 [INFO] FPS: 97.961426
-05:50:12 [INFO] FPS: 405.91006
-05:50:12 [INFO] FPS: 111.04819
-05:50:12 [INFO] FPS: 190.9782
-05:50:12 [INFO] FPS: 133.80075
-05:50:12 [INFO] FPS: 131.4596
-05:50:12 [INFO] FPS: 140.73209
-05:50:12 [INFO] FPS: 172.12001
-05:50:12 [INFO] FPS: 112.96627
-05:50:12 [INFO] FPS: 185.54942
-05:50:12 [INFO] FPS: 146.59319
-05:50:12 [INFO] FPS: 131.08221
-05:50:12 [INFO] FPS: 166.55286
-05:50:12 [INFO] FPS: 140.9205
-05:50:12 [INFO] FPS: 127.21999
-05:50:12 [INFO] FPS: 184.92491
-05:50:12 [INFO] FPS: 135.93051
-05:50:12 [INFO] FPS: 142.1444
-05:50:12 [INFO] FPS: 150.5888
-05:50:12 [INFO] FPS: 145.58583
-05:50:12 [INFO] FPS: 124.74583
-05:50:12 [INFO] FPS: 188.23175
-05:50:12 [INFO] FPS: 117.31582
-05:50:12 [INFO] FPS: 163.8109
-05:50:12 [INFO] FPS: 138.79636
-05:50:12 [INFO] FPS: 142.59029
-05:50:13 [INFO] FPS: 155.24817
-05:50:13 [INFO] FPS: 141.56686
-05:50:13 [INFO] FPS: 145.12314
-05:50:13 [INFO] FPS: 117.146774
-05:50:13 [INFO] FPS: 180.86453
-05:50:13 [INFO] FPS: 146.58888
-05:50:13 [INFO] FPS: 134.83267
-05:50:13 [INFO] FPS: 158.08777
-05:50:13 [INFO] FPS: 117.03571
-05:50:13 [INFO] FPS: 180.90053
-05:50:13 [INFO] FPS: 164.10391
-05:50:13 [INFO] FPS: 107.297295
-05:50:13 [INFO] FPS: 195.17528
-05:50:13 [INFO] FPS: 147.52962
-05:50:13 [INFO] FPS: 141.27686
-05:50:13 [INFO] FPS: 139.03952
-05:50:13 [INFO] FPS: 144.43562
-05:50:13 [INFO] FPS: 137.35509
-05:50:13 [INFO] FPS: 156.65141
-05:50:13 [INFO] FPS: 145.18634
-05:50:13 [INFO] FPS: 151.26076
-05:50:13 [INFO] FPS: 141.78163
-05:50:13 [INFO] FPS: 144.6257
-05:50:13 [INFO] FPS: 135.2393
-05:50:13 [INFO] FPS: 146.1625
-05:50:13 [INFO] FPS: 155.85548
-05:50:13 [INFO] FPS: 150.18172
-05:50:13 [INFO] FPS: 132.95573
-05:50:13 [INFO] FPS: 136.90753
-05:50:13 [INFO] FPS: 131.83742
-05:50:13 [INFO] FPS: 167.78523
-05:50:13 [INFO] FPS: 141.90033
-05:50:13 [INFO] FPS: 129.74881
-05:50:13 [INFO] FPS: 173.1182
-05:50:13 [INFO] FPS: 154.42824
-05:50:13 [INFO] FPS: 132.18596
-05:50:13 [INFO] FPS: 142.27382
-05:50:13 [INFO] FPS: 132.76334
-05:50:13 [INFO] FPS: 161.74686
-05:50:13 [INFO] FPS: 151.15787
-05:50:13 [INFO] FPS: 121.344505
-05:50:13 [INFO] FPS: 182.01343
-05:50:13 [INFO] FPS: 134.65474
-05:50:13 [INFO] FPS: 157.16846
-05:50:13 [INFO] FPS: 127.83963
-05:50:13 [INFO] FPS: 147.6734
-05:50:13 [INFO] FPS: 151.8672
-05:50:13 [INFO] FPS: 142.06361
-05:50:13 [INFO] FPS: 141.30879
-05:50:13 [INFO] FPS: 144.55254
-05:50:13 [INFO] FPS: 152.16068
-05:50:13 [INFO] FPS: 149.46342
-05:50:13 [INFO] FPS: 136.60641
-05:50:13 [INFO] FPS: 144.56299
-05:50:13 [INFO] FPS: 140.29181
-05:50:13 [INFO] FPS: 155.33499
-05:50:13 [INFO] FPS: 134.6203
-05:50:13 [INFO] FPS: 146.41289
-05:50:13 [INFO] FPS: 129.10889
-05:50:13 [INFO] FPS: 188.4872
-05:50:13 [INFO] FPS: 132.89566
-05:50:13 [INFO] FPS: 146.08777
-05:50:13 [INFO] FPS: 150.31943
-05:50:13 [INFO] FPS: 112.7917
-05:50:13 [INFO] FPS: 204.34854
-05:50:13 [INFO] FPS: 135.32166
-05:50:13 [INFO] FPS: 140.90659
-05:50:13 [INFO] FPS: 122.81392
-05:50:13 [INFO] FPS: 178.45988
-05:50:13 [INFO] FPS: 147.62544
-05:50:13 [INFO] FPS: 148.50235
-05:50:13 [INFO] FPS: 127.12779
-05:50:13 [INFO] FPS: 149.72974
-05:50:13 [INFO] FPS: 150.69772
-05:50:13 [INFO] FPS: 149.28938
-05:50:13 [INFO] FPS: 110.95947
-05:50:13 [INFO] FPS: 190.90163
-05:50:13 [INFO] FPS: 156.80862
-05:50:13 [INFO] FPS: 133.48283
-05:50:13 [INFO] FPS: 152.70906
-05:50:13 [INFO] FPS: 148.92255
-05:50:13 [INFO] FPS: 122.69487
-05:50:13 [INFO] FPS: 167.13744
-05:50:13 [INFO] FPS: 139.73506
-05:50:13 [INFO] FPS: 126.01919
-05:50:13 [INFO] FPS: 167.53506
-05:50:13 [INFO] FPS: 131.35254
-05:50:13 [INFO] FPS: 180.01152
-05:50:13 [INFO] FPS: 146.4622
-05:50:13 [INFO] FPS: 142.64725
-05:50:13 [INFO] FPS: 130.08977
-05:50:13 [INFO] FPS: 151.72205
-05:50:13 [INFO] FPS: 144.82678
-05:50:13 [INFO] FPS: 138.04338
-05:50:13 [INFO] FPS: 160.89069
-05:50:13 [INFO] FPS: 138.941
-05:50:13 [INFO] FPS: 140.0521
-05:50:13 [INFO] FPS: 136.54114
-05:50:13 [INFO] FPS: 149.28938
-05:50:13 [INFO] FPS: 149.85089
-05:50:13 [INFO] FPS: 149.45001
-05:50:13 [INFO] FPS: 139.11494
-05:50:13 [INFO] FPS: 156.56802
-05:50:13 [INFO] FPS: 129.26912
-05:50:13 [INFO] FPS: 131.89655
-05:50:13 [INFO] FPS: 157.08945
-05:50:13 [INFO] FPS: 162.74452
-05:50:13 [INFO] FPS: 133.96385
-05:50:13 [INFO] FPS: 145.4355
-05:50:13 [INFO] FPS: 110.74688
-05:50:13 [INFO] FPS: 193.6146
-05:50:13 [INFO] FPS: 169.63817
-05:50:13 [INFO] FPS: 109.23948
-05:50:13 [INFO] FPS: 206.18982
-05:50:13 [INFO] FPS: 131.4544
-05:50:13 [INFO] FPS: 139.43501
-05:50:13 [INFO] FPS: 164.81525
-05:50:13 [INFO] FPS: 132.59258
-05:50:13 [INFO] FPS: 138.21509
-05:50:13 [INFO] FPS: 166.8836
-05:50:13 [INFO] FPS: 134.17056
-05:50:13 [INFO] FPS: 144.95274
-05:50:13 [INFO] FPS: 144.54417
-05:50:13 [INFO] FPS: 149.98126
-05:50:13 [INFO] FPS: 135.34363
-05:50:13 [INFO] FPS: 151.34546
-05:50:13 [INFO] FPS: 148.4142
-05:50:13 [INFO] FPS: 144.20442
-05:50:13 [INFO] FPS: 141.07556
-05:50:13 [INFO] FPS: 146.58028
-05:50:13 [INFO] FPS: 117.57513
-05:50:13 [INFO] FPS: 183.8134
-05:50:13 [INFO] FPS: 132.1615
-05:50:13 [INFO] FPS: 137.28532
-05:50:13 [INFO] FPS: 177.79042
-05:50:13 [INFO] FPS: 145.19478
-05:50:13 [INFO] FPS: 148.22061
-05:50:13 [INFO] FPS: 131.61185
-05:50:13 [INFO] FPS: 146.12833
-05:50:13 [INFO] FPS: 123.40041
-05:50:13 [INFO] FPS: 188.90736
-05:50:13 [INFO] FPS: 122.503975
-05:50:13 [INFO] FPS: 173.26819
-05:50:13 [INFO] FPS: 146.48152
-05:50:14 [INFO] FPS: 143.92632
-05:50:14 [INFO] FPS: 135.6392
-05:50:14 [INFO] FPS: 151.89488
-05:50:14 [INFO] FPS: 147.59276
-05:50:14 [INFO] FPS: 148.78738
-05:50:14 [INFO] FPS: 120.976036
-05:50:14 [INFO] FPS: 171.44131
-05:50:14 [INFO] FPS: 136.4815
-05:50:14 [INFO] FPS: 140.95029
-05:50:14 [INFO] FPS: 153.68065
-05:50:14 [INFO] FPS: 142.37308
-05:50:14 [INFO] FPS: 138.36617
-05:50:14 [INFO] FPS: 144.26683
-05:50:14 [INFO] FPS: 146.705
-05:50:14 [INFO] FPS: 156.74226
-05:50:14 [INFO] FPS: 111.74558
-05:50:14 [INFO] FPS: 176.71591
-05:50:14 [INFO] FPS: 153.8793
-05:50:14 [INFO] FPS: 170.5437
-05:50:14 [INFO] FPS: 130.25583
-05:50:14 [INFO] FPS: 129.1706
-05:50:14 [INFO] FPS: 163.69827
-05:50:14 [INFO] FPS: 140.56592
-05:50:14 [INFO] FPS: 147.0372
-05:50:14 [INFO] FPS: 144.54208
-05:50:14 [INFO] FPS: 137.97481
-05:50:14 [INFO] FPS: 142.37917
-05:50:14 [INFO] FPS: 156.89229
-05:50:14 [INFO] FPS: 150.97075
-05:50:14 [INFO] FPS: 143.07994
-05:50:14 [INFO] FPS: 134.95276
-05:50:14 [INFO] FPS: 154.35432
-05:50:14 [INFO] FPS: 104.39721
-05:50:14 [INFO] FPS: 260.47095
-05:50:14 [INFO] FPS: 145.19688
-05:50:14 [INFO] FPS: 129.25407
-05:50:14 [INFO] FPS: 144.31264
-05:50:14 [INFO] FPS: 137.26648
-05:50:14 [INFO] FPS: 128.02458
-05:50:14 [INFO] FPS: 172.01341
-05:50:14 [INFO] FPS: 151.33401
-05:50:14 [INFO] FPS: 135.75705
-05:50:14 [INFO] FPS: 158.59422
-05:50:14 [INFO] FPS: 129.14891
-05:50:14 [INFO] FPS: 155.15182
-05:50:14 [INFO] FPS: 142.78372
-05:50:14 [INFO] FPS: 140.88078
-05:50:14 [INFO] FPS: 157.27475
-05:50:14 [INFO] FPS: 134.21558
-05:50:14 [INFO] FPS: 148.19646
-05:50:14 [INFO] FPS: 147.08261
-05:50:14 [INFO] FPS: 142.76944
-05:50:14 [INFO] FPS: 144.3689
-05:50:14 [INFO] FPS: 126.47502
-05:50:14 [INFO] FPS: 169.91776
-05:50:14 [INFO] FPS: 141.87617
-05:50:14 [INFO] FPS: 143.23979
-05:50:14 [INFO] FPS: 157.07957
-05:50:14 [INFO] FPS: 136.37541
-05:50:14 [INFO] FPS: 143.27469
-05:50:14 [INFO] FPS: 147.46652
-05:50:14 [INFO] FPS: 95.54384
-05:50:14 [INFO] FPS: 343.34766
-05:50:14 [INFO] FPS: 108.34001
-05:50:14 [INFO] FPS: 150.68864
-05:50:14 [INFO] FPS: 159.30415
-05:50:14 [INFO] FPS: 152.01265
-05:50:14 [INFO] FPS: 123.1694
-05:50:14 [INFO] FPS: 188.94662
-05:50:14 [INFO] FPS: 97.98446
-05:50:14 [INFO] FPS: 305.02682
-05:50:14 [INFO] FPS: 137.16856
-05:50:14 [INFO] FPS: 144.84567
-05:50:14 [INFO] FPS: 135.60242
-05:50:14 [INFO] FPS: 138.45045
-05:50:14 [INFO] FPS: 133.49353
-05:50:14 [INFO] FPS: 168.5971
-05:50:14 [INFO] FPS: 152.55298
-05:50:14 [INFO] FPS: 141.28085
-05:50:14 [INFO] FPS: 147.64725
-05:50:14 [INFO] FPS: 142.54355
-05:50:14 [INFO] FPS: 145.89595
-05:50:14 [INFO] FPS: 154.11646
-05:50:14 [INFO] FPS: 128.7316
-05:50:14 [INFO] FPS: 149.17802
-05:50:14 [INFO] FPS: 150.49362
-05:50:14 [INFO] FPS: 149.61774
-05:50:14 [INFO] FPS: 148.46928
-05:50:14 [INFO] FPS: 129.85326
-05:50:14 [INFO] FPS: 148.29094
-05:50:14 [INFO] FPS: 116.26149
-05:50:14 [INFO] FPS: 199.53708
-05:50:14 [INFO] FPS: 136.48337
-05:50:14 [INFO] FPS: 134.55147
-05:50:14 [INFO] FPS: 165.37672
-05:50:14 [INFO] FPS: 122.42299
-05:50:14 [INFO] FPS: 170.8146
-05:50:14 [INFO] FPS: 128.53801
-05:50:14 [INFO] FPS: 141.38872
-05:50:14 [INFO] FPS: 180.35892
-05:50:14 [INFO] FPS: 136.55232
-05:50:14 [INFO] FPS: 152.33684
-05:50:14 [INFO] FPS: 136.65121
-05:50:14 [INFO] FPS: 148.61713
-05:50:14 [INFO] FPS: 137.52132
-05:50:14 [INFO] FPS: 146.14114
-05:50:14 [INFO] FPS: 145.04945
-05:50:14 [INFO] FPS: 155.15663
-05:50:14 [INFO] FPS: 134.12917
-05:50:14 [INFO] FPS: 151.60474
-05:50:14 [INFO] FPS: 138.18452
-05:50:14 [INFO] FPS: 168.82767
-05:50:14 [INFO] FPS: 117.43291
-05:50:14 [INFO] FPS: 164.86143
-05:50:14 [INFO] FPS: 151.30196
-05:50:14 [INFO] FPS: 137.19868
-05:50:14 [INFO] FPS: 123.12087
-05:50:14 [INFO] FPS: 168.76213
-05:50:14 [INFO] FPS: 141.0895
-05:50:14 [INFO] FPS: 125.03908
-05:50:14 [INFO] FPS: 186.54976
-05:50:14 [INFO] FPS: 136.94316
-05:50:14 [INFO] FPS: 147.38176
-05:50:14 [INFO] FPS: 148.15692
-05:50:14 [INFO] FPS: 132.91685
-05:50:14 [INFO] FPS: 163.29996
-05:50:14 [INFO] FPS: 136.99756
-05:50:14 [INFO] FPS: 127.35122
-05:50:14 [INFO] FPS: 176.74402
-05:50:14 [INFO] FPS: 140.91057
-05:50:14 [INFO] FPS: 151.00494
-05:50:14 [INFO] FPS: 137.7107
-05:50:14 [INFO] FPS: 152.36934
-05:50:14 [INFO] FPS: 129.12056
-05:50:14 [INFO] FPS: 154.3067
-05:50:14 [INFO] FPS: 140.41197
-05:50:14 [INFO] FPS: 150.51854
-05:50:14 [INFO] FPS: 140.34102
-05:50:14 [INFO] FPS: 143.68024
-05:50:14 [INFO] FPS: 134.18317
-05:50:14 [INFO] FPS: 179.58803
-05:50:14 [INFO] FPS: 121.19008
-05:50:14 [INFO] FPS: 156.77176
-05:50:14 [INFO] FPS: 136.85695
-05:50:14 [INFO] FPS: 152.21626
-05:50:15 [INFO] FPS: 116.812874
-05:50:15 [INFO] FPS: 205.84602
-05:50:15 [INFO] FPS: 136.74092
-05:50:15 [INFO] FPS: 145.04315
-05:50:15 [INFO] FPS: 138.77902
-05:50:15 [INFO] FPS: 121.26503
-05:50:15 [INFO] FPS: 189.19685
-05:50:15 [INFO] FPS: 143.11475
-05:50:15 [INFO] FPS: 148.68341
-05:50:15 [INFO] FPS: 142.22728
-05:50:15 [INFO] FPS: 137.87589
-05:50:15 [INFO] FPS: 162.41676
-05:50:15 [INFO] FPS: 127.45185
-05:50:15 [INFO] FPS: 145.09366
-05:50:15 [INFO] FPS: 167.70364
-05:50:15 [INFO] FPS: 141.11537
-05:50:15 [INFO] FPS: 144.66127
-05:50:15 [INFO] FPS: 103.584
-05:50:15 [INFO] FPS: 217.42438
-05:50:15 [INFO] FPS: 151.28593
-05:50:15 [INFO] FPS: 143.039
-05:50:15 [INFO] FPS: 150.26071
-05:50:15 [INFO] FPS: 131.49762
-05:50:15 [INFO] FPS: 155.47748
-05:50:15 [INFO] FPS: 136.07663
-05:50:15 [INFO] FPS: 141.97084
-05:50:15 [INFO] Close Requested, closing...
-05:50:15 [INFO] FPS: 153.36952
+05:55:39 [INFO] 	objects: (type: INSTANCE, hndl: 0x1e5afafe690, name: ?)
+05:55:39 [INFO] FPS: 1.148254
+05:55:39 [INFO] FPS: 342.64178
+05:55:39 [INFO] FPS: 847.0987
+05:55:39 [INFO] FPS: 800.64056
+05:55:39 [INFO] FPS: 138.42938
+05:55:39 [INFO] FPS: 1152.3392
+05:55:39 [INFO] FPS: 447.38727
+05:55:39 [INFO] FPS: 51.087917
+05:55:39 [INFO] FPS: 702.5926
+05:55:39 [INFO] FPS: 18.59697
+05:55:39 [INFO] FPS: 237.9253
+05:55:39 [INFO] FPS: 169.47142
+05:55:39 [INFO] FPS: 142.29407
+05:55:39 [INFO] FPS: 145.45667
+05:55:39 [INFO] FPS: 153.4943
+05:55:39 [INFO] FPS: 141.17714
+05:55:39 [INFO] FPS: 70.48707
+05:55:39 [INFO] FPS: 141.31079
+05:55:39 [INFO] FPS: 157.3069
+05:55:39 [INFO] FPS: 142.03336
+05:55:39 [INFO] FPS: 145.87253
+05:55:39 [INFO] FPS: 148.01877
+05:55:39 [INFO] FPS: 141.56085
+05:55:39 [INFO] FPS: 137.72966
+05:55:39 [INFO] FPS: 161.4257
+05:55:39 [INFO] FPS: 129.35774
+05:55:39 [INFO] FPS: 154.46878
+05:55:39 [INFO] FPS: 146.14755
+05:55:39 [INFO] FPS: 146.24373
+05:55:39 [INFO] FPS: 146.95078
+05:55:39 [INFO] FPS: 138.95258
+05:55:39 [INFO] FPS: 149.15355
+05:55:39 [INFO] FPS: 145.93854
+05:55:39 [INFO] FPS: 138.4869
+05:55:39 [INFO] FPS: 142.63504
+05:55:39 [INFO] FPS: 148.31514
+05:55:39 [INFO] FPS: 145.04945
+05:55:39 [INFO] FPS: 144.20235
+05:55:39 [INFO] FPS: 143.21722
+05:55:39 [INFO] FPS: 152.42276
+05:55:39 [INFO] FPS: 138.08531
+05:55:40 [INFO] FPS: 144.93805
+05:55:40 [INFO] FPS: 141.78365
+05:55:40 [INFO] FPS: 110.686806
+05:55:40 [INFO] FPS: 186.19893
+05:55:40 [INFO] FPS: 153.5933
+05:55:40 [INFO] FPS: 135.45914
+05:55:40 [INFO] FPS: 143.50496
+05:55:40 [INFO] FPS: 149.59087
+05:55:40 [INFO] FPS: 142.27583
+05:55:40 [INFO] FPS: 151.89488
+05:55:40 [INFO] FPS: 136.73157
+05:55:40 [INFO] FPS: 149.38081
+05:55:40 [INFO] FPS: 134.11658
+05:55:40 [INFO] FPS: 153.65703
+05:55:40 [INFO] FPS: 141.25291
+05:55:40 [INFO] FPS: 132.39247
+05:55:40 [INFO] FPS: 173.34927
+05:55:40 [INFO] FPS: 125.79092
+05:55:40 [INFO] FPS: 164.61989
+05:55:40 [INFO] FPS: 133.40092
+05:55:40 [INFO] FPS: 151.38899
+05:55:40 [INFO] FPS: 139.91689
+05:55:40 [INFO] FPS: 146.15823
+05:55:40 [INFO] FPS: 165.87874
+05:55:40 [INFO] FPS: 112.26117
+05:55:40 [INFO] FPS: 199.73634
+05:55:40 [INFO] FPS: 132.41174
+05:55:40 [INFO] FPS: 139.28159
+05:55:40 [INFO] FPS: 155.64929
+05:55:40 [INFO] FPS: 151.66681
+05:55:40 [INFO] FPS: 129.94775
+05:55:40 [INFO] FPS: 146.95294
+05:55:40 [INFO] FPS: 139.20984
+05:55:40 [INFO] FPS: 160.5291
+05:55:40 [INFO] FPS: 148.7564
+05:55:40 [INFO] FPS: 129.22568
+05:55:40 [INFO] FPS: 158.95976
+05:55:40 [INFO] FPS: 138.22464
+05:55:40 [INFO] FPS: 143.38768
+05:55:40 [INFO] FPS: 143.03491
+05:55:40 [INFO] FPS: 160.44154
+05:55:40 [INFO] FPS: 136.8251
+05:55:40 [INFO] FPS: 134.21378
+05:55:40 [INFO] FPS: 160.50334
+05:55:40 [INFO] FPS: 150.8091
+05:55:40 [INFO] FPS: 143.55852
+05:55:40 [INFO] FPS: 140.78558
+05:55:40 [INFO] FPS: 141.7535
+05:55:40 [INFO] FPS: 153.5768
+05:55:40 [INFO] FPS: 130.3424
+05:55:40 [INFO] FPS: 145.58583
+05:55:40 [INFO] FPS: 151.3363
+05:55:40 [INFO] FPS: 146.17105
+05:55:40 [INFO] FPS: 142.74907
+05:55:40 [INFO] FPS: 140.6727
+05:55:40 [INFO] FPS: 137.48727
+05:55:40 [INFO] FPS: 152.0242
+05:55:40 [INFO] FPS: 154.30908
+05:55:40 [INFO] FPS: 137.8949
+05:55:40 [INFO] FPS: 131.15614
+05:55:40 [INFO] FPS: 140.63708
+05:55:40 [INFO] FPS: 158.93703
+05:55:40 [INFO] FPS: 143.87868
+05:55:40 [INFO] FPS: 136.86256
+05:55:40 [INFO] FPS: 160.51364
+05:55:40 [INFO] FPS: 142.0495
+05:55:40 [INFO] FPS: 104.41574
+05:55:40 [INFO] FPS: 196.8814
+05:55:40 [INFO] FPS: 158.08028
+05:55:40 [INFO] FPS: 151.14188
+05:55:40 [INFO] FPS: 136.55232
+05:55:40 [INFO] FPS: 144.29597
+05:55:40 [INFO] FPS: 148.90924
+05:55:40 [INFO] FPS: 125.73556
+05:55:40 [INFO] FPS: 189.29355
+05:55:40 [INFO] FPS: 125.39813
+05:55:40 [INFO] FPS: 153.75627
+05:55:40 [INFO] FPS: 147.87431
+05:55:40 [INFO] FPS: 147.1432
+05:55:40 [INFO] FPS: 108.48576
+05:55:40 [INFO] FPS: 187.36066
+05:55:40 [INFO] FPS: 156.12315
+05:55:40 [INFO] FPS: 138.71935
+05:55:40 [INFO] FPS: 153.09482
+05:55:40 [INFO] FPS: 143.35478
+05:55:40 [INFO] FPS: 133.23207
+05:55:40 [INFO] FPS: 148.81616
+05:55:40 [INFO] FPS: 146.10484
+05:55:40 [INFO] FPS: 148.65909
+05:55:40 [INFO] FPS: 142.1545
+05:55:40 [INFO] FPS: 142.95721
+05:55:40 [INFO] FPS: 135.58955
+05:55:40 [INFO] FPS: 140.82721
+05:55:40 [INFO] FPS: 173.25317
+05:55:40 [INFO] FPS: 141.14127
+05:55:40 [INFO] FPS: 135.96379
+05:55:40 [INFO] FPS: 150.60014
+05:55:40 [INFO] FPS: 144.69894
+05:55:40 [INFO] FPS: 142.05353
+05:55:40 [INFO] FPS: 139.94626
+05:55:40 [INFO] FPS: 140.2092
+05:55:40 [INFO] FPS: 138.32216
+05:55:40 [INFO] FPS: 139.8093
+05:55:40 [INFO] FPS: 166.80289
+05:55:40 [INFO] FPS: 150.01726
+05:55:40 [INFO] FPS: 130.13208
+05:55:40 [INFO] FPS: 151.0985
+05:55:40 [INFO] FPS: 137.62541
+05:55:40 [INFO] FPS: 127.691086
+05:55:40 [INFO] FPS: 148.9292
+05:55:40 [INFO] FPS: 168.32466
+05:55:40 [INFO] FPS: 146.32077
+05:55:40 [INFO] FPS: 147.60802
+05:55:40 [INFO] FPS: 138.00528
+05:55:40 [INFO] FPS: 151.4165
+05:55:40 [INFO] FPS: 147.05666
+05:55:40 [INFO] FPS: 140.90063
+05:55:40 [INFO] FPS: 123.14361
+05:55:40 [INFO] FPS: 180.04716
+05:55:40 [INFO] FPS: 156.86029
+05:55:40 [INFO] FPS: 139.65895
+05:55:40 [INFO] FPS: 149.93402
+05:55:40 [INFO] FPS: 143.0697
+05:55:40 [INFO] FPS: 140.0521
+05:55:40 [INFO] FPS: 144.13168
+05:55:40 [INFO] FPS: 142.74498
+05:55:40 [INFO] FPS: 132.83388
+05:55:40 [INFO] FPS: 146.65338
+05:55:40 [INFO] FPS: 162.91687
+05:55:40 [INFO] FPS: 145.62187
+05:55:40 [INFO] FPS: 138.2495
+05:55:40 [INFO] FPS: 148.20523
+05:55:40 [INFO] FPS: 148.18767
+05:55:40 [INFO] FPS: 130.52444
+05:55:40 [INFO] FPS: 151.60704
+05:55:40 [INFO] FPS: 152.0057
+05:55:40 [INFO] FPS: 143.50908
+05:55:40 [INFO] FPS: 147.9881
+05:55:40 [INFO] FPS: 142.55777
+05:55:40 [INFO] FPS: 125.15645
+05:55:40 [INFO] FPS: 157.86566
+05:55:40 [INFO] FPS: 151.66681
+05:55:40 [INFO] FPS: 146.06216
+05:55:40 [INFO] FPS: 146.10912
+05:55:40 [INFO] FPS: 140.06387
+05:55:41 [INFO] FPS: 139.64336
+05:55:41 [INFO] FPS: 143.34451
+05:55:41 [INFO] FPS: 148.20523
+05:55:41 [INFO] FPS: 152.0057
+05:55:41 [INFO] FPS: 141.77962
+05:55:41 [INFO] FPS: 152.14911
+05:55:41 [INFO] FPS: 134.30751
+05:55:41 [INFO] FPS: 149.0913
+05:55:41 [INFO] FPS: 134.86905
+05:55:41 [INFO] FPS: 141.59692
+05:55:41 [INFO] FPS: 155.7317
+05:55:41 [INFO] FPS: 117.23467
+05:55:41 [INFO] FPS: 150.52986
+05:55:41 [INFO] FPS: 178.1769
+05:55:41 [INFO] received zoom: 1.1587842
+05:55:41 [INFO] FPS: 146.4901
+05:55:41 [INFO] received zoom: 1.059731
+05:55:41 [INFO] FPS: 125.741875
+05:55:41 [INFO] FPS: 176.22078
+05:55:41 [INFO] received zoom: 1.122479
+05:55:41 [INFO] FPS: 123.22707
+05:55:41 [INFO] FPS: 139.24861
+05:55:41 [INFO] received zoom: 1.0774993
+05:55:41 [INFO] FPS: 165.35211
+05:55:41 [INFO] received zoom: 1.0546813
+05:55:41 [INFO] FPS: 145.46724
+05:55:41 [INFO] received zoom: 1.058146
+05:55:41 [INFO] FPS: 149.83968
+05:55:41 [INFO] received zoom: 1.0506097
+05:55:41 [INFO] FPS: 135.99152
+05:55:41 [INFO] received zoom: 1.0536186
+05:55:41 [INFO] FPS: 146.71147
+05:55:41 [INFO] received zoom: 1.0377725
+05:55:41 [INFO] FPS: 144.90024
+05:55:41 [INFO] received zoom: 1.032206
+05:55:41 [INFO] FPS: 147.6407
+05:55:41 [INFO] received zoom: 1.0276573
+05:55:41 [INFO] FPS: 142.44203
+05:55:41 [INFO] received zoom: 1.0245714
+05:55:41 [INFO] FPS: 146.15396
+05:55:41 [INFO] received zoom: 1.0219518
+05:55:41 [INFO] FPS: 148.236
+05:55:41 [INFO] received zoom: 1.0216434
+05:55:41 [INFO] FPS: 141.40671
+05:55:41 [INFO] received zoom: 1.0165008
+05:55:41 [INFO] FPS: 139.91884
+05:55:41 [INFO] received zoom: 1.0166763
+05:55:41 [INFO] FPS: 154.94987
+05:55:41 [INFO] received zoom: 1.0131763
+05:55:41 [INFO] FPS: 133.55414
+05:55:41 [INFO] FPS: 148.236
+05:55:41 [INFO] received zoom: 1.0137731
+05:55:41 [INFO] FPS: 143.74838
+05:55:41 [INFO] received zoom: 1.0101451
+05:55:41 [INFO] FPS: 139.57513
+05:55:41 [INFO] received zoom: 1.0146277
+05:55:41 [INFO] FPS: 135.0968
+05:55:41 [INFO] received zoom: 1.0107948
+05:55:41 [INFO] FPS: 161.74686
+05:55:41 [INFO] received zoom: 1.0126226
+05:55:41 [INFO] FPS: 153.5933
+05:55:41 [INFO] received zoom: 1.0132927
+05:55:41 [INFO] FPS: 139.13431
+05:55:41 [INFO] received zoom: 1.0125778
+05:55:41 [INFO] FPS: 110.63293
+05:55:41 [INFO] received zoom: 1.0316361
+05:55:41 [INFO] FPS: 209.74474
+05:55:41 [INFO] FPS: 139.87383
+05:55:41 [INFO] received zoom: 1.010426
+05:55:41 [INFO] FPS: 153.05498
+05:55:41 [INFO] received zoom: 1.0133394
+05:55:41 [INFO] FPS: 138.74821
+05:55:41 [INFO] received zoom: 1.0126128
+05:55:41 [INFO] FPS: 143.1045
+05:55:41 [INFO] received zoom: 1.014267
+05:55:41 [INFO] FPS: 148.2338
+05:55:41 [INFO] received zoom: 1.0098381
+05:55:41 [INFO] FPS: 142.34875
+05:55:41 [INFO] received zoom: 1.0102448
+05:55:41 [INFO] FPS: 113.9796
+05:55:41 [INFO] received zoom: 1.0153537
+05:55:41 [INFO] FPS: 191.64798
+05:55:41 [INFO] received zoom: 1.0076095
+05:55:41 [INFO] FPS: 150.81819
+05:55:41 [INFO] FPS: 141.12334
+05:55:41 [INFO] received zoom: 1.0103338
+05:55:41 [INFO] FPS: 148.65466
+05:55:41 [INFO] received zoom: 1.0098102
+05:55:41 [INFO] FPS: 122.955864
+05:55:41 [INFO] received zoom: 1.0094885
+05:55:41 [INFO] FPS: 149.64684
+05:55:41 [INFO] received zoom: 1.0077962
+05:55:41 [INFO] FPS: 159.17737
+05:55:41 [INFO] received zoom: 1.005497
+05:55:41 [INFO] FPS: 134.79088
+05:55:41 [INFO] received zoom: 1.0086554
+05:55:41 [INFO] FPS: 155.01953
+05:55:41 [INFO] received zoom: 1.0018815
+05:55:41 [INFO] FPS: 142.12218
+05:55:41 [INFO] received zoom: 1.0041045
+05:55:41 [INFO] FPS: 149.32506
+05:55:41 [INFO] received zoom: 1.0039065
+05:55:41 [INFO] FPS: 137.63678
+05:55:41 [INFO] FPS: 157.60939
+05:55:41 [INFO] received zoom: 1.0037011
+05:55:41 [INFO] FPS: 144.51494
+05:55:41 [INFO] FPS: 144.78694
+05:55:41 [INFO] FPS: 147.19519
+05:55:41 [INFO] FPS: 124.11568
+05:55:41 [INFO] FPS: 175.54022
+05:55:41 [INFO] FPS: 136.67177
+05:55:41 [INFO] FPS: 144.271
+05:55:41 [INFO] received zoom: 0.9979783
+05:55:41 [INFO] FPS: 149.29607
+05:55:41 [INFO] received zoom: 0.9960928
+05:55:41 [INFO] FPS: 137.55725
+05:55:41 [INFO] received zoom: 0.993639
+05:55:41 [INFO] FPS: 150.89557
+05:55:41 [INFO] received zoom: 0.9884026
+05:55:41 [INFO] FPS: 102.2997
+05:55:41 [INFO] received zoom: 0.9743401
+05:55:41 [INFO] FPS: 244.20023
+05:55:41 [INFO] received zoom: 0.98805624
+05:55:41 [INFO] FPS: 143.50703
+05:55:41 [INFO] received zoom: 0.96748126
+05:55:41 [INFO] FPS: 143.38974
+05:55:41 [INFO] received zoom: 0.9572843
+05:55:41 [INFO] FPS: 139.9972
+05:55:41 [INFO] received zoom: 0.9437489
+05:55:41 [INFO] FPS: 147.67995
+05:55:41 [INFO] received zoom: 0.94075024
+05:55:41 [INFO] FPS: 131.27495
+05:55:41 [INFO] received zoom: 0.93334603
+05:55:41 [INFO] FPS: 160.67613
+05:55:41 [INFO] received zoom: 0.94009686
+05:55:41 [INFO] FPS: 148.7586
+05:55:41 [INFO] received zoom: 0.9333372
+05:55:41 [INFO] FPS: 135.32532
+05:55:41 [INFO] received zoom: 0.9288751
+05:55:41 [INFO] FPS: 148.28656
+05:55:41 [INFO] received zoom: 0.9409926
+05:55:41 [INFO] FPS: 136.65497
+05:55:41 [INFO] received zoom: 0.9359701
+05:55:41 [INFO] FPS: 155.91138
+05:55:41 [INFO] received zoom: 0.953232
+05:55:41 [INFO] FPS: 142.80206
+05:55:41 [INFO] FPS: 143.42264
+05:55:41 [INFO] received zoom: 0.9511932
+05:55:41 [INFO] FPS: 152.15605
+05:55:41 [INFO] received zoom: 0.9559115
+05:55:41 [INFO] FPS: 136.55418
+05:55:41 [INFO] received zoom: 0.9530101
+05:55:41 [INFO] FPS: 147.42087
+05:55:41 [INFO] received zoom: 0.9544954
+05:55:41 [INFO] FPS: 124.4896
+05:55:41 [INFO] received zoom: 0.9601707
+05:55:41 [INFO] FPS: 172.38406
+05:55:41 [INFO] received zoom: 0.96616083
+05:55:41 [INFO] FPS: 144.88133
+05:55:41 [INFO] received zoom: 0.96577656
+05:55:41 [INFO] FPS: 149.11351
+05:55:41 [INFO] received zoom: 0.9687039
+05:55:41 [INFO] FPS: 138.22083
+05:55:41 [INFO] received zoom: 0.9662376
+05:55:41 [INFO] FPS: 146.52873
+05:55:41 [INFO] received zoom: 0.97213286
+05:55:41 [INFO] FPS: 117.43567
+05:55:41 [INFO] received zoom: 0.9652292
+05:55:41 [INFO] FPS: 185.85979
+05:55:41 [INFO] received zoom: 0.97803
+05:55:41 [INFO] FPS: 145.32559
+05:55:41 [INFO] received zoom: 0.97390914
+05:55:41 [INFO] FPS: 146.12833
+05:55:41 [INFO] received zoom: 0.9720565
+05:55:41 [INFO] FPS: 132.05853
+05:55:41 [INFO] received zoom: 0.9734966
+05:55:41 [INFO] FPS: 157.61435
+05:55:41 [INFO] received zoom: 0.9740929
+05:55:41 [INFO] FPS: 144.35847
+05:55:41 [INFO] FPS: 143.06151
+05:55:41 [INFO] received zoom: 0.9714575
+05:55:41 [INFO] FPS: 139.268
+05:55:41 [INFO] received zoom: 0.96649146
+05:55:41 [INFO] FPS: 155.28674
+05:55:41 [INFO] received zoom: 0.9737046
+05:55:41 [INFO] FPS: 143.01651
+05:55:41 [INFO] received zoom: 0.9734879
+05:55:41 [INFO] FPS: 130.26262
+05:55:41 [INFO] received zoom: 0.97760934
+05:55:41 [INFO] FPS: 151.79114
+05:55:41 [INFO] FPS: 161.09286
+05:55:41 [INFO] FPS: 131.02898
+05:55:41 [INFO] FPS: 146.139
+05:55:41 [INFO] received zoom: 1.2794143
+05:55:41 [INFO] FPS: 144.83308
+05:55:41 [INFO] received zoom: 0.97784805
+05:55:41 [INFO] FPS: 153.948
+05:55:41 [INFO] received zoom: 0.9829488
+05:55:41 [INFO] FPS: 136.17114
+05:55:41 [INFO] received zoom: 0.97643894
+05:55:41 [INFO] FPS: 146.71361
+05:55:41 [INFO] received zoom: 0.986084
+05:55:41 [INFO] FPS: 146.14542
+05:55:41 [INFO] received zoom: 0.9860299
+05:55:41 [INFO] FPS: 146.53732
+05:55:41 [INFO] received zoom: 0.98606724
+05:55:41 [INFO] FPS: 146.97021
+05:55:41 [INFO] received zoom: 0.9900774
+05:55:41 [INFO] FPS: 136.5803
+05:55:41 [INFO] FPS: 132.48192
+05:55:41 [INFO] received zoom: 0.980186
+05:55:41 [INFO] FPS: 169.04457
+05:55:41 [INFO] FPS: 142.90613
+05:55:41 [INFO] FPS: 146.86876
+05:55:41 [INFO] FPS: 141.6812
+05:55:41 [INFO] FPS: 144.4711
+05:55:41 [INFO] FPS: 140.99799
+05:55:41 [INFO] FPS: 142.29204
+05:55:41 [INFO] FPS: 153.52258
+05:55:41 [INFO] FPS: 140.62521
+05:55:41 [INFO] FPS: 136.25648
+05:55:41 [INFO] FPS: 156.30373
+05:55:41 [INFO] FPS: 136.18597
+05:55:41 [INFO] FPS: 157.67897
+05:55:41 [INFO] FPS: 142.00511
+05:55:41 [INFO] FPS: 145.35095
+05:55:41 [INFO] FPS: 141.12932
+05:55:41 [INFO] FPS: 140.69843
+05:55:41 [INFO] FPS: 135.67232
+05:55:41 [INFO] FPS: 160.09221
+05:55:41 [INFO] FPS: 142.27179
+05:55:41 [INFO] FPS: 112.58599
+05:55:41 [INFO] FPS: 209.34517
+05:55:41 [INFO] FPS: 132.68935
+05:55:42 [INFO] FPS: 157.9629
+05:55:42 [INFO] FPS: 139.76436
+05:55:42 [INFO] FPS: 138.86575
+05:55:42 [INFO] FPS: 159.67044
+05:55:42 [INFO] FPS: 129.88869
+05:55:42 [INFO] FPS: 163.12947
+05:55:42 [INFO] FPS: 135.318
+05:55:42 [INFO] FPS: 155.73656
+05:55:42 [INFO] FPS: 137.74294
+05:55:42 [INFO] FPS: 149.68939
+05:55:42 [INFO] FPS: 143.9947
+05:55:42 [INFO] FPS: 139.04144
+05:55:42 [INFO] FPS: 138.79059
+05:55:42 [INFO] FPS: 142.68388
+05:55:42 [INFO] FPS: 157.79341
+05:55:42 [INFO] FPS: 128.42741
+05:55:42 [INFO] FPS: 164.57925
+05:55:42 [INFO] FPS: 140.18364
+05:55:42 [INFO] FPS: 139.4778
+05:55:42 [INFO] FPS: 136.55978
+05:55:42 [INFO] FPS: 128.59917
+05:55:42 [INFO] FPS: 178.28809
+05:55:42 [INFO] received zoom: 0.9885485
+05:55:42 [INFO] FPS: 138.37575
+05:55:42 [INFO] received zoom: 0.9641676
+05:55:42 [INFO] FPS: 160.80273
+05:55:42 [INFO] received zoom: 0.96372366
+05:55:42 [INFO] FPS: 121.811584
+05:55:42 [INFO] received zoom: 0.9497174
+05:55:42 [INFO] FPS: 145.56677
+05:55:42 [INFO] received zoom: 0.9539158
+05:55:42 [INFO] FPS: 161.89088
+05:55:42 [INFO] received zoom: 0.9621659
+05:55:42 [INFO] FPS: 146.50298
+05:55:42 [INFO] FPS: 148.89594
+05:55:42 [INFO] received zoom: 0.95886385
+05:55:42 [INFO] FPS: 137.779
+05:55:42 [INFO] received zoom: 0.9597786
+05:55:42 [INFO] FPS: 137.1441
+05:55:42 [INFO] received zoom: 0.9617191
+05:55:42 [INFO] FPS: 158.16528
+05:55:42 [INFO] received zoom: 0.9668069
+05:55:42 [INFO] FPS: 147.7105
+05:55:42 [INFO] received zoom: 0.9664321
+05:55:42 [INFO] FPS: 129.36108
+05:55:42 [INFO] received zoom: 0.96843463
+05:55:42 [INFO] FPS: 161.82014
+05:55:42 [INFO] received zoom: 0.97656864
+05:55:42 [INFO] FPS: 145.11472
+05:55:42 [INFO] received zoom: 0.97588116
+05:55:42 [INFO] FPS: 142.00108
+05:55:42 [INFO] received zoom: 0.9815142
+05:55:42 [INFO] FPS: 141.46472
+05:55:42 [INFO] received zoom: 0.9814441
+05:55:42 [INFO] FPS: 147.30144
+05:55:42 [INFO] received zoom: 0.99009967
+05:55:42 [INFO] FPS: 147.67122
+05:55:42 [INFO] received zoom: 0.9920996
+05:55:42 [INFO] FPS: 134.99103
+05:55:42 [INFO] received zoom: 0.9935181
+05:55:42 [INFO] FPS: 141.28484
+05:55:42 [INFO] received zoom: 0.99587125
+05:55:42 [INFO] FPS: 153.83195
+05:55:42 [INFO] FPS: 144.7178
+05:55:42 [INFO] FPS: 150.92061
+05:55:42 [INFO] received zoom: 0.9961348
+05:55:42 [INFO] FPS: 139.15173
+05:55:42 [INFO] FPS: 148.00563
+05:55:42 [INFO] FPS: 107.316864
+05:55:42 [INFO] FPS: 154.46878
+05:55:42 [INFO] FPS: 188.2601
+05:55:42 [INFO] FPS: 141.32278
+05:55:42 [INFO] FPS: 135.84558
+05:55:42 [INFO] FPS: 158.05779
+05:55:42 [INFO] FPS: 139.7878
+05:55:42 [INFO] FPS: 136.16002
+05:55:42 [INFO] FPS: 158.80074
+05:55:42 [INFO] FPS: 150.37819
+05:55:42 [INFO] FPS: 139.75069
+05:55:42 [INFO] FPS: 135.43529
+05:55:42 [INFO] FPS: 112.4442
+05:55:42 [INFO] FPS: 205.69359
+05:55:42 [INFO] FPS: 156.57048
+05:55:42 [INFO] FPS: 138.74629
+05:55:42 [INFO] FPS: 150.89784
+05:55:42 [INFO] FPS: 140.71823
+05:55:42 [INFO] FPS: 134.43571
+05:55:42 [INFO] FPS: 144.17947
+05:55:42 [INFO] FPS: 112.15667
+05:55:42 [INFO] FPS: 230.00667
+05:55:42 [INFO] FPS: 138.77902
+05:55:42 [INFO] FPS: 121.96908
+05:55:42 [INFO] FPS: 183.09988
+05:55:42 [INFO] FPS: 135.14061
+05:55:42 [INFO] FPS: 157.39357
+05:55:42 [INFO] FPS: 142.77148
+05:55:42 [INFO] FPS: 147.6516
+05:55:42 [INFO] FPS: 125.8289
+05:55:42 [INFO] FPS: 169.47142
+05:55:42 [INFO] FPS: 128.76642
+05:55:42 [INFO] FPS: 132.714
+05:55:42 [INFO] FPS: 172.39299
+05:55:42 [INFO] FPS: 148.64584
+05:55:42 [INFO] FPS: 130.666
+05:55:42 [INFO] FPS: 158.81335
+05:55:42 [INFO] FPS: 130.56364
+05:55:42 [INFO] FPS: 164.08507
+05:55:42 [INFO] FPS: 140.42972
+05:55:42 [INFO] FPS: 151.04372
+05:55:42 [INFO] FPS: 110.09942
+05:55:42 [INFO] FPS: 183.3315
+05:55:42 [INFO] FPS: 160.44154
+05:55:42 [INFO] FPS: 143.5915
+05:55:42 [INFO] FPS: 141.07954
+05:55:42 [INFO] FPS: 143.21722
+05:55:42 [INFO] FPS: 110.367966
+05:55:42 [INFO] FPS: 209.6436
+05:55:42 [INFO] FPS: 102.67573
+05:55:42 [INFO] FPS: 235.29965
+05:55:42 [INFO] FPS: 125.91604
+05:55:42 [INFO] FPS: 135.91388
+05:55:42 [INFO] FPS: 156.11096
+05:55:42 [INFO] FPS: 118.77754
+05:55:42 [INFO] FPS: 148.26018
+05:55:42 [INFO] FPS: 214.36688
+05:55:42 [INFO] FPS: 125.16115
+05:55:42 [INFO] FPS: 152.78606
+05:55:42 [INFO] FPS: 139.03178
+05:55:42 [INFO] FPS: 145.3446
+05:55:42 [INFO] FPS: 151.03915
+05:55:42 [INFO] FPS: 154.0215
+05:55:42 [INFO] FPS: 134.17596
+05:55:42 [INFO] FPS: 149.6849
+05:55:42 [INFO] FPS: 157.77599
+05:55:42 [INFO] FPS: 146.01524
+05:55:42 [INFO] FPS: 140.37451
+05:55:42 [INFO] FPS: 149.51482
+05:55:42 [INFO] FPS: 126.78128
+05:55:42 [INFO] FPS: 170.23885
+05:55:42 [INFO] FPS: 132.22966
+05:55:42 [INFO] FPS: 112.7167
+05:55:42 [INFO] FPS: 205.01045
+05:55:42 [INFO] FPS: 136.36983
+05:55:42 [INFO] FPS: 154.4306
+05:55:42 [INFO] FPS: 153.92192
+05:55:42 [INFO] FPS: 159.109
+05:55:42 [INFO] FPS: 114.083626
+05:55:42 [INFO] FPS: 159.27878
+05:55:42 [INFO] FPS: 151.89488
+05:55:42 [INFO] FPS: 144.69058
+05:55:42 [INFO] FPS: 145.59431
+05:55:42 [INFO] FPS: 156.66368
+05:55:42 [INFO] FPS: 140.74596
+05:55:42 [INFO] FPS: 141.82385
+05:55:42 [INFO] FPS: 142.35889
+05:55:42 [INFO] FPS: 140.16006
+05:55:42 [INFO] FPS: 152.6601
+05:55:42 [INFO] FPS: 135.89911
+05:55:42 [INFO] FPS: 155.83606
+05:55:42 [INFO] FPS: 139.83472
+05:55:42 [INFO] FPS: 142.78575
+05:55:42 [INFO] FPS: 146.98749
+05:55:42 [INFO] FPS: 138.87346
+05:55:42 [INFO] FPS: 137.0201
+05:55:42 [INFO] FPS: 157.24507
+05:55:43 [INFO] FPS: 145.60916
+05:55:43 [INFO] FPS: 136.50572
+05:55:43 [INFO] FPS: 132.04109
+05:55:43 [INFO] FPS: 169.62378
+05:55:43 [INFO] FPS: 108.88976
+05:55:43 [INFO] FPS: 208.71597
+05:55:43 [INFO] FPS: 128.43895
+05:55:43 [INFO] FPS: 141.1871
+05:55:43 [INFO] FPS: 160.90623
+05:55:43 [INFO] FPS: 149.44556
+05:55:43 [INFO] FPS: 127.76123
+05:55:43 [INFO] FPS: 166.01643
+05:55:43 [INFO] FPS: 134.73457
+05:55:43 [INFO] FPS: 145.59856
+05:55:43 [INFO] FPS: 146.42789
+05:55:43 [INFO] FPS: 144.43562
+05:55:43 [INFO] FPS: 105.35076
+05:55:43 [INFO] FPS: 271.5178
+05:55:43 [INFO] FPS: 152.5972
+05:55:43 [INFO] FPS: 119.500015
+05:55:43 [INFO] FPS: 159.33969
+05:55:43 [INFO] FPS: 137.44005
+05:55:43 [INFO] FPS: 150.86142
+05:55:43 [INFO] FPS: 135.40779
+05:55:43 [INFO] FPS: 152.40417
+05:55:43 [INFO] FPS: 127.76613
+05:55:43 [INFO] FPS: 161.81491
+05:55:43 [INFO] FPS: 147.71266
+05:55:43 [INFO] FPS: 130.59946
+05:55:43 [INFO] FPS: 162.67569
+05:55:43 [INFO] FPS: 147.10641
+05:55:43 [INFO] FPS: 147.31662
+05:55:43 [INFO] FPS: 143.31781
+05:55:43 [INFO] FPS: 122.503975
+05:55:43 [INFO] FPS: 172.69069
+05:55:43 [INFO] FPS: 146.17319
+05:55:43 [INFO] FPS: 142.59233
+05:55:43 [INFO] FPS: 148.30634
+05:55:43 [INFO] FPS: 138.49265
+05:55:43 [INFO] FPS: 137.79419
+05:55:43 [INFO] FPS: 160.44669
+05:55:43 [INFO] FPS: 136.30478
+05:55:43 [INFO] FPS: 138.64049
+05:55:43 [INFO] FPS: 143.62863
+05:55:43 [INFO] FPS: 149.86887
+05:55:43 [INFO] FPS: 103.9447
+05:55:43 [INFO] FPS: 283.80872
+05:55:43 [INFO] FPS: 131.52184
+05:55:43 [INFO] FPS: 135.78285
+05:55:43 [INFO] FPS: 132.92923
+05:55:43 [INFO] FPS: 179.5848
+05:55:43 [INFO] FPS: 138.59822
+05:55:43 [INFO] FPS: 156.55577
+05:55:43 [INFO] FPS: 142.56793
+05:55:43 [INFO] FPS: 140.04622
+05:55:43 [INFO] FPS: 150.96846
+05:55:43 [INFO] FPS: 119.82937
+05:55:43 [INFO] FPS: 159.41081
+05:55:43 [INFO] FPS: 155.36153
+05:55:43 [INFO] FPS: 117.568214
+05:55:43 [INFO] FPS: 201.50322
+05:55:43 [INFO] FPS: 116.057755
+05:55:43 [INFO] FPS: 164.79893
+05:55:43 [INFO] FPS: 153.03389
+05:55:43 [INFO] FPS: 137.99385
+05:55:43 [INFO] FPS: 152.01035
+05:55:43 [INFO] FPS: 134.44475
+05:55:43 [INFO] FPS: 143.84143
+05:55:43 [INFO] FPS: 154.80595
+05:55:43 [INFO] FPS: 138.66164
+05:55:43 [INFO] FPS: 165.88976
+05:55:43 [INFO] FPS: 121.00531
+05:55:43 [INFO] FPS: 167.02019
+05:55:43 [INFO] FPS: 126.28017
+05:55:43 [INFO] FPS: 119.094406
+05:55:43 [INFO] FPS: 244.64833
+05:55:43 [INFO] FPS: 139.16916
+05:55:43 [INFO] FPS: 137.69553
+05:55:43 [INFO] FPS: 143.65546
+05:55:43 [INFO] FPS: 119.54001
+05:55:43 [INFO] FPS: 157.95293
+05:55:43 [INFO] FPS: 149.0313
+05:55:43 [INFO] Close Requested, closing...
