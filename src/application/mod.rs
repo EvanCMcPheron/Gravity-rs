@@ -196,6 +196,7 @@ impl<'app> ApplicationHandler for App<'app> {
             }
             WindowEvent::Resized(size) => {
                 self.graphics.as_mut().unwrap().resize(size);
+                self.camera.as_mut().unwrap().aspect_ratio = size.width as f32 / size.height as f32;
                 // self.window.as_ref().unwrap().request_redraw();
             }
             WindowEvent::RedrawRequested => {
