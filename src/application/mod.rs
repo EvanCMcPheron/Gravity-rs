@@ -1,5 +1,5 @@
 #![allow(dead_code, unused_variables)]
-use std::arch::x86_64;
+use std::{arch::x86_64, borrow::Borrow};
 
 use crate::graphics::{
     rendering::{Camera, ViewModeLookAt, ViewModeLookTo},
@@ -9,7 +9,7 @@ use crate::prelude::*;
 
 use winit::{
     application::ApplicationHandler,
-    event::{self, WindowEvent},
+    event::{self, DeviceId, KeyEvent, WindowEvent},
     event_loop,
     window::{self, Window},
 };
@@ -32,6 +32,34 @@ impl Default for UserOptions {
         }
     }
 }
+
+// #[derive(Debug, Default)]
+// pub struct FullscreenState {
+//     alt: bool,
+//     enter: bool,
+// }
+//
+// impl FullscreenState {
+//     pub fn set_alt(&mut self, state: bool, window: Arc<Window>) {
+//         if self.enter && state && !self.alt {
+//             Self::toggle_fullscreen(window);
+//         }
+//         self.alt = state;
+//     }
+//     pub fn toggle_fullscreen(window: Arc<Window>) {
+//         if window.fullscreen().is_some() {
+//             window.set_fullscreen(None);
+//             return;
+//         }
+//         window.set_fullscreen(Some(winit::window::Fullscreen::Borderless(None)));
+//     }
+//     pub fn set_enter(&mut self, state: bool, window: Arc<Window>) {
+//         if self.alt && state && !self.enter {
+//             Self::toggle_fullscreen(window);
+//         }
+//         self.enter = state;
+//     }
+// }
 
 #[derive(Debug, Default)]
 pub struct CursorState {
@@ -70,6 +98,7 @@ pub struct App<'app> {
     camera: Option<Camera<ViewModeLookAt>>,
     previous_frame: Option<std::time::Instant>,
     cursor_state: CursorState,
+    f11_state: bool,
     options: UserOptions,
 }
 
@@ -217,6 +246,29 @@ impl<'app> ApplicationHandler for App<'app> {
             WindowEvent::CloseRequested => {
                 info!("Close Requested, closing...");
                 event_loop.exit();
+            }
+            WindowEvent::KeyboardInput {
+                device_id,
+                event,
+                is_synthetic,
+            } => {
+                if let winit::keyboard::PhysicalKey::Code(code) = event.physical_key {
+                    match code {
+                        winit::keyboard::KeyCode::F11 => {
+                            if event.state.is_pressed() != self.f11_state && event.state.is_pressed() {
+                                if let Some(_) = self.window.as_ref().unwrap().clone().fullscreen() {
+                                    self.window.as_ref().unwrap().clone().set_fullscreen(None);
+                                } else {
+                                    self.window.as_ref().unwrap().clone().set_fullscreen(Some(
+                                        winit::window::Fullscreen::Borderless(None),
+                                    ));
+                                }
+                            }
+                            self.f11_state = event.state.is_pressed();
+                        }
+                        _ => (),
+                    }
+                }
             }
             _ => (),
         }
