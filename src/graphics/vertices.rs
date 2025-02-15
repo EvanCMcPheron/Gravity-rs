@@ -2,16 +2,24 @@ use core::f32;
 
 use crate::prelude::*;
 
-#[derive(Debug, Default)]
-pub struct Verticies {
+#[derive(Debug)]
+pub struct BodyData {
     /// The actual positions of the points
-    pub points: Vec<[f32; 4]>,
+    pub positions: wgpu::Buffer,
     /// The velocities of the points
-    pub velocities: Vec<[f32; 4]>,
-    pub mass: Vec<f32>,
+    pub velocities: wgpu::Buffer,
+    pub mass: wgpu::Buffer,
 }
 
-impl Verticies {
+impl BodyData {
+    pub fn with_length(device: &wgpu::Device, n: u32) -> Self {
+        device.create_buffer(&wgpu::BufferDescriptor { 
+            label: Some("Positions Buffer Init"),
+
+        });
+
+
+    }
     pub fn get_vertex_buffer_layout() -> wgpu::VertexBufferLayout<'static> {
         wgpu::VertexBufferLayout {
             array_stride: size_of::<Vec4>() as u64,
