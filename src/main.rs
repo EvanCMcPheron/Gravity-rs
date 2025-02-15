@@ -20,7 +20,9 @@ pub mod prelude {
         Rng,
         rng
     };
+    pub use std::sync::atomic::*;
 }
+
 
 use prelude::*;
 
