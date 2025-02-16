@@ -32,11 +32,12 @@ impl BodyData<Compute> {
         let size = mappable.mass.size();
         encoder.copy_buffer_to_buffer(mappable.mass.as_ref(), 0_u64, self.mass.as_ref(), 0_u64, size);
     }
-    pub fn map_to(&self, device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder, data: &UnbufferedBodyData) {
+    pub fn map_to(&self, device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder, data: &UnbufferedBodyData) -> Result<()> {
         let mut mapping_buffer = BodyData::<Mappable>::with_length(device, self.len);
         
-        mapping_buffer.map(data);
+        mapping_buffer.map(data)?;
         self.copy_from_mappable(&mapping_buffer, device, encoder);
+        Ok(())
     }
 }
 
@@ -136,7 +137,7 @@ impl<B: BufferType> BodyData<B> {
             attributes: &wgpu::vertex_attr_array![0 => Float32x4],
         }
     }
-    pub fn generate_unit_points(device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder) -> BodyData<Compute> {
+    pub fn generate_unit_points(device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder) -> Result<BodyData<Compute>> {
         let points = Arc::new(vec![
             [1.0, 0.0, 0.0, 1.0],
             [0.0, 1.0, 0.0, 1.0],
@@ -155,7 +156,7 @@ impl<B: BufferType> BodyData<B> {
             velocities,
             mass: masses
         });
-        compute
+        Ok(compute)
     }
     // pub fn generate_galaxy(
     //     max_radius: f32,

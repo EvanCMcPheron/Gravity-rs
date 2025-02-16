@@ -1,11 +1,7 @@
 #![allow(dead_code, unused_variables)]
-use std::borrow::Borrow;
+use std::{borrow::Borrow, time::Duration};
 
 use rendering::ViewMode;
-use wgpu::{
-    core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState,
-    FragmentState, TextureUsages,
-};
 
 use crate::prelude::*;
 
@@ -108,11 +104,23 @@ impl<'s> Graphics<'s> {
         })
     }
     pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
+        use std::{
+            time::Instant,
+            collections::HashMap
+        };
+
+        let mut start = Instant::now();
+        let mut times: HashMap<&'static str, Duration> = HashMap::new();
+
         let instance = wgpu::Instance::new(&Default::default());
+        times.insert("Instance Creation", start.elapsed());
+        start = Instant::now();
 
         let surface = instance
             .create_surface(window.clone())
             .with_context(|| "Failed to create surface from window")?;
+        times.insert("Surface Creation", start.elapsed());
+        start = Instant::now();
 
         let adapter = block_on(instance.request_adapter(&wgpu::RequestAdapterOptionsBase {
             power_preference: wgpu::PowerPreference::HighPerformance,
@@ -120,9 +128,13 @@ impl<'s> Graphics<'s> {
             force_fallback_adapter: false,
         }))
         .ok_or_else(|| anyhow!("Failed to create"))?;
+        times.insert("Adapter Creation", start.elapsed());
+        start = Instant::now();
 
         let (device, queue) = block_on(adapter.request_device(&Default::default(), None))
             .with_context(|| "Failed to obtain device")?;
+        times.insert("Device Creation", start.elapsed());
+        start = Instant::now();
 
         let size = window.clone().inner_size();
 
@@ -131,10 +143,20 @@ impl<'s> Graphics<'s> {
             .ok_or_else(|| anyhow!("faild to create surface configuration"))?;
 
         surface.configure(&device, &surface_config);
+        times.insert("Surface configuration", start.elapsed());
+        start = Instant::now();
 
         let mut encoder = device.create_command_encoder(&Default::default());
-        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder);
+        times.insert("Encoder Creation", start.elapsed());
+        start = Instant::now();
+        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder).with_context(|| "Failed to create unit points")?;
+        times.insert("Creating Body Data", start.elapsed());
+        start = Instant::now();
         queue.submit(Some(encoder.finish()));
+        times.insert("Queue submission", start.elapsed());
+        start = Instant::now();
+
+        info!("Graphics Instanciation Times - {:?}", times);
 
         Ok(Graphics {
             render_pipeline: Self::generate_render_pipeline(&device, &surface, &adapter),

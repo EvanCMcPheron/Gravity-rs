@@ -154,6 +154,12 @@ impl<'app> App<'app> {
 
 impl<'app> ApplicationHandler for App<'app> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
+        use std::time::{Duration, Instant};
+        use std::collections::HashMap;
+
+        let mut start = Instant::now();
+        let mut times: HashMap<&'static str, Duration> = HashMap::new();
+
         let attr = Window::default_attributes().with_title("Gravity Simulation");
 
         self.window = Some(Arc::new(
@@ -166,12 +172,18 @@ impl<'app> ApplicationHandler for App<'app> {
         let aspect_ratio = size.width as f32 / size.height as f32;
         self.camera = Some(Self::create_camera(aspect_ratio));
         self.previous_frame = Some(std::time::Instant::now());
+        times.insert("Window Instanciation", start.elapsed());
+        start = Instant::now();
 
         self.graphics = Some(
             Graphics::new(self.window.as_ref().unwrap().clone())
                 .with_context(|| "failed to create window")
                 .unwrap(),
         );
+        times.insert("Graphics Instanciation", start.elapsed());
+        start = Instant::now();
+
+        info!("Application instanciation - {:?}", times);
     }
     fn device_event(
         &mut self,
