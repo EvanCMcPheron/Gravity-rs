@@ -2,7 +2,6 @@
 use std::borrow::Borrow;
 
 use rendering::ViewMode;
-use vertices::Verticies;
 use wgpu::{
     core::device, hal::dx12::BindGroupLayout, util::RenderEncoder, DepthStencilState,
     FragmentState, TextureUsages,
@@ -14,6 +13,11 @@ pub mod compute;
 pub mod rendering;
 pub mod vertices;
 
+use vertices::{
+    BodyData,
+    Compute
+};
+
 #[derive(Debug)]
 pub struct Graphics<'s> {
     surface: wgpu::Surface<'s>,
@@ -22,7 +26,7 @@ pub struct Graphics<'s> {
     queue: wgpu::Queue,
     surface_config: wgpu::SurfaceConfiguration,
     render_pipeline: wgpu::RenderPipeline,
-    vertices: vertices::Verticies,
+    body_data: BodyData<Compute>
 }
 
 impl<'s> Graphics<'s> {
@@ -80,7 +84,7 @@ impl<'s> Graphics<'s> {
                 module: &shaders,
                 entry_point: Some("vs_main"),
                 compilation_options: Default::default(),
-                buffers: &[vertices::Verticies::get_vertex_buffer_layout()],
+                buffers: &[BodyData::<Compute>::get_vertex_buffer_layout()],
             },
             fragment: Some(wgpu::FragmentState {
                 module: &shaders,
@@ -103,7 +107,7 @@ impl<'s> Graphics<'s> {
             multisample: Default::default(),
         })
     }
-    pub fn new(window: Arc<winit::window::Window>, vertices: Verticies) -> Result<Self> {
+    pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
         let instance = wgpu::Instance::new(&Default::default());
 
         let surface = instance
@@ -128,7 +132,9 @@ impl<'s> Graphics<'s> {
 
         surface.configure(&device, &surface_config);
 
-        info!("Vertices: {:#?}", vertices);
+        let mut encoder = device.create_command_encoder(&Default::default());
+        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder);
+        queue.submit(Some(encoder.finish()));
 
         Ok(Graphics {
             render_pipeline: Self::generate_render_pipeline(&device, &surface, &adapter),
@@ -137,7 +143,7 @@ impl<'s> Graphics<'s> {
             device,
             queue,
             surface_config,
-            vertices,
+            body_data,
         })
     }
     fn reconfigure_surface(&self) {
@@ -167,7 +173,7 @@ impl<'s> Graphics<'s> {
         })
     }
     pub fn physics_tick(&mut self, delta: f32, gravitation_const: f32) {
-        compute::physics_tick(delta, &mut self.vertices, gravitation_const);
+        // compute::physics_tick(delta, &mut self.vertices, gravitation_const);
     }
     pub fn render<M: ViewMode + Default>(&mut self, camera: &rendering::Camera<M>) -> Result<()> {
         // let uniform = rendering::Uniform {
@@ -223,26 +229,26 @@ impl<'s> Graphics<'s> {
 
         rpass.set_vertex_buffer(
             0,
-            self.vertices.create_vertex_buffer(&self.device).slice(..),
+            self.body_data.positions.slice(..),
         );
 
         // rpass.draw(0..4, 0..1);
 
-        let indirect_buffer = self
-            .device
-            .create_buffer_init(&wgpu::util::BufferInitDescriptor {
-                label: Some("indirect draw instruction buffer"),
-                contents: wgpu::util::DrawIndirectArgs {
-                    vertex_count: self.vertices.points.len() as u32,
-                    instance_count: 1,
-                    first_vertex: 0,
-                    first_instance: 0,
-                }
-                .as_bytes(),
-                usage: wgpu::BufferUsages::INDIRECT,
-            });
+        // let indirect_buffer = self
+        //     .device
+        //     .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+        //         label: Some("indirect draw instruction buffer"),
+        //         contents: wgpu::util::DrawIndirectArgs {
+        //             vertex_count: self.vertices.points.len() as u32,
+        //             instance_count: 1,
+        //             first_vertex: 0,
+        //             first_instance: 0,
+        //         }
+        //         .as_bytes(),
+        //         usage: wgpu::BufferUsages::INDIRECT,
+        //     });
 
-        rpass.draw_indirect(&indirect_buffer, 0);
+        rpass.draw(0..(self.body_data.len as u32), 0..1);
 
         drop(rpass);
 

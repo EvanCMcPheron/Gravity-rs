@@ -1,5 +1,4 @@
 #![allow(dead_code, unused_variables)]
-use std::{arch::x86_64, borrow::Borrow};
 
 use crate::graphics::{
     rendering::{Camera, ViewModeLookAt, ViewModeLookTo},
@@ -168,17 +167,8 @@ impl<'app> ApplicationHandler for App<'app> {
         self.camera = Some(Self::create_camera(aspect_ratio));
         self.previous_frame = Some(std::time::Instant::now());
 
-        let vertices = crate::graphics::vertices::Verticies::generate_galaxy(
-            2.0,
-            core::f32::consts::PI / 12.0,
-            3000,
-            Vec3::Z,
-            self.options.gravitation_const,
-        )
-        .with_context(|| "Failed to generate galaxy")
-        .unwrap();
         self.graphics = Some(
-            Graphics::new(self.window.as_ref().unwrap().clone(), vertices)
+            Graphics::new(self.window.as_ref().unwrap().clone())
                 .with_context(|| "failed to create window")
                 .unwrap(),
         );

@@ -4,8 +4,6 @@ use wgpu::Maintain;
 
 use crate::prelude::*;
 
-use std::marker::PhantomData;
-
 #[derive(Debug)]
 pub struct BodyData<B: BufferType> {
     /// The actual positions of the points
@@ -219,10 +217,12 @@ pub trait BufferType {
     fn new() -> Self;
 }
 
+#[derive(Debug, Default)]
 pub struct Mappable {
     pub mapped_buffer_count: Arc<AtomicUsize>
 }
 
+#[derive(Debug, Default)]
 pub struct Compute;
 
 impl BufferType for Mappable {
