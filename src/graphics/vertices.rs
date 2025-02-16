@@ -138,8 +138,8 @@ impl<B: BufferType> BodyData<B> {
             attributes: &wgpu::vertex_attr_array![0 => Float32x4],
         }
     }
-    pub fn generate_unit_points(device: &wgpu::Device) -> BodyData<Compute> {
-        let points = vec![
+    pub fn generate_unit_points(device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder) -> BodyData<Compute> {
+        let points = Arc::new(vec![
             [1.0, 0.0, 0.0, 1.0],
             [0.0, 1.0, 0.0, 1.0],
             [-1.0, 0.0, 0.0, 1.0],
@@ -147,14 +147,17 @@ impl<B: BufferType> BodyData<B> {
             [0.0, 0.0, 1.0, 1.0],
             [0.0, 0.0, -1.0, 1.0],
             [0.0, 0.0, 0.0, 1.0],
-        ];
-        let velocities = vec![[0.0; 4]; points.len()];
-        let masses = vec![1.0; points.len()];
+        ]);
+        let velocities = Arc::new(vec![[0.0; 4]; points.len()]);
+        let masses = Arc::new(vec![1.0; points.len()]);
 
-        let mappables = BodyData::<Mappable>::with_length(device, points.len());
         let compute = BodyData::<Compute>::with_length(device, points.len());
-
-        todo!()
+        compute.map_to(device, encoder, &UnbufferedBodyData {
+            positions: points,
+            velocities,
+            mass: masses
+        });
+        compute
     }
     // pub fn generate_galaxy(
     //     max_radius: f32,
