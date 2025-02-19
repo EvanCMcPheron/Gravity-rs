@@ -113,11 +113,7 @@ impl<'app> App<'app> {
         )
     }
     fn process_frame(&mut self, delta: f32) -> Result<()> {
-        info!("FPS: {:?}", 1. / delta);
-        self.graphics
-            .as_mut()
-            .unwrap()
-            .physics_tick(delta, self.options.gravitation_const);
+        trace!("FPS: {:?}", 1. / delta);
 
         if self.cursor_state.pressed {
             let cursor_delta = self.cursor_state.pop_delta();
@@ -160,6 +156,10 @@ impl<'app> ApplicationHandler for App<'app> {
         let mut start = Instant::now();
         let mut times: HashMap<&'static str, Duration> = HashMap::new();
 
+        let instance = wgpu::Instance::new(&Default::default());
+        times.insert("WGPU Instance Instanciation", start.elapsed());
+        start = Instant::now();
+
         let attr = Window::default_attributes().with_title("Gravity Simulation");
 
         self.window = Some(Arc::new(
@@ -176,12 +176,12 @@ impl<'app> ApplicationHandler for App<'app> {
         start = Instant::now();
 
         self.graphics = Some(
-            Graphics::new(self.window.as_ref().unwrap().clone())
+            Graphics::new(self.window.as_ref().unwrap().clone(), instance)
                 .with_context(|| "failed to create window")
                 .unwrap(),
         );
         times.insert("Graphics Instanciation", start.elapsed());
-        start = Instant::now();
+        // start = Instant::now();
 
         info!("Application instanciation - {:?}", times);
     }

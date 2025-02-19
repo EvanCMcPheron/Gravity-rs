@@ -155,7 +155,7 @@ impl<B: BufferType> BodyData<B> {
             positions: points,
             velocities,
             mass: masses
-        });
+        }).with_context(|| "Failed to map unit points buffers to gpu bound buffers")?;
         Ok(compute)
     }
     // pub fn generate_galaxy(

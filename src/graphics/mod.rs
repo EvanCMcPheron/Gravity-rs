@@ -9,10 +9,7 @@ pub mod compute;
 pub mod rendering;
 pub mod vertices;
 
-use vertices::{
-    BodyData,
-    Compute
-};
+use vertices::{BodyData, Compute};
 
 #[derive(Debug)]
 pub struct Graphics<'s> {
@@ -22,7 +19,8 @@ pub struct Graphics<'s> {
     queue: wgpu::Queue,
     surface_config: wgpu::SurfaceConfiguration,
     render_pipeline: wgpu::RenderPipeline,
-    body_data: BodyData<Compute>
+    compute_pipeline: wgpu::ComputePipeline,
+    body_data: BodyData<Compute>,
 }
 
 impl<'s> Graphics<'s> {
@@ -66,6 +64,88 @@ impl<'s> Graphics<'s> {
             push_constant_ranges: &[],
         })
     }
+    fn generate_compute_bind_groups(&self) -> wgpu::BindGroup {
+        self.device.create_bind_group(&wgpu::BindGroupDescriptor {
+            label: None,
+            layout: &self.compute_pipeline.get_bind_group_layout(0),
+            entries: &[
+                wgpu::BindGroupEntry {
+                    binding: 0,
+                    resource: self.body_data.positions.as_entire_binding(),
+                },
+                wgpu::BindGroupEntry {
+                    binding: 1,
+                    resource: self.body_data.velocities.as_entire_binding(),
+                },
+                wgpu::BindGroupEntry {
+                    binding: 2,
+                    resource: self.body_data.mass.as_entire_binding(),
+                }
+            ]
+        })
+    }
+    fn generate_compute_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
+        // @Todo | update min_binding_size to account for length of buffers,
+        // pontentially optomising bind group allocation
+        device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
+            label: None,
+            push_constant_ranges: &[],
+            bind_group_layouts: &[&device.create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor {
+                label: None,
+                entries: &[
+                    wgpu::BindGroupLayoutEntry {
+                        binding: 0,
+                        visibility: wgpu::ShaderStages::COMPUTE,
+                        ty: wgpu::BindingType::Buffer { 
+                            ty: wgpu::BufferBindingType::Storage { read_only: false }, 
+                            has_dynamic_offset: false, 
+                            min_binding_size: None 
+                        },
+                        count: None //Some(std::num::NonZero::new(self.body_data.len as u32).unwrap())
+                    },
+                    wgpu::BindGroupLayoutEntry {
+                        binding: 1,
+                        visibility: wgpu::ShaderStages::COMPUTE,
+                        ty: wgpu::BindingType::Buffer { 
+                            ty: wgpu::BufferBindingType::Storage {
+                                read_only: false
+                            },
+                            has_dynamic_offset: false,
+                            min_binding_size: None
+                        },
+                        count: None
+                    },
+                    wgpu::BindGroupLayoutEntry {
+                        binding: 2,
+                        visibility: wgpu::ShaderStages::COMPUTE,
+                        ty: wgpu::BindingType::Buffer { 
+                            ty: wgpu::BufferBindingType::Storage {
+                                read_only: false
+                            },
+                            has_dynamic_offset: false,
+                            min_binding_size: None
+                        },
+                        count: None
+                    }
+                ]
+            })]
+        })
+    }
+    fn generate_compute_pipeline(
+        device: &wgpu::Device,
+        adapter: &wgpu::Adapter,
+    ) -> wgpu::ComputePipeline {
+        let module = device.create_shader_module(include_wgsl!("../../shaders/compute.wgsl"));
+
+        device.create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+            label: None,
+            layout: Some(&Self::generate_compute_pipeline_layout(device)),
+            module: &module,
+            entry_point: Some("cs_entry"),
+            compilation_options: Default::default(),
+            cache: None
+        })
+    }
     fn generate_render_pipeline(
         device: &wgpu::Device,
         surface: &wgpu::Surface,
@@ -103,18 +183,15 @@ impl<'s> Graphics<'s> {
             multisample: Default::default(),
         })
     }
-    pub fn new(window: Arc<winit::window::Window>) -> Result<Self> {
-        use std::{
-            time::Instant,
-            collections::HashMap
-        };
+    pub fn new(window: Arc<winit::window::Window>, instance: wgpu::Instance) -> Result<Self> {
+        use std::{collections::HashMap, time::Instant};
 
         let mut start = Instant::now();
         let mut times: HashMap<&'static str, Duration> = HashMap::new();
 
-        let instance = wgpu::Instance::new(&Default::default());
-        times.insert("Instance Creation", start.elapsed());
-        start = Instant::now();
+        // let instance = wgpu::Instance::new(&Default::default());
+        // times.insert("Instance Creation", start.elapsed());
+        // start = Instant::now();
 
         let surface = instance
             .create_surface(window.clone())
@@ -149,17 +226,19 @@ impl<'s> Graphics<'s> {
         let mut encoder = device.create_command_encoder(&Default::default());
         times.insert("Encoder Creation", start.elapsed());
         start = Instant::now();
-        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder).with_context(|| "Failed to create unit points")?;
+        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder)
+            .with_context(|| "Failed to create unit points")?;
         times.insert("Creating Body Data", start.elapsed());
         start = Instant::now();
         queue.submit(Some(encoder.finish()));
         times.insert("Queue submission", start.elapsed());
-        start = Instant::now();
+        // start = Instant::now();
 
         info!("Graphics Instanciation Times - {:?}", times);
 
         Ok(Graphics {
             render_pipeline: Self::generate_render_pipeline(&device, &surface, &adapter),
+            compute_pipeline: Self::generate_compute_pipeline(&device, &adapter),
             surface,
             adapter,
             device,
@@ -194,16 +273,7 @@ impl<'s> Graphics<'s> {
             }],
         })
     }
-    pub fn physics_tick(&mut self, delta: f32, gravitation_const: f32) {
-        // compute::physics_tick(delta, &mut self.vertices, gravitation_const);
-    }
     pub fn render<M: ViewMode + Default>(&mut self, camera: &rendering::Camera<M>) -> Result<()> {
-        // let uniform = rendering::Uniform {
-        //     width: self.surface_config.width,
-        //     height: self.surface_config.height,
-        //     world_mat: self.camera.generate_world_matrix_columns(),
-        //     padding: [0; 2]
-        // };
         let uniform = rendering::UniformBuilder::default()
             .height(self.surface_config.height)
             .width(self.surface_config.width)
@@ -243,42 +313,26 @@ impl<'s> Graphics<'s> {
             ..Default::default()
         };
 
-        let mut rpass = command_encoder.begin_render_pass(&render_pass_descriptor);
+        {
+            let mut cpass = command_encoder.begin_compute_pass(&Default::default());
+            cpass.set_pipeline(&self.compute_pipeline);
+            cpass.set_bind_group(0 ,&self.generate_compute_bind_groups(), &[]);
+            cpass.dispatch_workgroups(self.body_data.len as u32, self.body_data.len as u32, 1);
+        }
 
-        rpass.set_pipeline(&self.render_pipeline);
+        {
+            let mut rpass = command_encoder.begin_render_pass(&render_pass_descriptor);
 
-        rpass.set_bind_group(0, &self.create_uniform_bind_group(uniform), &[]);
+            rpass.set_pipeline(&self.render_pipeline);
 
-        rpass.set_vertex_buffer(
-            0,
-            self.body_data.positions.slice(..),
-        );
+            rpass.set_bind_group(0, &self.create_uniform_bind_group(uniform), &[]);
 
-        // rpass.draw(0..4, 0..1);
+            rpass.set_vertex_buffer(0, self.body_data.positions.slice(..));
 
-        // let indirect_buffer = self
-        //     .device
-        //     .create_buffer_init(&wgpu::util::BufferInitDescriptor {
-        //         label: Some("indirect draw instruction buffer"),
-        //         contents: wgpu::util::DrawIndirectArgs {
-        //             vertex_count: self.vertices.points.len() as u32,
-        //             instance_count: 1,
-        //             first_vertex: 0,
-        //             first_instance: 0,
-        //         }
-        //         .as_bytes(),
-        //         usage: wgpu::BufferUsages::INDIRECT,
-        //     });
-
-        rpass.draw(0..(self.body_data.len as u32), 0..1);
-
-        drop(rpass);
-
-        trace!("Submitting Queue");
+            rpass.draw(0..(self.body_data.len as u32), 0..1);
+        }
 
         self.queue.submit(Some(command_encoder.finish()));
-
-        trace!("Presenting Surface");
 
         surface_tex.present();
 
