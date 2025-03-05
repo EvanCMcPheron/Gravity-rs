@@ -334,6 +334,7 @@ impl<'s> Graphics<'s> {
 
         self.queue.submit(Some(command_encoder.finish()));
 
+
         surface_tex.present();
 
         Ok(())
