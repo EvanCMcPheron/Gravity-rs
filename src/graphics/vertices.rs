@@ -28,12 +28,14 @@ impl BodyData<Compute> {
         let size = mappable.positions.size();
         encoder.copy_buffer_to_buffer(mappable.positions.as_ref(), 0_u64, self.positions.as_ref(), 0_u64, size);
         let size = mappable.velocities.size();
-        encoder.copy_buffer_to_buffer(mappable.positions.as_ref(), 0_u64, self.velocities.as_ref(), 0_u64, size);
+        encoder.copy_buffer_to_buffer(mappable.velocities.as_ref(), 0_u64, self.velocities.as_ref(), 0_u64, size);
         let size = mappable.mass.size();
         encoder.copy_buffer_to_buffer(mappable.mass.as_ref(), 0_u64, self.mass.as_ref(), 0_u64, size);
     }
     pub fn map_to(&self, device: &wgpu::Device, encoder: &mut wgpu::CommandEncoder, data: &UnbufferedBodyData) -> Result<()> {
         let mut mapping_buffer = BodyData::<Mappable>::with_length(device, self.len);
+
+        // info!("Mapping Velocity Data: {:?}", data.velocities);
         
         mapping_buffer.map(data)?;
         self.copy_from_mappable(&mapping_buffer, device, encoder);
@@ -118,13 +120,14 @@ impl<B: BufferType> BodyData<B> {
         }
     }
     pub fn with_length(device: &wgpu::Device, len: usize) -> BodyData<B> {
-        let vector_buffer_desc = Self::create_buffer_desc(4, len, B::get_usages());
+        let pos_buffer_desc = Self::create_buffer_desc(4, len, B::get_usages());
+        let vel_buffer_desc = Self::create_buffer_desc(4, len, B::get_usages());
 
         let mass_buffer_desc = Self::create_buffer_desc(1, len, B::get_usages());
 
         BodyData::<B> {
-            positions: Arc::new(device.create_buffer(&vector_buffer_desc)),
-            velocities: Arc::new(device.create_buffer(&vector_buffer_desc)),
+            positions: Arc::new(device.create_buffer(&pos_buffer_desc)),
+            velocities: Arc::new(device.create_buffer(&vel_buffer_desc)),
             mass: Arc::new(device.create_buffer(&mass_buffer_desc)),
             len,
             buffer_type: B::new(),
@@ -243,7 +246,7 @@ impl BufferType for Compute {
         use wgpu::BufferUsages as BU;
         BU::INDIRECT | BU::VERTEX | BU::STORAGE | BU::COPY_DST
     }
-    fn new() -> Self {
-        Self
+    fn new() -> Self {
+        Self
     }
 }

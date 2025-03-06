@@ -1,5 +1,5 @@
 #![allow(dead_code, unused_variables)]
-const LOG_LEVEL: simplelog::LevelFilter = simplelog::LevelFilter::Info;
+const LOG_LEVEL: simplelog::LevelFilter = simplelog::LevelFilter::Trace;
 const CLEAR_COLOR: wgpu::Color = wgpu::Color::BLACK;
 
 mod application;
