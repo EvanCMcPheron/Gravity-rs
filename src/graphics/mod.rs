@@ -80,55 +80,34 @@ impl<'s> Graphics<'s> {
                 wgpu::BindGroupEntry {
                     binding: 2,
                     resource: self.body_data.mass.as_entire_binding(),
-                }
-            ]
+                },
+            ],
         })
     }
     fn generate_compute_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
         // @Todo | update min_binding_size to account for length of buffers,
         // pontentially optomising bind group allocation
+        let bingroup_layout_entry = |index: _| wgpu::BindGroupLayoutEntry {
+            binding: index,
+            visibility: wgpu::ShaderStages::COMPUTE,
+            ty: wgpu::BindingType::Buffer {
+                ty: wgpu::BufferBindingType::Storage { read_only: false },
+                has_dynamic_offset: false,
+                min_binding_size: None,
+            },
+            count: None, //Some(std::num::NonZero::new(self.body_data.len as u32).unwrap())
+        };
+        let entries: Vec<_> = (0..3).map(bingroup_layout_entry).collect();
+
         device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
             label: None,
             push_constant_ranges: &[],
-            bind_group_layouts: &[&device.create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor {
-                label: None,
-                entries: &[
-                    wgpu::BindGroupLayoutEntry {
-                        binding: 0,
-                        visibility: wgpu::ShaderStages::COMPUTE,
-                        ty: wgpu::BindingType::Buffer { 
-                            ty: wgpu::BufferBindingType::Storage { read_only: false }, 
-                            has_dynamic_offset: false, 
-                            min_binding_size: None 
-                        },
-                        count: None //Some(std::num::NonZero::new(self.body_data.len as u32).unwrap())
-                    },
-                    wgpu::BindGroupLayoutEntry {
-                        binding: 1,
-                        visibility: wgpu::ShaderStages::COMPUTE,
-                        ty: wgpu::BindingType::Buffer { 
-                            ty: wgpu::BufferBindingType::Storage {
-                                read_only: false
-                            },
-                            has_dynamic_offset: false,
-                            min_binding_size: None
-                        },
-                        count: None
-                    },
-                    wgpu::BindGroupLayoutEntry {
-                        binding: 2,
-                        visibility: wgpu::ShaderStages::COMPUTE,
-                        ty: wgpu::BindingType::Buffer { 
-                            ty: wgpu::BufferBindingType::Storage {
-                                read_only: false
-                            },
-                            has_dynamic_offset: false,
-                            min_binding_size: None
-                        },
-                        count: None
-                    }
-                ]
-            })]
+            bind_group_layouts: &[&device.create_bind_group_layout(
+                &wgpu::BindGroupLayoutDescriptor {
+                    label: None,
+                    entries: &entries,
+                },
+            )],
         })
     }
     fn generate_compute_pipeline(
@@ -143,7 +122,7 @@ impl<'s> Graphics<'s> {
             module: &module,
             entry_point: Some("cs_entry"),
             compilation_options: Default::default(),
-            cache: None
+            cache: None,
         })
     }
     fn generate_render_pipeline(
@@ -316,7 +295,7 @@ impl<'s> Graphics<'s> {
         {
             let mut cpass = command_encoder.begin_compute_pass(&Default::default());
             cpass.set_pipeline(&self.compute_pipeline);
-            cpass.set_bind_group(0 ,&self.generate_compute_bind_groups(), &[]);
+            cpass.set_bind_group(0, &self.generate_compute_bind_groups(), &[]);
             cpass.dispatch_workgroups(self.body_data.len as u32, self.body_data.len as u32, 1);
         }
 
@@ -333,7 +312,6 @@ impl<'s> Graphics<'s> {
         }
 
         self.queue.submit(Some(command_encoder.finish()));
-
 
         surface_tex.present();
 

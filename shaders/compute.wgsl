@@ -12,8 +12,8 @@ const D: f32 = 0.005;
     var y = id.y;
 
     if x == y {
-      positions[x] += velocities[x] * D;
-      positions[x].w = 1;
+//      positions[x] += velocities[x] * D;
+//      positions[x].w = 1;
 
       return;
     }
