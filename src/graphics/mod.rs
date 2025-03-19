@@ -2,6 +2,7 @@
 use std::{borrow::Borrow, time::Duration};
 
 use rendering::ViewMode;
+use wgpu::BindGroupLayoutDescriptor;
 
 use crate::prelude::*;
 
@@ -20,6 +21,7 @@ pub struct Graphics<'s> {
     surface_config: wgpu::SurfaceConfiguration,
     render_pipeline: wgpu::RenderPipeline,
     compute_pipeline: wgpu::ComputePipeline,
+    incriment_pipeline: wgpu::ComputePipeline,
     body_data: BodyData<Compute>,
 }
 
@@ -84,9 +86,7 @@ impl<'s> Graphics<'s> {
             ],
         })
     }
-    fn generate_compute_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
-        // @Todo | update min_binding_size to account for length of buffers,
-        // pontentially optomising bind group allocation
+    fn generate_compute_pipeline_bg_entries() -> Vec<wgpu::BindGroupLayoutEntry> {
         let bingroup_layout_entry = |index: _| wgpu::BindGroupLayoutEntry {
             binding: index,
             visibility: wgpu::ShaderStages::COMPUTE,
@@ -97,7 +97,12 @@ impl<'s> Graphics<'s> {
             },
             count: None, //Some(std::num::NonZero::new(self.body_data.len as u32).unwrap())
         };
-        let entries: Vec<_> = (0..3).map(bingroup_layout_entry).collect();
+        (0..3).map(bingroup_layout_entry).collect()
+    }
+    fn generate_compute_pipeline_layout(device: &wgpu::Device) -> wgpu::PipelineLayout {
+        // @Todo | update min_binding_size to account for length of buffers,
+        // pontentially optomising bind group allocation
+        let entries = Self::generate_compute_pipeline_bg_entries();
 
         device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
             label: None,
@@ -110,10 +115,7 @@ impl<'s> Graphics<'s> {
             )],
         })
     }
-    fn generate_compute_pipeline(
-        device: &wgpu::Device,
-        adapter: &wgpu::Adapter,
-    ) -> wgpu::ComputePipeline {
+    fn generate_compute_pipeline(device: &wgpu::Device) -> wgpu::ComputePipeline {
         let module = device.create_shader_module(include_wgsl!("../../shaders/compute.wgsl"));
 
         device.create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
@@ -162,6 +164,19 @@ impl<'s> Graphics<'s> {
             multisample: Default::default(),
         })
     }
+    fn generate_incriment_pipeline(device: &wgpu::Device) -> wgpu::ComputePipeline {
+        let shader =
+            device.create_shader_module(include_wgsl!("../../shaders/incriment_bodys.wgsl"));
+
+        device.create_compute_pipeline(&wgpu::ComputePipelineDescriptor {
+            label: None,
+            layout: Some(&Self::generate_compute_pipeline_layout(device)),
+            module: &shader,
+            entry_point: Some("cs_entry"),
+            compilation_options: Default::default(),
+            cache: None,
+        })
+    }
     pub fn new(window: Arc<winit::window::Window>, instance: wgpu::Instance) -> Result<Self> {
         use std::{collections::HashMap, time::Instant};
 
@@ -205,8 +220,19 @@ impl<'s> Graphics<'s> {
         let mut encoder = device.create_command_encoder(&Default::default());
         times.insert("Encoder Creation", start.elapsed());
         start = Instant::now();
-        let body_data = BodyData::<Compute>::generate_unit_points(&device, &mut encoder)
-            .with_context(|| "Failed to create unit points")?;
+
+        let body_data = BodyData::<Compute>::generate_galaxy(
+            1.,
+            3.14 / 8.,
+            7000,
+            Vec3::Z,
+            6e-3 * 0.2,
+            &device,
+            &mut encoder,
+        )
+        .with_context(|| "Failed to create unit points")?;
+        info!("BodyData length : {:?}", body_data.positions);
+
         times.insert("Creating Body Data", start.elapsed());
         start = Instant::now();
         queue.submit(Some(encoder.finish()));
@@ -217,7 +243,8 @@ impl<'s> Graphics<'s> {
 
         Ok(Graphics {
             render_pipeline: Self::generate_render_pipeline(&device, &surface, &adapter),
-            compute_pipeline: Self::generate_compute_pipeline(&device, &adapter),
+            compute_pipeline: Self::generate_compute_pipeline(&device),
+            incriment_pipeline: Self::generate_incriment_pipeline(&device),
             surface,
             adapter,
             device,
@@ -292,11 +319,20 @@ impl<'s> Graphics<'s> {
             ..Default::default()
         };
 
+        let compute_bindgroups = self.generate_compute_bind_groups();
+
         {
             let mut cpass = command_encoder.begin_compute_pass(&Default::default());
             cpass.set_pipeline(&self.compute_pipeline);
-            cpass.set_bind_group(0, &self.generate_compute_bind_groups(), &[]);
+            cpass.set_bind_group(0, &compute_bindgroups, &[]);
             cpass.dispatch_workgroups(self.body_data.len as u32, self.body_data.len as u32, 1);
+        }
+
+        {
+            let mut ipass = command_encoder.begin_compute_pass(&Default::default());
+            ipass.set_pipeline(&self.incriment_pipeline);
+            ipass.set_bind_group(0, &compute_bindgroups, &[]);
+            ipass.dispatch_workgroups(self.body_data.len as u32, 1, 1);
         }
 
         {

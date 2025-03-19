@@ -172,7 +172,7 @@ impl<'app> ApplicationHandler for App<'app> {
         let aspect_ratio = size.width as f32 / size.height as f32;
         self.camera = Some(Self::create_camera(aspect_ratio));
         self.previous_frame = Some(std::time::Instant::now());
-        times.insert("Window Instanciation", start.elapsed());
+        times.insert("Window Instantiation", start.elapsed());
         start = Instant::now();
 
         self.graphics = Some(
